@@ -1,14 +1,15 @@
+//go:build !minimal
 // +build !minimal
 
 package charts
 
 import (
-	"github.com/bluszcz/cute"
-	"github.com/bluszcz/cute/core"
-	"github.com/bluszcz/cute/gui"
-	"github.com/bluszcz/cute/widgets"
-	"strings"
 	"unsafe"
+
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/internal"
+	"github.com/topofstack/cutego/widgets"
 )
 
 type QAbstractAxis struct {
@@ -59,8 +60,9 @@ func NewQAbstractAxisFromPointer(ptr unsafe.Pointer) (n *QAbstractAxis) {
 	return
 }
 
+// QAbstractAxis::AxisType
+//
 //go:generate stringer -type=QAbstractAxis__AxisType
-//QAbstractAxis::AxisType
 type QAbstractAxis__AxisType int64
 
 const (
@@ -945,8 +947,9 @@ func NewQAbstractBarSeriesFromPointer(ptr unsafe.Pointer) (n *QAbstractBarSeries
 	return
 }
 
+// QAbstractBarSeries::LabelsPosition
+//
 //go:generate stringer -type=QAbstractBarSeries__LabelsPosition
-//QAbstractBarSeries::LabelsPosition
 type QAbstractBarSeries__LabelsPosition int64
 
 const (
@@ -1389,8 +1392,9 @@ func NewQAbstractSeriesFromPointer(ptr unsafe.Pointer) (n *QAbstractSeries) {
 	return
 }
 
+// QAbstractSeries::SeriesType
+//
 //go:generate stringer -type=QAbstractSeries__SeriesType
-//QAbstractSeries::SeriesType
 type QAbstractSeries__SeriesType int64
 
 const (
@@ -3763,8 +3767,9 @@ func NewQBoxSetFromPointer(ptr unsafe.Pointer) (n *QBoxSet) {
 	return
 }
 
+// QBoxSet::ValuePositions
+//
 //go:generate stringer -type=QBoxSet__ValuePositions
-//QBoxSet::ValuePositions
 type QBoxSet__ValuePositions int64
 
 const (
@@ -5584,8 +5589,9 @@ func NewQCategoryAxisFromPointer(ptr unsafe.Pointer) (n *QCategoryAxis) {
 	return
 }
 
+// QCategoryAxis::AxisLabelsPosition
+//
 //go:generate stringer -type=QCategoryAxis__AxisLabelsPosition
-//QCategoryAxis::AxisLabelsPosition
 type QCategoryAxis__AxisLabelsPosition int64
 
 const (
@@ -5746,8 +5752,9 @@ func NewQChartFromPointer(ptr unsafe.Pointer) (n *QChart) {
 	return
 }
 
+// QChart::ChartType
+//
 //go:generate stringer -type=QChart__ChartType
-//QChart::ChartType
 type QChart__ChartType int64
 
 const (
@@ -5756,8 +5763,9 @@ const (
 	QChart__ChartTypePolar     QChart__ChartType = QChart__ChartType(2)
 )
 
+// QChart::ChartTheme
+//
 //go:generate stringer -type=QChart__ChartTheme
-//QChart::ChartTheme
 type QChart__ChartTheme int64
 
 const (
@@ -5771,8 +5779,9 @@ const (
 	QChart__ChartThemeQt           QChart__ChartTheme = QChart__ChartTheme(7)
 )
 
+// QChart::AnimationOption
+//
 //go:generate stringer -type=QChart__AnimationOption
-//QChart::AnimationOption
 type QChart__AnimationOption int64
 
 const (
@@ -6665,8 +6674,9 @@ func NewQChartViewFromPointer(ptr unsafe.Pointer) (n *QChartView) {
 	return
 }
 
+// QChartView::RubberBand
+//
 //go:generate stringer -type=QChartView__RubberBand
-//QChartView::RubberBand
 type QChartView__RubberBand int64
 
 const (
@@ -9157,8 +9167,9 @@ func NewQLegendFromPointer(ptr unsafe.Pointer) (n *QLegend) {
 	return
 }
 
+// QLegend::MarkerShape
+//
 //go:generate stringer -type=QLegend__MarkerShape
-//QLegend::MarkerShape
 type QLegend__MarkerShape int64
 
 const (
@@ -9981,8 +9992,9 @@ func NewQLegendMarkerFromPointer(ptr unsafe.Pointer) (n *QLegendMarker) {
 	return
 }
 
+// QLegendMarker::LegendMarkerType
+//
 //go:generate stringer -type=QLegendMarker__LegendMarkerType
-//QLegendMarker::LegendMarkerType
 type QLegendMarker__LegendMarkerType int64
 
 const (
@@ -11573,8 +11585,9 @@ func NewQPieSliceFromPointer(ptr unsafe.Pointer) (n *QPieSlice) {
 	return
 }
 
+// QPieSlice::LabelPosition
+//
 //go:generate stringer -type=QPieSlice__LabelPosition
-//QPieSlice::LabelPosition
 type QPieSlice__LabelPosition int64
 
 const (
@@ -12222,8 +12235,9 @@ func NewQPolarChartFromPointer(ptr unsafe.Pointer) (n *QPolarChart) {
 	return
 }
 
+// QPolarChart::PolarOrientation
+//
 //go:generate stringer -type=QPolarChart__PolarOrientation
-//QPolarChart::PolarOrientation
 type QPolarChart__PolarOrientation int64
 
 const (
@@ -12324,8 +12338,9 @@ func NewQScatterSeriesFromPointer(ptr unsafe.Pointer) (n *QScatterSeries) {
 	return
 }
 
+// QScatterSeries::MarkerShape
+//
 //go:generate stringer -type=QScatterSeries__MarkerShape
-//QScatterSeries::MarkerShape
 type QScatterSeries__MarkerShape int64
 
 const (
@@ -13950,8 +13965,9 @@ func NewQValueAxisFromPointer(ptr unsafe.Pointer) (n *QValueAxis) {
 	return
 }
 
+// QValueAxis::TickType
+//
 //go:generate stringer -type=QValueAxis__TickType
-//QValueAxis::TickType
 type QValueAxis__TickType int64
 
 const (
