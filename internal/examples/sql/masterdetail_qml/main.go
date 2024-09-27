@@ -1,3 +1,4 @@
+//go:build !qml
 // +build !qml
 
 package main
@@ -5,12 +6,12 @@ package main
 import (
 	"os"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/widgets"
 
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/controller"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/controller"
 
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/view"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/view"
 )
 
 func main() {

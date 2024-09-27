@@ -3,9 +3,9 @@ package interop
 import (
 	"encoding/json"
 
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	"github.com/bluszcz/cutego"
+	"github.com/topofstack/cutego"
 )
 
 //TODO: this == nil checks

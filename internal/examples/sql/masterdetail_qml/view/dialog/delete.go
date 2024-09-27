@@ -1,3 +1,4 @@
+//go:build !qml
 // +build !qml
 
 package dialog
@@ -5,10 +6,10 @@ package dialog
 import (
 	"fmt"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/widgets"
 
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/controller"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/controller"
 )
 
 type deleteDialogController struct {

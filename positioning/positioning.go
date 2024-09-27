@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package positioning
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
 	"strings"
 	"unsafe"
 )
@@ -455,8 +456,9 @@ func NewQGeoAreaMonitorSourceFromPointer(ptr unsafe.Pointer) (n *QGeoAreaMonitor
 	return
 }
 
+// QGeoAreaMonitorSource::Error
+//
 //go:generate stringer -type=QGeoAreaMonitorSource__Error
-//QGeoAreaMonitorSource::Error
 type QGeoAreaMonitorSource__Error int64
 
 const (
@@ -466,8 +468,9 @@ const (
 	QGeoAreaMonitorSource__NoError                  QGeoAreaMonitorSource__Error = QGeoAreaMonitorSource__Error(3)
 )
 
+// QGeoAreaMonitorSource::AreaMonitorFeature
+//
 //go:generate stringer -type=QGeoAreaMonitorSource__AreaMonitorFeature
-//QGeoAreaMonitorSource::AreaMonitorFeature
 type QGeoAreaMonitorSource__AreaMonitorFeature int64
 
 const (
@@ -1019,8 +1022,9 @@ func NewQGeoCoordinateFromPointer(ptr unsafe.Pointer) (n *QGeoCoordinate) {
 	return
 }
 
+// QGeoCoordinate::CoordinateType
+//
 //go:generate stringer -type=QGeoCoordinate__CoordinateType
-//QGeoCoordinate::CoordinateType
 type QGeoCoordinate__CoordinateType int64
 
 const (
@@ -1029,8 +1033,9 @@ const (
 	QGeoCoordinate__Coordinate3D      QGeoCoordinate__CoordinateType = QGeoCoordinate__CoordinateType(2)
 )
 
+// QGeoCoordinate::CoordinateFormat
+//
 //go:generate stringer -type=QGeoCoordinate__CoordinateFormat
-//QGeoCoordinate::CoordinateFormat
 type QGeoCoordinate__CoordinateFormat int64
 
 const (
@@ -1735,8 +1740,9 @@ func NewQGeoPositionInfoFromPointer(ptr unsafe.Pointer) (n *QGeoPositionInfo) {
 	return
 }
 
+// QGeoPositionInfo::Attribute
+//
 //go:generate stringer -type=QGeoPositionInfo__Attribute
-//QGeoPositionInfo::Attribute
 type QGeoPositionInfo__Attribute int64
 
 const (
@@ -1861,8 +1867,9 @@ func NewQGeoPositionInfoSourceFromPointer(ptr unsafe.Pointer) (n *QGeoPositionIn
 	return
 }
 
+// QGeoPositionInfoSource::Error
+//
 //go:generate stringer -type=QGeoPositionInfoSource__Error
-//QGeoPositionInfoSource::Error
 type QGeoPositionInfoSource__Error int64
 
 const (
@@ -1872,8 +1879,9 @@ const (
 	QGeoPositionInfoSource__NoError            QGeoPositionInfoSource__Error = QGeoPositionInfoSource__Error(3)
 )
 
+// QGeoPositionInfoSource::PositioningMethod
+//
 //go:generate stringer -type=QGeoPositionInfoSource__PositioningMethod
-//QGeoPositionInfoSource::PositioningMethod
 type QGeoPositionInfoSource__PositioningMethod int64
 
 const (
@@ -2603,8 +2611,9 @@ func NewQGeoSatelliteInfoFromPointer(ptr unsafe.Pointer) (n *QGeoSatelliteInfo) 
 	return
 }
 
+// QGeoSatelliteInfo::Attribute
+//
 //go:generate stringer -type=QGeoSatelliteInfo__Attribute
-//QGeoSatelliteInfo::Attribute
 type QGeoSatelliteInfo__Attribute int64
 
 const (
@@ -2612,8 +2621,9 @@ const (
 	QGeoSatelliteInfo__Azimuth   QGeoSatelliteInfo__Attribute = QGeoSatelliteInfo__Attribute(1)
 )
 
+// QGeoSatelliteInfo::SatelliteSystem
+//
 //go:generate stringer -type=QGeoSatelliteInfo__SatelliteSystem
-//QGeoSatelliteInfo::SatelliteSystem
 type QGeoSatelliteInfo__SatelliteSystem int64
 
 const (
@@ -2735,8 +2745,9 @@ func NewQGeoSatelliteInfoSourceFromPointer(ptr unsafe.Pointer) (n *QGeoSatellite
 	return
 }
 
+// QGeoSatelliteInfoSource::Error
+//
 //go:generate stringer -type=QGeoSatelliteInfoSource__Error
-//QGeoSatelliteInfoSource::Error
 type QGeoSatelliteInfoSource__Error int64
 
 const (
@@ -3143,8 +3154,9 @@ func NewQGeoShapeFromPointer(ptr unsafe.Pointer) (n *QGeoShape) {
 	return
 }
 
+// QGeoShape::ShapeType
+//
 //go:generate stringer -type=QGeoShape__ShapeType
-//QGeoShape::ShapeType
 type QGeoShape__ShapeType int64
 
 const (
@@ -3253,8 +3265,9 @@ func NewQNmeaPositionInfoSourceFromPointer(ptr unsafe.Pointer) (n *QNmeaPosition
 	return
 }
 
+// QNmeaPositionInfoSource::UpdateMode
+//
 //go:generate stringer -type=QNmeaPositionInfoSource__UpdateMode
-//QNmeaPositionInfoSource::UpdateMode
 type QNmeaPositionInfoSource__UpdateMode int64
 
 const (

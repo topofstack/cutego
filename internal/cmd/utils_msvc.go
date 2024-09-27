@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 var rep = map[string]string{

@@ -18,11 +18,11 @@ import (
 
 	"golang.org/x/tools/imports"
 
-	"github.com/bluszcz/cutego/internal/binding/parser"
-	"github.com/bluszcz/cutego/internal/binding/templater"
+	"github.com/topofstack/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/binding/templater"
 
-	"github.com/bluszcz/cutego/internal/cmd"
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/cmd"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 var (
@@ -58,7 +58,7 @@ func Moc(path, target, tags string, fast, slow, deploying bool, skipSetup bool) 
 			utils.RunCmd(cmd, "go mod vendor")
 		}
 		if utils.QT_DOCKER() {
-			cmd := exec.Command("go", "get", "-v", "-d", "github.com/bluszcz/cutego/internal/binding/files/docs/"+utils.QT_API(utils.QT_VERSION())+"@"+cmd.QtModVersion(filepath.Dir(utils.GOMOD(path)))) //TODO: needs to pull 5.8.0 if QT_WEBKIT
+			cmd := exec.Command("go", "get", "-v", "-d", "github.com/topofstack/cutego/internal/binding/files/docs/"+utils.QT_API(utils.QT_VERSION())+"@"+cmd.QtModVersion(filepath.Dir(utils.GOMOD(path)))) //TODO: needs to pull 5.8.0 if QT_WEBKIT
 			cmd.Dir = path
 			if !utils.QT_PKG_CONFIG() {
 				utils.RunCmdOptional(cmd, "go get docs") //TODO: this can fail if QT_PKG_CONFIG
@@ -957,7 +957,7 @@ func hasStructors(m *parser.Module) bool {
 	return true
 }
 
-//TODO: replace MocImports hack with GoClassMap, needs parse() to properly detect all pure Go types, structs, interfaces, ...
+// TODO: replace MocImports hack with GoClassMap, needs parse() to properly detect all pure Go types, structs, interfaces, ...
 func parseNonMocDeps(files []string) {
 	utils.Log.Debug("parseNonMocDeps")
 

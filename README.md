@@ -7,7 +7,7 @@ cutego is a fork of non-maintained anymore [therecipe/qt](https://github.com/the
 
 [Go](https://en.wikipedia.org/wiki/Go_(programming_language)), also known as Golang, is a programming language designed at Google.
 
-[bluszcz/cutego](https://github.com/bluszcz/cutego) allows you to write Qt applications entirely in Go or JavaScript.
+[bluszcz/cutego](https://github.com/topofstack/cutego) allows you to write Qt applications entirely in Go or JavaScript.
 
 Beside the language bindings provided, `bluszcz/cutego` also greatly simplifies the deployment of Qt applications to various software and hardware platforms.
 
@@ -16,7 +16,7 @@ At the time of writing, almost all Qt functions and classes are accessible, and 
 Impressions
 -----------
 
-[Gallery](https://github.com/bluszcz/cutego/wiki/Gallery) of example applications.
+[Gallery](https://github.com/topofstack/cutego/wiki/Gallery) of example applications.
 
 [JavaScript Demo](https://therecipe.github.io/entry) | *[source](https://therecipe.com/bluszcz/entry)*
 
@@ -25,40 +25,40 @@ Installation
 
 The following instructions assume that you already installed [Go](https://golang.org/dl/) and [Git](https://git-scm.com/downloads)
 
-##### Windows [(more info)](https://github.com/bluszcz/cutego/wiki/Installation-on-Windows)
+##### Windows [(more info)](https://github.com/topofstack/cutego/wiki/Installation-on-Windows)
 
 ```powershell
 set GO111MODULE=off
-go get -v github.com/bluszcz/cutego/cmd/... && for /f %v in ('go env GOPATH') do %v\bin\qtsetup test && %v\bin\qtsetup -test=false
+go get -v github.com/topofstack/cutego/cmd/... && for /f %v in ('go env GOPATH') do %v\bin\qtsetup test && %v\bin\qtsetup -test=false
 ```
 
-##### macOS [(more info)](https://github.com/bluszcz/cutego/wiki/Installation-on-macOS)
+##### macOS [(more info)](https://github.com/topofstack/cutego/wiki/Installation-on-macOS)
 
 ```bash
-export GO111MODULE=off; xcode-select --install; go get -v github.com/bluszcz/cutego/cmd/... && $(go env GOPATH)/bin/qtsetup test && $(go env GOPATH)/bin/qtsetup -test=false
+export GO111MODULE=off; xcode-select --install; go get -v github.com/topofstack/cutego/cmd/... && $(go env GOPATH)/bin/qtsetup test && $(go env GOPATH)/bin/qtsetup -test=false
 ```
 
-##### Linux [(more info)](https://github.com/bluszcz/cutego/wiki/Installation-on-Linux)
+##### Linux [(more info)](https://github.com/topofstack/cutego/wiki/Installation-on-Linux)
 
 ```bash
-export GO111MODULE=off; go get -v github.com/bluszcz/cutego/cmd/... && $(go env GOPATH)/bin/qtsetup test && $(go env GOPATH)/bin/qtsetup -test=false
+export GO111MODULE=off; go get -v github.com/topofstack/cutego/cmd/... && $(go env GOPATH)/bin/qtsetup test && $(go env GOPATH)/bin/qtsetup -test=false
 ```
 
 Resources
 ---------
 
--	[Installation](https://github.com/bluszcz/cutego/wiki/Installation)
--	[Getting Started](https://github.com/bluszcz/cutego/wiki/Getting-Started)
--	[Wiki](https://github.com/bluszcz/cutego/wiki)
+-	[Installation](https://github.com/topofstack/cutego/wiki/Installation)
+-	[Getting Started](https://github.com/topofstack/cutego/wiki/Getting-Started)
+-	[Wiki](https://github.com/topofstack/cutego/wiki)
 -	[Qt Documentation](https://doc.qt.io/qt-5/classes.html)
--	[FAQ](https://github.com/bluszcz/cutego/wiki/FAQ)
+-	[FAQ](https://github.com/topofstack/cutego/wiki/FAQ)
 -	[#qt-binding](https://gophers.slack.com/messages/qt-binding/details) Slack channel ([invite](https://invite.slack.golangbridge.org)\)
 
 Deployment Targets
 ------------------
 
-| Target                   | Arch             | Linkage                   | Docker Deployment | Host OS |
-|:------------------------:|:----------------:|:-------------------------:|:-----------------:|:-------:|
+|          Target          |       Arch       |          Linkage          | Docker Deployment | Host OS |
+| :----------------------: | :--------------: | :-----------------------: | :---------------: | :-----: |
 |         Windows          |     32 / 64      |     dynamic / static      |        Yes        |   Any   |
 |          macOS           |        64        |          dynamic          |        Yes        |   Any   |
 |          Linux           | arm / arm64 / 64 | dynamic / static / system |        Yes        |   Any   |

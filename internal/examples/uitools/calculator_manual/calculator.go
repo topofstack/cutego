@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/uitools"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/uitools"
+	"github.com/topofstack/cutego/widgets"
 )
 
 func main() {

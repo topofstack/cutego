@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
 
-	"github.com/bluszcz/cutego/internal/examples/showcases/wallet/wallet/model"
+	"github.com/topofstack/cutego/internal/examples/showcases/wallet/wallet/model"
 )
 
 var Controller *WalletController

@@ -10,9 +10,9 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/binding/parser"
-	"github.com/bluszcz/cutego/internal/cmd"
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/cmd"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 const (
@@ -78,7 +78,7 @@ func cgoTemplate(module, path, target string, mode int, ipkg, tags string, libs 
 	return
 }
 
-//TODO: use qmake props ?
+// TODO: use qmake props ?
 func isAlreadyCached(module, path, target string, mode int, libs []string) bool {
 	if utils.QT_NOT_CACHED() {
 		return false

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/binding/parser"
 )
 
 func EnumNeedsCppGlue(value string) bool {

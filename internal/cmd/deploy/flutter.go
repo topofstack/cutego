@@ -13,7 +13,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 func flutter(target string, path string) {

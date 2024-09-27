@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	"github.com/bluszcz/cutego/internal/examples/showcases/wallet/view/controller"
+	"github.com/topofstack/cutego/internal/examples/showcases/wallet/view/controller"
 )
 
 type buttonController struct {
@@ -12,5 +12,5 @@ type buttonController struct {
 	_ func(code string) `signal:"clicked,auto"`
 }
 
-//lazy binding to the view/stack controller
+// lazy binding to the view/stack controller
 func (c *buttonController) clicked(code string) { controller.StackController.Clicked(code) }

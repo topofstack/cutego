@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/widgets"
 )
 
 func main() {

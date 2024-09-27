@@ -1,6 +1,6 @@
 package top
 
-import "github.com/bluszcz/cutego/quick"
+import "github.com/topofstack/cutego/quick"
 
 func init() { topTemplate_QmlRegisterType2("TopTemplate", 1, 0, "TopTemplate") }
 

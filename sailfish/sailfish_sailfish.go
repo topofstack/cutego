@@ -1,12 +1,13 @@
+//go:build sailfish || sailfish_emulator
 // +build sailfish sailfish_emulator
 
 package sailfish
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/quick"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/quick"
 	"strings"
 	"unsafe"
 )

@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package remoteobjects
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
 	"strings"
 	"unsafe"
 )
@@ -1428,8 +1429,9 @@ func NewQRemoteObjectHostBaseFromPointer(ptr unsafe.Pointer) (n *QRemoteObjectHo
 func (ptr *QRemoteObjectHostBase) DestroyQRemoteObjectHostBase() {
 }
 
+// QRemoteObjectHostBase::AllowedSchemas
+//
 //go:generate stringer -type=QRemoteObjectHostBase__AllowedSchemas
-//QRemoteObjectHostBase::AllowedSchemas
 type QRemoteObjectHostBase__AllowedSchemas int64
 
 const (
@@ -1523,8 +1525,9 @@ func NewQRemoteObjectNodeFromPointer(ptr unsafe.Pointer) (n *QRemoteObjectNode) 
 func (ptr *QRemoteObjectNode) DestroyQRemoteObjectNode() {
 }
 
+// QRemoteObjectNode::ErrorCode
+//
 //go:generate stringer -type=QRemoteObjectNode__ErrorCode
-//QRemoteObjectNode::ErrorCode
 type QRemoteObjectNode__ErrorCode int64
 
 const (
@@ -2307,8 +2310,9 @@ func NewQRemoteObjectReplicaFromPointer(ptr unsafe.Pointer) (n *QRemoteObjectRep
 func (ptr *QRemoteObjectReplica) DestroyQRemoteObjectReplica() {
 }
 
+// QRemoteObjectReplica::State
+//
 //go:generate stringer -type=QRemoteObjectReplica__State
-//QRemoteObjectReplica::State
 type QRemoteObjectReplica__State int64
 
 const (

@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/widgets"
 
-	"github.com/bluszcz/cutego/internal/examples/uitools/calculator/ui"
+	"github.com/topofstack/cutego/internal/examples/uitools/calculator/ui"
 )
 
 func main() {

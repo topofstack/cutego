@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 )
 
 func init() { MyQMLType_QmlRegisterType2("com.yourcompany.xyz", 1, 0, "MyQMLType") }

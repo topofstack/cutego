@@ -1,6 +1,6 @@
 package model
 
-import "github.com/bluszcz/cutego/core"
+import "github.com/topofstack/cutego/core"
 
 type File struct {
 	Name          string

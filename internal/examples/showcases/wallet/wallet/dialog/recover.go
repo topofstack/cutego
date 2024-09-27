@@ -1,9 +1,9 @@
 package dialog
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	_ "github.com/bluszcz/cutego/internal/examples/showcases/wallet/wallet/dialog/controller"
+	_ "github.com/topofstack/cutego/internal/examples/showcases/wallet/wallet/dialog/controller"
 )
 
 func init() { recoverTemplate_QmlRegisterType2("DialogTemplate", 1, 0, "RecoverTemplate") }

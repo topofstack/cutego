@@ -1,9 +1,10 @@
+//go:build !minimal
 // +build !minimal
 
 package core
 
 import (
-	"github.com/bluszcz/cutego"
+	"github.com/topofstack/cutego"
 	"math"
 	"reflect"
 	"runtime"
@@ -59,8 +60,9 @@ func NewQAbstractAnimationFromPointer(ptr unsafe.Pointer) (n *QAbstractAnimation
 	return
 }
 
+// QAbstractAnimation::Direction
+//
 //go:generate stringer -type=QAbstractAnimation__Direction
-//QAbstractAnimation::Direction
 type QAbstractAnimation__Direction int64
 
 const (
@@ -68,8 +70,9 @@ const (
 	QAbstractAnimation__Backward QAbstractAnimation__Direction = QAbstractAnimation__Direction(1)
 )
 
+// QAbstractAnimation::State
+//
 //go:generate stringer -type=QAbstractAnimation__State
-//QAbstractAnimation::State
 type QAbstractAnimation__State int64
 
 const (
@@ -78,8 +81,9 @@ const (
 	QAbstractAnimation__Running QAbstractAnimation__State = QAbstractAnimation__State(2)
 )
 
+// QAbstractAnimation::DeletionPolicy
+//
 //go:generate stringer -type=QAbstractAnimation__DeletionPolicy
-//QAbstractAnimation::DeletionPolicy
 type QAbstractAnimation__DeletionPolicy int64
 
 const (
@@ -797,8 +801,9 @@ func NewQAbstractItemModelFromPointer(ptr unsafe.Pointer) (n *QAbstractItemModel
 	return
 }
 
+// QAbstractItemModel::LayoutChangeHint
+//
 //go:generate stringer -type=QAbstractItemModel__LayoutChangeHint
-//QAbstractItemModel::LayoutChangeHint
 type QAbstractItemModel__LayoutChangeHint int64
 
 const (
@@ -807,8 +812,9 @@ const (
 	QAbstractItemModel__HorizontalSortHint QAbstractItemModel__LayoutChangeHint = QAbstractItemModel__LayoutChangeHint(2)
 )
 
+// QAbstractItemModel::CheckIndexOption
+//
 //go:generate stringer -type=QAbstractItemModel__CheckIndexOption
-//QAbstractItemModel::CheckIndexOption
 type QAbstractItemModel__CheckIndexOption int64
 
 const (
@@ -2985,8 +2991,9 @@ func NewQAbstractTransitionFromPointer(ptr unsafe.Pointer) (n *QAbstractTransiti
 	return
 }
 
+// QAbstractTransition::TransitionType
+//
 //go:generate stringer -type=QAbstractTransition__TransitionType
-//QAbstractTransition::TransitionType
 type QAbstractTransition__TransitionType int64
 
 const (
@@ -4400,8 +4407,9 @@ func NewQByteArrayFromPointer(ptr unsafe.Pointer) (n *QByteArray) {
 	return
 }
 
+// QByteArray::Base64Option
+//
 //go:generate stringer -type=QByteArray__Base64Option
-//QByteArray::Base64Option
 type QByteArray__Base64Option int64
 
 const (
@@ -5660,8 +5668,9 @@ func NewQCborErrorFromPointer(ptr unsafe.Pointer) (n *QCborError) {
 func (ptr *QCborError) DestroyQCborError() {
 }
 
+// QCborError::Code
+//
 //go:generate stringer -type=QCborError__Code
-//QCborError::Code
 type QCborError__Code int64
 
 const (
@@ -6135,8 +6144,9 @@ func NewQCborStreamReaderFromPointer(ptr unsafe.Pointer) (n *QCborStreamReader) 
 	return
 }
 
+// QCborStreamReader::Type
+//
 //go:generate stringer -type=QCborStreamReader__Type
-//QCborStreamReader::Type
 type QCborStreamReader__Type int64
 
 const (
@@ -6157,8 +6167,9 @@ const (
 	QCborStreamReader__Invalid         QCborStreamReader__Type = QCborStreamReader__Type(0xff)
 )
 
+// QCborStreamReader::StringResultCode
+//
 //go:generate stringer -type=QCborStreamReader__StringResultCode
-//QCborStreamReader::StringResultCode
 type QCborStreamReader__StringResultCode int64
 
 const (
@@ -6251,8 +6262,9 @@ func NewQCborValueFromPointer(ptr unsafe.Pointer) (n *QCborValue) {
 	return
 }
 
+// QCborValue::EncodingOption
+//
 //go:generate stringer -type=QCborValue__EncodingOption
-//QCborValue::EncodingOption
 type QCborValue__EncodingOption int64
 
 const (
@@ -6263,8 +6275,9 @@ const (
 	QCborValue__NoTransformation QCborValue__EncodingOption = QCborValue__EncodingOption(0)
 )
 
+// QCborValue::DiagnosticNotationOption
+//
 //go:generate stringer -type=QCborValue__DiagnosticNotationOption
-//QCborValue::DiagnosticNotationOption
 type QCborValue__DiagnosticNotationOption int64
 
 const (
@@ -6273,8 +6286,9 @@ const (
 	QCborValue__ExtendedFormat QCborValue__DiagnosticNotationOption = QCborValue__DiagnosticNotationOption(0x02)
 )
 
+// QCborValue::Type
+//
 //go:generate stringer -type=QCborValue__Type
-//QCborValue::Type
 type QCborValue__Type int64
 
 var (
@@ -6387,8 +6401,9 @@ func NewQCharFromPointer(ptr unsafe.Pointer) (n *QChar) {
 func (ptr *QChar) DestroyQChar() {
 }
 
+// QChar::SpecialCharacter
+//
 //go:generate stringer -type=QChar__SpecialCharacter
-//QChar::SpecialCharacter
 type QChar__SpecialCharacter int64
 
 const (
@@ -6408,8 +6423,9 @@ const (
 	QChar__LastValidCodePoint         QChar__SpecialCharacter = QChar__SpecialCharacter(0x10ffff)
 )
 
+// QChar::Category
+//
 //go:generate stringer -type=QChar__Category
-//QChar::Category
 type QChar__Category int64
 
 const (
@@ -6445,8 +6461,9 @@ const (
 	QChar__Symbol_Other             QChar__Category = QChar__Category(29)
 )
 
+// QChar::Script
+//
 //go:generate stringer -type=QChar__Script
-//QChar::Script
 type QChar__Script int64
 
 const (
@@ -6595,8 +6612,9 @@ const (
 	QChar__ScriptCount                  QChar__Script = QChar__Script(142)
 )
 
+// QChar::Direction
+//
 //go:generate stringer -type=QChar__Direction
-//QChar::Direction
 type QChar__Direction int64
 
 const (
@@ -6625,8 +6643,9 @@ const (
 	QChar__DirPDI QChar__Direction = QChar__Direction(22)
 )
 
+// QChar::Decomposition
+//
 //go:generate stringer -type=QChar__Decomposition
-//QChar::Decomposition
 type QChar__Decomposition int64
 
 const (
@@ -6650,8 +6669,9 @@ const (
 	QChar__Fraction        QChar__Decomposition = QChar__Decomposition(17)
 )
 
+// QChar::JoiningType
+//
 //go:generate stringer -type=QChar__JoiningType
-//QChar::JoiningType
 type QChar__JoiningType int64
 
 const (
@@ -6663,8 +6683,9 @@ const (
 	QChar__Joining_Transparent QChar__JoiningType = QChar__JoiningType(5)
 )
 
+// QChar::UnicodeVersion
+//
 //go:generate stringer -type=QChar__UnicodeVersion
-//QChar::UnicodeVersion
 type QChar__UnicodeVersion int64
 
 const (
@@ -7595,8 +7616,9 @@ func NewQCommandLineOptionFromPointer(ptr unsafe.Pointer) (n *QCommandLineOption
 	return
 }
 
+// QCommandLineOption::Flag
+//
 //go:generate stringer -type=QCommandLineOption__Flag
-//QCommandLineOption::Flag
 type QCommandLineOption__Flag int64
 
 const (
@@ -7731,8 +7753,9 @@ func NewQCommandLineParserFromPointer(ptr unsafe.Pointer) (n *QCommandLineParser
 	return
 }
 
+// QCommandLineParser::SingleDashWordOptionMode
+//
 //go:generate stringer -type=QCommandLineParser__SingleDashWordOptionMode
-//QCommandLineParser::SingleDashWordOptionMode
 type QCommandLineParser__SingleDashWordOptionMode int64
 
 const (
@@ -7740,8 +7763,9 @@ const (
 	QCommandLineParser__ParseAsLongOptions           QCommandLineParser__SingleDashWordOptionMode = QCommandLineParser__SingleDashWordOptionMode(1)
 )
 
+// QCommandLineParser::OptionsAfterPositionalArgumentsMode
+//
 //go:generate stringer -type=QCommandLineParser__OptionsAfterPositionalArgumentsMode
-//QCommandLineParser::OptionsAfterPositionalArgumentsMode
 type QCommandLineParser__OptionsAfterPositionalArgumentsMode int64
 
 const (
@@ -8825,8 +8849,9 @@ func NewQCryptographicHashFromPointer(ptr unsafe.Pointer) (n *QCryptographicHash
 	return
 }
 
+// QCryptographicHash::Algorithm
+//
 //go:generate stringer -type=QCryptographicHash__Algorithm
-//QCryptographicHash::Algorithm
 type QCryptographicHash__Algorithm int64
 
 const (
@@ -8948,8 +8973,9 @@ func NewQDataStreamFromPointer(ptr unsafe.Pointer) (n *QDataStream) {
 	return
 }
 
+// QDataStream::Version
+//
 //go:generate stringer -type=QDataStream__Version
-//QDataStream::Version
 type QDataStream__Version int64
 
 const (
@@ -8986,8 +9012,9 @@ const (
 	QDataStream__Qt_DefaultCompiledVersion QDataStream__Version = QDataStream__Version(QDataStream__Qt_5_13)
 )
 
+// QDataStream::ByteOrder
+//
 //go:generate stringer -type=QDataStream__ByteOrder
-//QDataStream::ByteOrder
 type QDataStream__ByteOrder int64
 
 const (
@@ -8995,8 +9022,9 @@ const (
 	QDataStream__LittleEndian QDataStream__ByteOrder = QDataStream__ByteOrder(QSysInfo__LittleEndian)
 )
 
+// QDataStream::Status
+//
 //go:generate stringer -type=QDataStream__Status
-//QDataStream::Status
 type QDataStream__Status int64
 
 const (
@@ -9006,8 +9034,9 @@ const (
 	QDataStream__WriteFailed     QDataStream__Status = QDataStream__Status(3)
 )
 
+// QDataStream::FloatingPointPrecision
+//
 //go:generate stringer -type=QDataStream__FloatingPointPrecision
-//QDataStream::FloatingPointPrecision
 type QDataStream__FloatingPointPrecision int64
 
 const (
@@ -9180,8 +9209,9 @@ func NewQDateFromPointer(ptr unsafe.Pointer) (n *QDate) {
 func (ptr *QDate) DestroyQDate() {
 }
 
+// QDate::MonthNameType
+//
 //go:generate stringer -type=QDate__MonthNameType
-//QDate::MonthNameType
 type QDate__MonthNameType int64
 
 const (
@@ -9770,8 +9800,9 @@ func NewQDeadlineTimerFromPointer(ptr unsafe.Pointer) (n *QDeadlineTimer) {
 func (ptr *QDeadlineTimer) DestroyQDeadlineTimer() {
 }
 
+// QDeadlineTimer::ForeverConstant
+//
 //go:generate stringer -type=QDeadlineTimer__ForeverConstant
-//QDeadlineTimer::ForeverConstant
 type QDeadlineTimer__ForeverConstant int64
 
 const (
@@ -9900,8 +9931,9 @@ func NewQDebugFromPointer(ptr unsafe.Pointer) (n *QDebug) {
 	return
 }
 
+// QDebug::VerbosityLevel
+//
 //go:generate stringer -type=QDebug__VerbosityLevel
-//QDebug::VerbosityLevel
 type QDebug__VerbosityLevel int64
 
 const (
@@ -10149,8 +10181,9 @@ func NewQDirFromPointer(ptr unsafe.Pointer) (n *QDir) {
 	return
 }
 
+// QDir::Filter
+//
 //go:generate stringer -type=QDir__Filter
-//QDir::Filter
 type QDir__Filter int64
 
 const (
@@ -10176,8 +10209,9 @@ const (
 	QDir__NoFilter       QDir__Filter = QDir__Filter(-1)
 )
 
+// QDir::SortFlag
+//
 //go:generate stringer -type=QDir__SortFlag
-//QDir::SortFlag
 type QDir__SortFlag int64
 
 const (
@@ -10712,8 +10746,9 @@ func NewQDirIteratorFromPointer(ptr unsafe.Pointer) (n *QDirIterator) {
 	return
 }
 
+// QDirIterator::IteratorFlag
+//
 //go:generate stringer -type=QDirIterator__IteratorFlag
-//QDirIterator::IteratorFlag
 type QDirIterator__IteratorFlag int64
 
 const (
@@ -10825,8 +10860,9 @@ func NewQEasingCurveFromPointer(ptr unsafe.Pointer) (n *QEasingCurve) {
 	return
 }
 
+// QEasingCurve::Type
+//
 //go:generate stringer -type=QEasingCurve__Type
-//QEasingCurve::Type
 type QEasingCurve__Type int64
 
 const (
@@ -11041,8 +11077,9 @@ func NewQElapsedTimerFromPointer(ptr unsafe.Pointer) (n *QElapsedTimer) {
 func (ptr *QElapsedTimer) DestroyQElapsedTimer() {
 }
 
+// QElapsedTimer::ClockType
+//
 //go:generate stringer -type=QElapsedTimer__ClockType
-//QElapsedTimer::ClockType
 type QElapsedTimer__ClockType int64
 
 const (
@@ -11215,8 +11252,9 @@ func NewQEventFromPointer(ptr unsafe.Pointer) (n *QEvent) {
 	return
 }
 
+// QEvent::Type
+//
 //go:generate stringer -type=QEvent__Type
-//QEvent::Type
 type QEvent__Type int64
 
 const (
@@ -11509,8 +11547,9 @@ func NewQEventLoopFromPointer(ptr unsafe.Pointer) (n *QEventLoop) {
 	return
 }
 
+// QEventLoop::ProcessEventsFlag
+//
 //go:generate stringer -type=QEventLoop__ProcessEventsFlag
-//QEventLoop::ProcessEventsFlag
 type QEventLoop__ProcessEventsFlag int64
 
 const (
@@ -12223,8 +12262,9 @@ func NewQFileDeviceFromPointer(ptr unsafe.Pointer) (n *QFileDevice) {
 	return
 }
 
+// QFileDevice::FileError
+//
 //go:generate stringer -type=QFileDevice__FileError
-//QFileDevice::FileError
 type QFileDevice__FileError int64
 
 const (
@@ -12245,8 +12285,9 @@ const (
 	QFileDevice__CopyError        QFileDevice__FileError = QFileDevice__FileError(14)
 )
 
+// QFileDevice::FileTime
+//
 //go:generate stringer -type=QFileDevice__FileTime
-//QFileDevice::FileTime
 type QFileDevice__FileTime int64
 
 const (
@@ -12256,8 +12297,9 @@ const (
 	QFileDevice__FileModificationTime   QFileDevice__FileTime = QFileDevice__FileTime(3)
 )
 
+// QFileDevice::Permission
+//
 //go:generate stringer -type=QFileDevice__Permission
-//QFileDevice::Permission
 type QFileDevice__Permission int64
 
 const (
@@ -12275,8 +12317,9 @@ const (
 	QFileDevice__ExeOther   QFileDevice__Permission = QFileDevice__Permission(0x0001)
 )
 
+// QFileDevice::FileHandleFlag
+//
 //go:generate stringer -type=QFileDevice__FileHandleFlag
-//QFileDevice::FileHandleFlag
 type QFileDevice__FileHandleFlag int64
 
 const (
@@ -12284,8 +12327,9 @@ const (
 	QFileDevice__DontCloseHandle QFileDevice__FileHandleFlag = QFileDevice__FileHandleFlag(0)
 )
 
+// QFileDevice::MemoryMapFlags
+//
 //go:generate stringer -type=QFileDevice__MemoryMapFlags
-//QFileDevice::MemoryMapFlags
 type QFileDevice__MemoryMapFlags int64
 
 const (
@@ -14010,8 +14054,9 @@ func NewQHistoryStateFromPointer(ptr unsafe.Pointer) (n *QHistoryState) {
 	return
 }
 
+// QHistoryState::HistoryType
+//
 //go:generate stringer -type=QHistoryState__HistoryType
-//QHistoryState::HistoryType
 type QHistoryState__HistoryType int64
 
 const (
@@ -14197,8 +14242,9 @@ func NewQIODeviceFromPointer(ptr unsafe.Pointer) (n *QIODevice) {
 	return
 }
 
+// QIODevice::OpenModeFlag
+//
 //go:generate stringer -type=QIODevice__OpenModeFlag
-//QIODevice::OpenModeFlag
 type QIODevice__OpenModeFlag int64
 
 const (
@@ -15239,8 +15285,9 @@ func NewQItemSelectionModelFromPointer(ptr unsafe.Pointer) (n *QItemSelectionMod
 	return
 }
 
+// QItemSelectionModel::SelectionFlag
+//
 //go:generate stringer -type=QItemSelectionModel__SelectionFlag
-//QItemSelectionModel::SelectionFlag
 type QItemSelectionModel__SelectionFlag int64
 
 const (
@@ -16055,8 +16102,9 @@ func NewQJsonDocumentFromPointer(ptr unsafe.Pointer) (n *QJsonDocument) {
 	return
 }
 
+// QJsonDocument::DataValidation
+//
 //go:generate stringer -type=QJsonDocument__DataValidation
-//QJsonDocument::DataValidation
 type QJsonDocument__DataValidation int64
 
 const (
@@ -16064,8 +16112,9 @@ const (
 	QJsonDocument__BypassValidation QJsonDocument__DataValidation = QJsonDocument__DataValidation(1)
 )
 
+// QJsonDocument::JsonFormat
+//
 //go:generate stringer -type=QJsonDocument__JsonFormat
-//QJsonDocument::JsonFormat
 type QJsonDocument__JsonFormat int64
 
 const (
@@ -16524,8 +16573,9 @@ func NewQJsonParseErrorFromPointer(ptr unsafe.Pointer) (n *QJsonParseError) {
 func (ptr *QJsonParseError) DestroyQJsonParseError() {
 }
 
+// QJsonParseError::ParseError
+//
 //go:generate stringer -type=QJsonParseError__ParseError
-//QJsonParseError::ParseError
 type QJsonParseError__ParseError int64
 
 const (
@@ -16613,8 +16663,9 @@ func NewQJsonValueFromPointer(ptr unsafe.Pointer) (n *QJsonValue) {
 	return
 }
 
+// QJsonValue::Type
+//
 //go:generate stringer -type=QJsonValue__Type
-//QJsonValue::Type
 type QJsonValue__Type int64
 
 const (
@@ -17260,8 +17311,9 @@ func NewQLibraryFromPointer(ptr unsafe.Pointer) (n *QLibrary) {
 	return
 }
 
+// QLibrary::LoadHint
+//
 //go:generate stringer -type=QLibrary__LoadHint
-//QLibrary::LoadHint
 type QLibrary__LoadHint int64
 
 const (
@@ -17452,8 +17504,9 @@ func NewQLibraryInfoFromPointer(ptr unsafe.Pointer) (n *QLibraryInfo) {
 func (ptr *QLibraryInfo) DestroyQLibraryInfo() {
 }
 
+// QLibraryInfo::LibraryLocation
+//
 //go:generate stringer -type=QLibraryInfo__LibraryLocation
-//QLibraryInfo::LibraryLocation
 type QLibraryInfo__LibraryLocation int64
 
 const (
@@ -17699,8 +17752,9 @@ func NewQLineFFromPointer(ptr unsafe.Pointer) (n *QLineF) {
 func (ptr *QLineF) DestroyQLineF() {
 }
 
+// QLineF::IntersectType
+//
 //go:generate stringer -type=QLineF__IntersectType
-//QLineF::IntersectType
 type QLineF__IntersectType int64
 
 const (
@@ -18233,8 +18287,9 @@ func NewQLocaleFromPointer(ptr unsafe.Pointer) (n *QLocale) {
 	return
 }
 
+// QLocale::Language
+//
 //go:generate stringer -type=QLocale__Language
-//QLocale::Language
 type QLocale__Language int64
 
 const (
@@ -18620,8 +18675,9 @@ const (
 	QLocale__LastLanguage              QLocale__Language = QLocale__Language(QLocale__WesternBalochi)
 )
 
+// QLocale::Script
+//
 //go:generate stringer -type=QLocale__Script
-//QLocale::Script
 type QLocale__Script int64
 
 const (
@@ -18772,8 +18828,9 @@ const (
 	QLocale__LastScript                  QLocale__Script = QLocale__Script(QLocale__JamoScript)
 )
 
+// QLocale::Country
+//
 //go:generate stringer -type=QLocale__Country
-//QLocale::Country
 type QLocale__Country int64
 
 const (
@@ -19051,8 +19108,9 @@ const (
 	QLocale__LastCountry                            QLocale__Country = QLocale__Country(QLocale__Europe)
 )
 
+// QLocale::MeasurementSystem
+//
 //go:generate stringer -type=QLocale__MeasurementSystem
-//QLocale::MeasurementSystem
 type QLocale__MeasurementSystem int64
 
 const (
@@ -19062,8 +19120,9 @@ const (
 	QLocale__ImperialSystem   QLocale__MeasurementSystem = QLocale__MeasurementSystem(QLocale__ImperialUSSystem)
 )
 
+// QLocale::FormatType
+//
 //go:generate stringer -type=QLocale__FormatType
-//QLocale::FormatType
 type QLocale__FormatType int64
 
 const (
@@ -19072,8 +19131,9 @@ const (
 	QLocale__NarrowFormat QLocale__FormatType = QLocale__FormatType(2)
 )
 
+// QLocale::NumberOption
+//
 //go:generate stringer -type=QLocale__NumberOption
-//QLocale::NumberOption
 type QLocale__NumberOption int64
 
 const (
@@ -19086,16 +19146,18 @@ const (
 	QLocale__RejectTrailingZeroesAfterDot  QLocale__NumberOption = QLocale__NumberOption(0x20)
 )
 
+// QLocale::FloatingPointPrecisionOption
+//
 //go:generate stringer -type=QLocale__FloatingPointPrecisionOption
-//QLocale::FloatingPointPrecisionOption
 type QLocale__FloatingPointPrecisionOption int64
 
 const (
 	QLocale__FloatingPointShortest QLocale__FloatingPointPrecisionOption = QLocale__FloatingPointPrecisionOption(-128)
 )
 
+// QLocale::CurrencySymbolFormat
+//
 //go:generate stringer -type=QLocale__CurrencySymbolFormat
-//QLocale::CurrencySymbolFormat
 type QLocale__CurrencySymbolFormat int64
 
 const (
@@ -19104,8 +19166,9 @@ const (
 	QLocale__CurrencyDisplayName QLocale__CurrencySymbolFormat = QLocale__CurrencySymbolFormat(2)
 )
 
+// QLocale::DataSizeFormat
+//
 //go:generate stringer -type=QLocale__DataSizeFormat
-//QLocale::DataSizeFormat
 type QLocale__DataSizeFormat int64
 
 const (
@@ -19116,8 +19179,9 @@ const (
 	QLocale__DataSizeSIFormat          QLocale__DataSizeFormat = QLocale__DataSizeFormat(QLocale__DataSizeBase1000 | QLocale__DataSizeSIQuantifiers)
 )
 
+// QLocale::QuotationStyle
+//
 //go:generate stringer -type=QLocale__QuotationStyle
-//QLocale::QuotationStyle
 type QLocale__QuotationStyle int64
 
 var (
@@ -19812,8 +19876,9 @@ func NewQLockFileFromPointer(ptr unsafe.Pointer) (n *QLockFile) {
 	return
 }
 
+// QLockFile::LockError
+//
 //go:generate stringer -type=QLockFile__LockError
-//QLockFile::LockError
 type QLockFile__LockError int64
 
 const (
@@ -20897,8 +20962,9 @@ func NewQMetaMethodFromPointer(ptr unsafe.Pointer) (n *QMetaMethod) {
 func (ptr *QMetaMethod) DestroyQMetaMethod() {
 }
 
+// QMetaMethod::Access
+//
 //go:generate stringer -type=QMetaMethod__Access
-//QMetaMethod::Access
 type QMetaMethod__Access int64
 
 const (
@@ -20907,8 +20973,9 @@ const (
 	QMetaMethod__Public    QMetaMethod__Access = QMetaMethod__Access(2)
 )
 
+// QMetaMethod::MethodType
+//
 //go:generate stringer -type=QMetaMethod__MethodType
-//QMetaMethod::MethodType
 type QMetaMethod__MethodType int64
 
 const (
@@ -21515,8 +21582,9 @@ func NewQMetaTypeFromPointer(ptr unsafe.Pointer) (n *QMetaType) {
 	return
 }
 
+// QMetaType::Type
+//
 //go:generate stringer -type=QMetaType__Type
-//QMetaType::Type
 type QMetaType__Type int64
 
 const (
@@ -21605,8 +21673,9 @@ const (
 	QMetaType__User                  QMetaType__Type = QMetaType__Type(1024)
 )
 
+// QMetaType::TypeFlag
+//
 //go:generate stringer -type=QMetaType__TypeFlag
-//QMetaType::TypeFlag
 type QMetaType__TypeFlag int64
 
 const (
@@ -22152,8 +22221,9 @@ func NewQMimeDatabaseFromPointer(ptr unsafe.Pointer) (n *QMimeDatabase) {
 	return
 }
 
+// QMimeDatabase::MatchMode
+//
 //go:generate stringer -type=QMimeDatabase__MatchMode
-//QMimeDatabase::MatchMode
 type QMimeDatabase__MatchMode int64
 
 const (
@@ -22918,8 +22988,9 @@ func NewQMutexFromPointer(ptr unsafe.Pointer) (n *QMutex) {
 	return
 }
 
+// QMutex::RecursionMode
+//
 //go:generate stringer -type=QMutex__RecursionMode
-//QMutex::RecursionMode
 type QMutex__RecursionMode int64
 
 const (
@@ -23898,8 +23969,9 @@ func NewQOperatingSystemVersionFromPointer(ptr unsafe.Pointer) (n *QOperatingSys
 func (ptr *QOperatingSystemVersion) DestroyQOperatingSystemVersion() {
 }
 
+// QOperatingSystemVersion::OSType
+//
 //go:generate stringer -type=QOperatingSystemVersion__OSType
-//QOperatingSystemVersion::OSType
 type QOperatingSystemVersion__OSType int64
 
 const (
@@ -25028,8 +25100,9 @@ func NewQProcessFromPointer(ptr unsafe.Pointer) (n *QProcess) {
 	return
 }
 
+// QProcess::ProcessError
+//
 //go:generate stringer -type=QProcess__ProcessError
-//QProcess::ProcessError
 type QProcess__ProcessError int64
 
 const (
@@ -25041,8 +25114,9 @@ const (
 	QProcess__UnknownError  QProcess__ProcessError = QProcess__ProcessError(5)
 )
 
+// QProcess::ProcessState
+//
 //go:generate stringer -type=QProcess__ProcessState
-//QProcess::ProcessState
 type QProcess__ProcessState int64
 
 const (
@@ -25051,8 +25125,9 @@ const (
 	QProcess__Running    QProcess__ProcessState = QProcess__ProcessState(2)
 )
 
+// QProcess::ProcessChannel
+//
 //go:generate stringer -type=QProcess__ProcessChannel
-//QProcess::ProcessChannel
 type QProcess__ProcessChannel int64
 
 const (
@@ -25060,8 +25135,9 @@ const (
 	QProcess__StandardError  QProcess__ProcessChannel = QProcess__ProcessChannel(1)
 )
 
+// QProcess::ProcessChannelMode
+//
 //go:generate stringer -type=QProcess__ProcessChannelMode
-//QProcess::ProcessChannelMode
 type QProcess__ProcessChannelMode int64
 
 const (
@@ -25072,8 +25148,9 @@ const (
 	QProcess__ForwardedErrorChannel  QProcess__ProcessChannelMode = QProcess__ProcessChannelMode(4)
 )
 
+// QProcess::InputChannelMode
+//
 //go:generate stringer -type=QProcess__InputChannelMode
-//QProcess::InputChannelMode
 type QProcess__InputChannelMode int64
 
 const (
@@ -25081,8 +25158,9 @@ const (
 	QProcess__ForwardedInputChannel QProcess__InputChannelMode = QProcess__InputChannelMode(1)
 )
 
+// QProcess::ExitStatus
+//
 //go:generate stringer -type=QProcess__ExitStatus
-//QProcess::ExitStatus
 type QProcess__ExitStatus int64
 
 const (
@@ -26087,8 +26165,9 @@ func NewQReadWriteLockFromPointer(ptr unsafe.Pointer) (n *QReadWriteLock) {
 	return
 }
 
+// QReadWriteLock::RecursionMode
+//
 //go:generate stringer -type=QReadWriteLock__RecursionMode
-//QReadWriteLock::RecursionMode
 type QReadWriteLock__RecursionMode int64
 
 const (
@@ -26943,8 +27022,9 @@ func NewQRegExpFromPointer(ptr unsafe.Pointer) (n *QRegExp) {
 	return
 }
 
+// QRegExp::PatternSyntax
+//
 //go:generate stringer -type=QRegExp__PatternSyntax
-//QRegExp::PatternSyntax
 type QRegExp__PatternSyntax int64
 
 const (
@@ -26956,8 +27036,9 @@ const (
 	QRegExp__W3CXmlSchema11 QRegExp__PatternSyntax = QRegExp__PatternSyntax(5)
 )
 
+// QRegExp::CaretMode
+//
 //go:generate stringer -type=QRegExp__CaretMode
-//QRegExp::CaretMode
 type QRegExp__CaretMode int64
 
 const (
@@ -27138,8 +27219,9 @@ func NewQRegularExpressionFromPointer(ptr unsafe.Pointer) (n *QRegularExpression
 	return
 }
 
+// QRegularExpression::PatternOption
+//
 //go:generate stringer -type=QRegularExpression__PatternOption
-//QRegularExpression::PatternOption
 type QRegularExpression__PatternOption int64
 
 const (
@@ -27155,8 +27237,9 @@ const (
 	QRegularExpression__DontAutomaticallyOptimizeOption QRegularExpression__PatternOption = QRegularExpression__PatternOption(0x0100)
 )
 
+// QRegularExpression::MatchType
+//
 //go:generate stringer -type=QRegularExpression__MatchType
-//QRegularExpression::MatchType
 type QRegularExpression__MatchType int64
 
 const (
@@ -27166,8 +27249,9 @@ const (
 	QRegularExpression__NoMatch                    QRegularExpression__MatchType = QRegularExpression__MatchType(3)
 )
 
+// QRegularExpression::MatchOption
+//
 //go:generate stringer -type=QRegularExpression__MatchOption
-//QRegularExpression::MatchOption
 type QRegularExpression__MatchOption int64
 
 const (
@@ -27571,8 +27655,9 @@ func NewQResourceFromPointer(ptr unsafe.Pointer) (n *QResource) {
 	return
 }
 
+// QResource::Compression
+//
 //go:generate stringer -type=QResource__Compression
-//QResource::Compression
 type QResource__Compression int64
 
 const (
@@ -28802,8 +28887,9 @@ func NewQSettingsFromPointer(ptr unsafe.Pointer) (n *QSettings) {
 	return
 }
 
+// QSettings::Status
+//
 //go:generate stringer -type=QSettings__Status
-//QSettings::Status
 type QSettings__Status int64
 
 const (
@@ -28812,8 +28898,9 @@ const (
 	QSettings__FormatError QSettings__Status = QSettings__Status(2)
 )
 
+// QSettings::Format
+//
 //go:generate stringer -type=QSettings__Format
-//QSettings::Format
 type QSettings__Format int64
 
 const (
@@ -28840,8 +28927,9 @@ const (
 	QSettings__CustomFormat16   QSettings__Format = QSettings__Format(32)
 )
 
+// QSettings::Scope
+//
 //go:generate stringer -type=QSettings__Scope
-//QSettings::Scope
 type QSettings__Scope int64
 
 const (
@@ -29224,8 +29312,9 @@ func NewQSharedMemoryFromPointer(ptr unsafe.Pointer) (n *QSharedMemory) {
 	return
 }
 
+// QSharedMemory::AccessMode
+//
 //go:generate stringer -type=QSharedMemory__AccessMode
-//QSharedMemory::AccessMode
 type QSharedMemory__AccessMode int64
 
 const (
@@ -29233,8 +29322,9 @@ const (
 	QSharedMemory__ReadWrite QSharedMemory__AccessMode = QSharedMemory__AccessMode(1)
 )
 
+// QSharedMemory::SharedMemoryError
+//
 //go:generate stringer -type=QSharedMemory__SharedMemoryError
-//QSharedMemory::SharedMemoryError
 type QSharedMemory__SharedMemoryError int64
 
 const (
@@ -30010,8 +30100,9 @@ func NewQSocketNotifierFromPointer(ptr unsafe.Pointer) (n *QSocketNotifier) {
 	return
 }
 
+// QSocketNotifier::Type
+//
 //go:generate stringer -type=QSocketNotifier__Type
-//QSocketNotifier::Type
 type QSocketNotifier__Type int64
 
 const (
@@ -30718,8 +30809,9 @@ func NewQStandardPathsFromPointer(ptr unsafe.Pointer) (n *QStandardPaths) {
 func (ptr *QStandardPaths) DestroyQStandardPaths() {
 }
 
+// QStandardPaths::StandardLocation
+//
 //go:generate stringer -type=QStandardPaths__StandardLocation
-//QStandardPaths::StandardLocation
 type QStandardPaths__StandardLocation int64
 
 const (
@@ -30745,8 +30837,9 @@ const (
 	QStandardPaths__AppLocalDataLocation  QStandardPaths__StandardLocation = QStandardPaths__StandardLocation(QStandardPaths__DataLocation)
 )
 
+// QStandardPaths::LocateOption
+//
 //go:generate stringer -type=QStandardPaths__LocateOption
-//QStandardPaths::LocateOption
 type QStandardPaths__LocateOption int64
 
 const (
@@ -30872,8 +30965,9 @@ func NewQStateFromPointer(ptr unsafe.Pointer) (n *QState) {
 	return
 }
 
+// QState::ChildMode
+//
 //go:generate stringer -type=QState__ChildMode
-//QState::ChildMode
 type QState__ChildMode int64
 
 const (
@@ -30881,8 +30975,9 @@ const (
 	QState__ParallelStates  QState__ChildMode = QState__ChildMode(1)
 )
 
+// QState::RestorePolicy
+//
 //go:generate stringer -type=QState__RestorePolicy
-//QState::RestorePolicy
 type QState__RestorePolicy int64
 
 const (
@@ -31133,8 +31228,9 @@ func NewQStateMachineFromPointer(ptr unsafe.Pointer) (n *QStateMachine) {
 	return
 }
 
+// QStateMachine::EventPriority
+//
 //go:generate stringer -type=QStateMachine__EventPriority
-//QStateMachine::EventPriority
 type QStateMachine__EventPriority int64
 
 const (
@@ -31142,8 +31238,9 @@ const (
 	QStateMachine__HighPriority   QStateMachine__EventPriority = QStateMachine__EventPriority(1)
 )
 
+// QStateMachine::Error
+//
 //go:generate stringer -type=QStateMachine__Error
-//QStateMachine::Error
 type QStateMachine__Error int64
 
 const (
@@ -31796,8 +31893,9 @@ func NewQStringFromPointer(ptr unsafe.Pointer) (n *QString) {
 	return
 }
 
+// QString::SectionFlag
+//
 //go:generate stringer -type=QString__SectionFlag
-//QString::SectionFlag
 type QString__SectionFlag int64
 
 const (
@@ -31808,8 +31906,9 @@ const (
 	QString__SectionCaseInsensitiveSeps QString__SectionFlag = QString__SectionFlag(0x08)
 )
 
+// QString::SplitBehavior
+//
 //go:generate stringer -type=QString__SplitBehavior
-//QString::SplitBehavior
 type QString__SplitBehavior int64
 
 const (
@@ -31817,8 +31916,9 @@ const (
 	QString__SkipEmptyParts QString__SplitBehavior = QString__SplitBehavior(1)
 )
 
+// QString::NormalizationForm
+//
 //go:generate stringer -type=QString__NormalizationForm
-//QString::NormalizationForm
 type QString__NormalizationForm int64
 
 const (
@@ -32896,16 +32996,18 @@ func NewQSysInfoFromPointer(ptr unsafe.Pointer) (n *QSysInfo) {
 func (ptr *QSysInfo) DestroyQSysInfo() {
 }
 
+// QSysInfo::Sizes
+//
 //go:generate stringer -type=QSysInfo__Sizes
-//QSysInfo::Sizes
 type QSysInfo__Sizes int64
 
 var (
 	QSysInfo__WordSize QSysInfo__Sizes = QSysInfo__Sizes(0)
 )
 
+// QSysInfo::Endian
+//
 //go:generate stringer -type=QSysInfo__Endian
-//QSysInfo::Endian
 type QSysInfo__Endian int64
 
 const (
@@ -33065,8 +33167,9 @@ func NewQSystemSemaphoreFromPointer(ptr unsafe.Pointer) (n *QSystemSemaphore) {
 	return
 }
 
+// QSystemSemaphore::AccessMode
+//
 //go:generate stringer -type=QSystemSemaphore__AccessMode
-//QSystemSemaphore::AccessMode
 type QSystemSemaphore__AccessMode int64
 
 const (
@@ -33074,8 +33177,9 @@ const (
 	QSystemSemaphore__Create QSystemSemaphore__AccessMode = QSystemSemaphore__AccessMode(1)
 )
 
+// QSystemSemaphore::SystemSemaphoreError
+//
 //go:generate stringer -type=QSystemSemaphore__SystemSemaphoreError
-//QSystemSemaphore::SystemSemaphoreError
 type QSystemSemaphore__SystemSemaphoreError int64
 
 const (
@@ -33393,8 +33497,9 @@ func NewQTextBoundaryFinderFromPointer(ptr unsafe.Pointer) (n *QTextBoundaryFind
 	return
 }
 
+// QTextBoundaryFinder::BoundaryType
+//
 //go:generate stringer -type=QTextBoundaryFinder__BoundaryType
-//QTextBoundaryFinder::BoundaryType
 type QTextBoundaryFinder__BoundaryType int64
 
 const (
@@ -33404,8 +33509,9 @@ const (
 	QTextBoundaryFinder__Line     QTextBoundaryFinder__BoundaryType = QTextBoundaryFinder__BoundaryType(3)
 )
 
+// QTextBoundaryFinder::BoundaryReason
+//
 //go:generate stringer -type=QTextBoundaryFinder__BoundaryReason
-//QTextBoundaryFinder::BoundaryReason
 type QTextBoundaryFinder__BoundaryReason int64
 
 const (
@@ -33534,8 +33640,9 @@ func NewQTextCodecFromPointer(ptr unsafe.Pointer) (n *QTextCodec) {
 	return
 }
 
+// QTextCodec::ConversionFlag
+//
 //go:generate stringer -type=QTextCodec__ConversionFlag
-//QTextCodec::ConversionFlag
 type QTextCodec__ConversionFlag int64
 
 const (
@@ -33999,8 +34106,9 @@ func NewQTextStreamFromPointer(ptr unsafe.Pointer) (n *QTextStream) {
 	return
 }
 
+// QTextStream::RealNumberNotation
+//
 //go:generate stringer -type=QTextStream__RealNumberNotation
-//QTextStream::RealNumberNotation
 type QTextStream__RealNumberNotation int64
 
 const (
@@ -34009,8 +34117,9 @@ const (
 	QTextStream__ScientificNotation QTextStream__RealNumberNotation = QTextStream__RealNumberNotation(2)
 )
 
+// QTextStream::FieldAlignment
+//
 //go:generate stringer -type=QTextStream__FieldAlignment
-//QTextStream::FieldAlignment
 type QTextStream__FieldAlignment int64
 
 const (
@@ -34020,8 +34129,9 @@ const (
 	QTextStream__AlignAccountingStyle QTextStream__FieldAlignment = QTextStream__FieldAlignment(3)
 )
 
+// QTextStream::Status
+//
 //go:generate stringer -type=QTextStream__Status
-//QTextStream::Status
 type QTextStream__Status int64
 
 const (
@@ -34031,8 +34141,9 @@ const (
 	QTextStream__WriteFailed     QTextStream__Status = QTextStream__Status(3)
 )
 
+// QTextStream::NumberFlag
+//
 //go:generate stringer -type=QTextStream__NumberFlag
-//QTextStream::NumberFlag
 type QTextStream__NumberFlag int64
 
 const (
@@ -34381,8 +34492,9 @@ func NewQThreadFromPointer(ptr unsafe.Pointer) (n *QThread) {
 	return
 }
 
+// QThread::Priority
+//
 //go:generate stringer -type=QThread__Priority
-//QThread::Priority
 type QThread__Priority int64
 
 const (
@@ -35143,8 +35255,9 @@ func NewQTimeLineFromPointer(ptr unsafe.Pointer) (n *QTimeLine) {
 	return
 }
 
+// QTimeLine::State
+//
 //go:generate stringer -type=QTimeLine__State
-//QTimeLine::State
 type QTimeLine__State int64
 
 const (
@@ -35153,8 +35266,9 @@ const (
 	QTimeLine__Running    QTimeLine__State = QTimeLine__State(2)
 )
 
+// QTimeLine::Direction
+//
 //go:generate stringer -type=QTimeLine__Direction
-//QTimeLine::Direction
 type QTimeLine__Direction int64
 
 const (
@@ -35162,8 +35276,9 @@ const (
 	QTimeLine__Backward QTimeLine__Direction = QTimeLine__Direction(1)
 )
 
+// QTimeLine::CurveShape
+//
 //go:generate stringer -type=QTimeLine__CurveShape
-//QTimeLine::CurveShape
 type QTimeLine__CurveShape int64
 
 const (
@@ -35532,8 +35647,9 @@ func NewQTimeZoneFromPointer(ptr unsafe.Pointer) (n *QTimeZone) {
 	return
 }
 
+// QTimeZone::TimeType
+//
 //go:generate stringer -type=QTimeZone__TimeType
-//QTimeZone::TimeType
 type QTimeZone__TimeType int64
 
 const (
@@ -35542,8 +35658,9 @@ const (
 	QTimeZone__GenericTime  QTimeZone__TimeType = QTimeZone__TimeType(2)
 )
 
+// QTimeZone::NameType
+//
 //go:generate stringer -type=QTimeZone__NameType
-//QTimeZone::NameType
 type QTimeZone__NameType int64
 
 const (
@@ -36579,8 +36696,9 @@ func NewQUrlFromPointer(ptr unsafe.Pointer) (n *QUrl) {
 	return
 }
 
+// QUrl::ParsingMode
+//
 //go:generate stringer -type=QUrl__ParsingMode
-//QUrl::ParsingMode
 type QUrl__ParsingMode int64
 
 const (
@@ -36589,8 +36707,9 @@ const (
 	QUrl__DecodedMode  QUrl__ParsingMode = QUrl__ParsingMode(2)
 )
 
+// QUrl::UrlFormattingOption
+//
 //go:generate stringer -type=QUrl__UrlFormattingOption
-//QUrl::UrlFormattingOption
 type QUrl__UrlFormattingOption int64
 
 const (
@@ -36609,8 +36728,9 @@ const (
 	QUrl__NormalizePathSegments QUrl__UrlFormattingOption = QUrl__UrlFormattingOption(0x1000)
 )
 
+// QUrl::ComponentFormattingOption
+//
 //go:generate stringer -type=QUrl__ComponentFormattingOption
-//QUrl::ComponentFormattingOption
 type QUrl__ComponentFormattingOption int64
 
 const (
@@ -36624,8 +36744,9 @@ const (
 	QUrl__FullyDecoded     QUrl__ComponentFormattingOption = QUrl__ComponentFormattingOption(QUrl__FullyEncoded | QUrl__DecodeReserved | 0x4000000)
 )
 
+// QUrl::UserInputResolutionOption
+//
 //go:generate stringer -type=QUrl__UserInputResolutionOption
-//QUrl::UserInputResolutionOption
 type QUrl__UserInputResolutionOption int64
 
 const (
@@ -37284,8 +37405,9 @@ func NewQUuidFromPointer(ptr unsafe.Pointer) (n *QUuid) {
 func (ptr *QUuid) DestroyQUuid() {
 }
 
+// QUuid::Variant
+//
 //go:generate stringer -type=QUuid__Variant
-//QUuid::Variant
 type QUuid__Variant int64
 
 const (
@@ -37296,8 +37418,9 @@ const (
 	QUuid__Reserved   QUuid__Variant = QUuid__Variant(7)
 )
 
+// QUuid::Version
+//
 //go:generate stringer -type=QUuid__Version
-//QUuid::Version
 type QUuid__Version int64
 
 const (
@@ -37310,8 +37433,9 @@ const (
 	QUuid__Sha1          QUuid__Version = QUuid__Version(5)
 )
 
+// QUuid::StringFormat
+//
 //go:generate stringer -type=QUuid__StringFormat
-//QUuid::StringFormat
 type QUuid__StringFormat int64
 
 const (
@@ -37915,8 +38039,9 @@ func (ptr *QVariant) ToGoType(dst interface{}) {
 	}
 }
 
+// QVariant::Type
+//
 //go:generate stringer -type=QVariant__Type
-//QVariant::Type
 type QVariant__Type int64
 
 const (
@@ -39986,8 +40111,9 @@ func NewQXmlStreamReaderFromPointer(ptr unsafe.Pointer) (n *QXmlStreamReader) {
 	return
 }
 
+// QXmlStreamReader::TokenType
+//
 //go:generate stringer -type=QXmlStreamReader__TokenType
-//QXmlStreamReader::TokenType
 type QXmlStreamReader__TokenType int64
 
 const (
@@ -40004,8 +40130,9 @@ const (
 	QXmlStreamReader__ProcessingInstruction QXmlStreamReader__TokenType = QXmlStreamReader__TokenType(10)
 )
 
+// QXmlStreamReader::ReadElementTextBehaviour
+//
 //go:generate stringer -type=QXmlStreamReader__ReadElementTextBehaviour
-//QXmlStreamReader::ReadElementTextBehaviour
 type QXmlStreamReader__ReadElementTextBehaviour int64
 
 const (
@@ -40014,8 +40141,9 @@ const (
 	QXmlStreamReader__SkipChildElements        QXmlStreamReader__ReadElementTextBehaviour = QXmlStreamReader__ReadElementTextBehaviour(2)
 )
 
+// QXmlStreamReader::Error
+//
 //go:generate stringer -type=QXmlStreamReader__Error
-//QXmlStreamReader::Error
 type QXmlStreamReader__Error int64
 
 const (
@@ -40582,8 +40710,9 @@ func NewQtFromPointer(ptr unsafe.Pointer) (n *Qt) {
 func (ptr *Qt) DestroyQt() {
 }
 
+// Qt::GlobalColor
+//
 //go:generate stringer -type=Qt__GlobalColor
-//Qt::GlobalColor
 type Qt__GlobalColor int64
 
 const (
@@ -40609,8 +40738,9 @@ const (
 	Qt__transparent Qt__GlobalColor = Qt__GlobalColor(19)
 )
 
+// Qt::KeyboardModifier
+//
 //go:generate stringer -type=Qt__KeyboardModifier
-//Qt::KeyboardModifier
 type Qt__KeyboardModifier int64
 
 const (
@@ -40624,8 +40754,9 @@ const (
 	Qt__KeyboardModifierMask Qt__KeyboardModifier = Qt__KeyboardModifier(0xfe000000)
 )
 
+// Qt::Modifier
+//
 //go:generate stringer -type=Qt__Modifier
-//Qt::Modifier
 type Qt__Modifier int64
 
 const (
@@ -40637,8 +40768,9 @@ const (
 	Qt__UNICODE_ACCEL Qt__Modifier = Qt__Modifier(0x00000000)
 )
 
+// Qt::MouseButton
+//
 //go:generate stringer -type=Qt__MouseButton
-//Qt::MouseButton
 type Qt__MouseButton int64
 
 const (
@@ -40681,8 +40813,9 @@ const (
 	Qt__MouseButtonMask Qt__MouseButton = Qt__MouseButton(0xffffffff)
 )
 
+// Qt::Orientation
+//
 //go:generate stringer -type=Qt__Orientation
-//Qt::Orientation
 type Qt__Orientation int64
 
 const (
@@ -40690,8 +40823,9 @@ const (
 	Qt__Vertical   Qt__Orientation = Qt__Orientation(0x2)
 )
 
+// Qt::FocusPolicy
+//
 //go:generate stringer -type=Qt__FocusPolicy
-//Qt::FocusPolicy
 type Qt__FocusPolicy int64
 
 const (
@@ -40702,8 +40836,9 @@ const (
 	Qt__WheelFocus  Qt__FocusPolicy = Qt__FocusPolicy(Qt__StrongFocus | 0x4)
 )
 
+// Qt::TabFocusBehavior
+//
 //go:generate stringer -type=Qt__TabFocusBehavior
-//Qt::TabFocusBehavior
 type Qt__TabFocusBehavior int64
 
 const (
@@ -40713,8 +40848,9 @@ const (
 	Qt__TabFocusAllControls  Qt__TabFocusBehavior = Qt__TabFocusBehavior(0xff)
 )
 
+// Qt::SortOrder
+//
 //go:generate stringer -type=Qt__SortOrder
-//Qt::SortOrder
 type Qt__SortOrder int64
 
 const (
@@ -40722,8 +40858,9 @@ const (
 	Qt__DescendingOrder Qt__SortOrder = Qt__SortOrder(1)
 )
 
+// Qt::TileRule
+//
 //go:generate stringer -type=Qt__TileRule
-//Qt::TileRule
 type Qt__TileRule int64
 
 const (
@@ -40732,8 +40869,9 @@ const (
 	Qt__RoundTile   Qt__TileRule = Qt__TileRule(2)
 )
 
+// Qt::AlignmentFlag
+//
 //go:generate stringer -type=Qt__AlignmentFlag
-//Qt::AlignmentFlag
 type Qt__AlignmentFlag int64
 
 const (
@@ -40753,8 +40891,9 @@ const (
 	Qt__AlignCenter          Qt__AlignmentFlag = Qt__AlignmentFlag(Qt__AlignVCenter | Qt__AlignHCenter)
 )
 
+// Qt::TextFlag
+//
 //go:generate stringer -type=Qt__TextFlag
-//Qt::TextFlag
 type Qt__TextFlag int64
 
 const (
@@ -40774,8 +40913,9 @@ const (
 	Qt__TextBypassShaping         Qt__TextFlag = Qt__TextFlag(0x100000)
 )
 
+// Qt::TextElideMode
+//
 //go:generate stringer -type=Qt__TextElideMode
-//Qt::TextElideMode
 type Qt__TextElideMode int64
 
 const (
@@ -40785,8 +40925,9 @@ const (
 	Qt__ElideNone   Qt__TextElideMode = Qt__TextElideMode(3)
 )
 
+// Qt::WhiteSpaceMode
+//
 //go:generate stringer -type=Qt__WhiteSpaceMode
-//Qt::WhiteSpaceMode
 type Qt__WhiteSpaceMode int64
 
 const (
@@ -40796,8 +40937,9 @@ const (
 	Qt__WhiteSpaceModeUndefined Qt__WhiteSpaceMode = Qt__WhiteSpaceMode(-1)
 )
 
+// Qt::HitTestAccuracy
+//
 //go:generate stringer -type=Qt__HitTestAccuracy
-//Qt::HitTestAccuracy
 type Qt__HitTestAccuracy int64
 
 const (
@@ -40805,8 +40947,9 @@ const (
 	Qt__FuzzyHit Qt__HitTestAccuracy = Qt__HitTestAccuracy(1)
 )
 
+// Qt::WindowType
+//
 //go:generate stringer -type=Qt__WindowType
-//Qt::WindowType
 type Qt__WindowType int64
 
 const (
@@ -40850,8 +40993,9 @@ const (
 	Qt__WindowFullscreenButtonHint          Qt__WindowType = Qt__WindowType(0x80000000)
 )
 
+// Qt::WindowState
+//
 //go:generate stringer -type=Qt__WindowState
-//Qt::WindowState
 type Qt__WindowState int64
 
 const (
@@ -40862,8 +41006,9 @@ const (
 	Qt__WindowActive     Qt__WindowState = Qt__WindowState(0x00000008)
 )
 
+// Qt::ApplicationState
+//
 //go:generate stringer -type=Qt__ApplicationState
-//Qt::ApplicationState
 type Qt__ApplicationState int64
 
 const (
@@ -40873,8 +41018,9 @@ const (
 	Qt__ApplicationActive    Qt__ApplicationState = Qt__ApplicationState(0x00000004)
 )
 
+// Qt::ScreenOrientation
+//
 //go:generate stringer -type=Qt__ScreenOrientation
-//Qt::ScreenOrientation
 type Qt__ScreenOrientation int64
 
 const (
@@ -40885,8 +41031,9 @@ const (
 	Qt__InvertedLandscapeOrientation Qt__ScreenOrientation = Qt__ScreenOrientation(0x00000008)
 )
 
+// Qt::WidgetAttribute
+//
 //go:generate stringer -type=Qt__WidgetAttribute
-//Qt::WidgetAttribute
 type Qt__WidgetAttribute int64
 
 const (
@@ -41007,8 +41154,9 @@ const (
 	Qt__WA_AttributeCount                  Qt__WidgetAttribute = Qt__WidgetAttribute(132)
 )
 
+// Qt::ApplicationAttribute
+//
 //go:generate stringer -type=Qt__ApplicationAttribute
-//Qt::ApplicationAttribute
 type Qt__ApplicationAttribute int64
 
 const (
@@ -41046,8 +41194,9 @@ const (
 	Qt__AA_AttributeCount                          Qt__ApplicationAttribute = Qt__ApplicationAttribute(31)
 )
 
+// Qt::ImageConversionFlag
+//
 //go:generate stringer -type=Qt__ImageConversionFlag
-//Qt::ImageConversionFlag
 type Qt__ImageConversionFlag int64
 
 const (
@@ -41072,8 +41221,9 @@ const (
 	Qt__NoFormatConversion   Qt__ImageConversionFlag = Qt__ImageConversionFlag(0x00000200)
 )
 
+// Qt::BGMode
+//
 //go:generate stringer -type=Qt__BGMode
-//Qt::BGMode
 type Qt__BGMode int64
 
 const (
@@ -41081,8 +41231,9 @@ const (
 	Qt__OpaqueMode      Qt__BGMode = Qt__BGMode(1)
 )
 
+// Qt::Key
+//
 //go:generate stringer -type=Qt__Key
-//Qt::Key
 type Qt__Key int64
 
 const (
@@ -41557,8 +41708,9 @@ const (
 	Qt__Key_unknown                 Qt__Key = Qt__Key(0x01ffffff)
 )
 
+// Qt::ArrowType
+//
 //go:generate stringer -type=Qt__ArrowType
-//Qt::ArrowType
 type Qt__ArrowType int64
 
 const (
@@ -41569,8 +41721,9 @@ const (
 	Qt__RightArrow Qt__ArrowType = Qt__ArrowType(4)
 )
 
+// Qt::PenStyle
+//
 //go:generate stringer -type=Qt__PenStyle
-//Qt::PenStyle
 type Qt__PenStyle int64
 
 var (
@@ -41584,8 +41737,9 @@ var (
 	Qt__MPenStyle      Qt__PenStyle = Qt__PenStyle(0x0f)
 )
 
+// Qt::PenCapStyle
+//
 //go:generate stringer -type=Qt__PenCapStyle
-//Qt::PenCapStyle
 type Qt__PenCapStyle int64
 
 var (
@@ -41595,8 +41749,9 @@ var (
 	Qt__MPenCapStyle Qt__PenCapStyle = Qt__PenCapStyle(0x30)
 )
 
+// Qt::PenJoinStyle
+//
 //go:generate stringer -type=Qt__PenJoinStyle
-//Qt::PenJoinStyle
 type Qt__PenJoinStyle int64
 
 var (
@@ -41607,8 +41762,9 @@ var (
 	Qt__MPenJoinStyle Qt__PenJoinStyle = Qt__PenJoinStyle(0x1c0)
 )
 
+// Qt::BrushStyle
+//
 //go:generate stringer -type=Qt__BrushStyle
-//Qt::BrushStyle
 type Qt__BrushStyle int64
 
 var (
@@ -41633,8 +41789,9 @@ var (
 	Qt__TexturePattern         Qt__BrushStyle = Qt__BrushStyle(24)
 )
 
+// Qt::SizeMode
+//
 //go:generate stringer -type=Qt__SizeMode
-//Qt::SizeMode
 type Qt__SizeMode int64
 
 const (
@@ -41642,8 +41799,9 @@ const (
 	Qt__RelativeSize Qt__SizeMode = Qt__SizeMode(1)
 )
 
+// Qt::UIEffect
+//
 //go:generate stringer -type=Qt__UIEffect
-//Qt::UIEffect
 type Qt__UIEffect int64
 
 const (
@@ -41656,8 +41814,9 @@ const (
 	Qt__UI_AnimateToolBox Qt__UIEffect = Qt__UIEffect(6)
 )
 
+// Qt::CursorShape
+//
 //go:generate stringer -type=Qt__CursorShape
-//Qt::CursorShape
 type Qt__CursorShape int64
 
 const (
@@ -41688,8 +41847,9 @@ const (
 	Qt__CustomCursor       Qt__CursorShape = Qt__CursorShape(25)
 )
 
+// Qt::TextFormat
+//
 //go:generate stringer -type=Qt__TextFormat
-//Qt::TextFormat
 type Qt__TextFormat int64
 
 const (
@@ -41698,8 +41858,9 @@ const (
 	Qt__AutoText  Qt__TextFormat = Qt__TextFormat(2)
 )
 
+// Qt::AspectRatioMode
+//
 //go:generate stringer -type=Qt__AspectRatioMode
-//Qt::AspectRatioMode
 type Qt__AspectRatioMode int64
 
 const (
@@ -41708,8 +41869,9 @@ const (
 	Qt__KeepAspectRatioByExpanding Qt__AspectRatioMode = Qt__AspectRatioMode(2)
 )
 
+// Qt::DockWidgetArea
+//
 //go:generate stringer -type=Qt__DockWidgetArea
-//Qt::DockWidgetArea
 type Qt__DockWidgetArea int64
 
 const (
@@ -41722,8 +41884,9 @@ const (
 	Qt__NoDockWidgetArea     Qt__DockWidgetArea = Qt__DockWidgetArea(0)
 )
 
+// Qt::ToolBarArea
+//
 //go:generate stringer -type=Qt__ToolBarArea
-//Qt::ToolBarArea
 type Qt__ToolBarArea int64
 
 const (
@@ -41736,8 +41899,9 @@ const (
 	Qt__NoToolBarArea     Qt__ToolBarArea = Qt__ToolBarArea(0)
 )
 
+// Qt::DateFormat
+//
 //go:generate stringer -type=Qt__DateFormat
-//Qt::DateFormat
 type Qt__DateFormat int64
 
 const (
@@ -41754,8 +41918,9 @@ const (
 	Qt__ISODateWithMs          Qt__DateFormat = Qt__DateFormat(9)
 )
 
+// Qt::TimeSpec
+//
 //go:generate stringer -type=Qt__TimeSpec
-//Qt::TimeSpec
 type Qt__TimeSpec int64
 
 const (
@@ -41765,8 +41930,9 @@ const (
 	Qt__TimeZone      Qt__TimeSpec = Qt__TimeSpec(3)
 )
 
+// Qt::DayOfWeek
+//
 //go:generate stringer -type=Qt__DayOfWeek
-//Qt::DayOfWeek
 type Qt__DayOfWeek int64
 
 const (
@@ -41779,8 +41945,9 @@ const (
 	Qt__Sunday    Qt__DayOfWeek = Qt__DayOfWeek(7)
 )
 
+// Qt::ScrollBarPolicy
+//
 //go:generate stringer -type=Qt__ScrollBarPolicy
-//Qt::ScrollBarPolicy
 type Qt__ScrollBarPolicy int64
 
 const (
@@ -41789,8 +41956,9 @@ const (
 	Qt__ScrollBarAlwaysOn  Qt__ScrollBarPolicy = Qt__ScrollBarPolicy(2)
 )
 
+// Qt::CaseSensitivity
+//
 //go:generate stringer -type=Qt__CaseSensitivity
-//Qt::CaseSensitivity
 type Qt__CaseSensitivity int64
 
 const (
@@ -41798,8 +41966,9 @@ const (
 	Qt__CaseSensitive   Qt__CaseSensitivity = Qt__CaseSensitivity(1)
 )
 
+// Qt::Corner
+//
 //go:generate stringer -type=Qt__Corner
-//Qt::Corner
 type Qt__Corner int64
 
 const (
@@ -41809,8 +41978,9 @@ const (
 	Qt__BottomRightCorner Qt__Corner = Qt__Corner(0x00003)
 )
 
+// Qt::Edge
+//
 //go:generate stringer -type=Qt__Edge
-//Qt::Edge
 type Qt__Edge int64
 
 const (
@@ -41820,8 +41990,9 @@ const (
 	Qt__BottomEdge Qt__Edge = Qt__Edge(0x00008)
 )
 
+// Qt::ShortcutContext
+//
 //go:generate stringer -type=Qt__ShortcutContext
-//Qt::ShortcutContext
 type Qt__ShortcutContext int64
 
 const (
@@ -41831,8 +42002,9 @@ const (
 	Qt__WidgetWithChildrenShortcut Qt__ShortcutContext = Qt__ShortcutContext(3)
 )
 
+// Qt::ConnectionType
+//
 //go:generate stringer -type=Qt__ConnectionType
-//Qt::ConnectionType
 type Qt__ConnectionType int64
 
 const (
@@ -41843,8 +42015,9 @@ const (
 	Qt__UniqueConnection         Qt__ConnectionType = Qt__ConnectionType(0x80)
 )
 
+// Qt::FillRule
+//
 //go:generate stringer -type=Qt__FillRule
-//Qt::FillRule
 type Qt__FillRule int64
 
 const (
@@ -41852,8 +42025,9 @@ const (
 	Qt__WindingFill Qt__FillRule = Qt__FillRule(1)
 )
 
+// Qt::MaskMode
+//
 //go:generate stringer -type=Qt__MaskMode
-//Qt::MaskMode
 type Qt__MaskMode int64
 
 const (
@@ -41861,8 +42035,9 @@ const (
 	Qt__MaskOutColor Qt__MaskMode = Qt__MaskMode(1)
 )
 
+// Qt::ClipOperation
+//
 //go:generate stringer -type=Qt__ClipOperation
-//Qt::ClipOperation
 type Qt__ClipOperation int64
 
 const (
@@ -41871,8 +42046,9 @@ const (
 	Qt__IntersectClip Qt__ClipOperation = Qt__ClipOperation(2)
 )
 
+// Qt::ItemSelectionMode
+//
 //go:generate stringer -type=Qt__ItemSelectionMode
-//Qt::ItemSelectionMode
 type Qt__ItemSelectionMode int64
 
 const (
@@ -41882,8 +42058,9 @@ const (
 	Qt__IntersectsItemBoundingRect Qt__ItemSelectionMode = Qt__ItemSelectionMode(0x3)
 )
 
+// Qt::ItemSelectionOperation
+//
 //go:generate stringer -type=Qt__ItemSelectionOperation
-//Qt::ItemSelectionOperation
 type Qt__ItemSelectionOperation int64
 
 const (
@@ -41891,8 +42068,9 @@ const (
 	Qt__AddToSelection   Qt__ItemSelectionOperation = Qt__ItemSelectionOperation(1)
 )
 
+// Qt::TransformationMode
+//
 //go:generate stringer -type=Qt__TransformationMode
-//Qt::TransformationMode
 type Qt__TransformationMode int64
 
 const (
@@ -41900,8 +42078,9 @@ const (
 	Qt__SmoothTransformation Qt__TransformationMode = Qt__TransformationMode(1)
 )
 
+// Qt::Axis
+//
 //go:generate stringer -type=Qt__Axis
-//Qt::Axis
 type Qt__Axis int64
 
 const (
@@ -41910,8 +42089,9 @@ const (
 	Qt__ZAxis Qt__Axis = Qt__Axis(2)
 )
 
+// Qt::FocusReason
+//
 //go:generate stringer -type=Qt__FocusReason
-//Qt::FocusReason
 type Qt__FocusReason int64
 
 const (
@@ -41926,8 +42106,9 @@ const (
 	Qt__NoFocusReason           Qt__FocusReason = Qt__FocusReason(8)
 )
 
+// Qt::ContextMenuPolicy
+//
 //go:generate stringer -type=Qt__ContextMenuPolicy
-//Qt::ContextMenuPolicy
 type Qt__ContextMenuPolicy int64
 
 const (
@@ -41938,8 +42119,9 @@ const (
 	Qt__PreventContextMenu Qt__ContextMenuPolicy = Qt__ContextMenuPolicy(4)
 )
 
+// Qt::InputMethodQuery
+//
 //go:generate stringer -type=Qt__InputMethodQuery
-//Qt::InputMethodQuery
 type Qt__InputMethodQuery int64
 
 const (
@@ -41964,8 +42146,9 @@ const (
 	Qt__ImQueryAll               Qt__InputMethodQuery = Qt__InputMethodQuery(0xffffffff)
 )
 
+// Qt::InputMethodHint
+//
 //go:generate stringer -type=Qt__InputMethodHint
-//Qt::InputMethodHint
 type Qt__InputMethodHint int64
 
 const (
@@ -41994,8 +42177,9 @@ const (
 	Qt__ImhExclusiveInputMask     Qt__InputMethodHint = Qt__InputMethodHint(0xffff0000)
 )
 
+// Qt::EnterKeyType
+//
 //go:generate stringer -type=Qt__EnterKeyType
-//Qt::EnterKeyType
 type Qt__EnterKeyType int64
 
 const (
@@ -42009,8 +42193,9 @@ const (
 	Qt__EnterKeyPrevious Qt__EnterKeyType = Qt__EnterKeyType(7)
 )
 
+// Qt::ToolButtonStyle
+//
 //go:generate stringer -type=Qt__ToolButtonStyle
-//Qt::ToolButtonStyle
 type Qt__ToolButtonStyle int64
 
 var (
@@ -42021,8 +42206,9 @@ var (
 	Qt__ToolButtonFollowStyle    Qt__ToolButtonStyle = Qt__ToolButtonStyle(4)
 )
 
+// Qt::LayoutDirection
+//
 //go:generate stringer -type=Qt__LayoutDirection
-//Qt::LayoutDirection
 type Qt__LayoutDirection int64
 
 const (
@@ -42031,8 +42217,9 @@ const (
 	Qt__LayoutDirectionAuto Qt__LayoutDirection = Qt__LayoutDirection(2)
 )
 
+// Qt::AnchorPoint
+//
 //go:generate stringer -type=Qt__AnchorPoint
-//Qt::AnchorPoint
 type Qt__AnchorPoint int64
 
 const (
@@ -42044,8 +42231,9 @@ const (
 	Qt__AnchorBottom           Qt__AnchorPoint = Qt__AnchorPoint(5)
 )
 
+// Qt::FindChildOption
+//
 //go:generate stringer -type=Qt__FindChildOption
-//Qt::FindChildOption
 type Qt__FindChildOption int64
 
 const (
@@ -42053,8 +42241,9 @@ const (
 	Qt__FindChildrenRecursively Qt__FindChildOption = Qt__FindChildOption(0x1)
 )
 
+// Qt::DropAction
+//
 //go:generate stringer -type=Qt__DropAction
-//Qt::DropAction
 type Qt__DropAction int64
 
 const (
@@ -42066,8 +42255,9 @@ const (
 	Qt__IgnoreAction     Qt__DropAction = Qt__DropAction(0x0)
 )
 
+// Qt::CheckState
+//
 //go:generate stringer -type=Qt__CheckState
-//Qt::CheckState
 type Qt__CheckState int64
 
 const (
@@ -42076,8 +42266,9 @@ const (
 	Qt__Checked          Qt__CheckState = Qt__CheckState(2)
 )
 
+// Qt::ItemDataRole
+//
 //go:generate stringer -type=Qt__ItemDataRole
-//Qt::ItemDataRole
 type Qt__ItemDataRole int64
 
 const (
@@ -42106,8 +42297,9 @@ const (
 	Qt__UserRole                  Qt__ItemDataRole = Qt__ItemDataRole(0x0100)
 )
 
+// Qt::ItemFlag
+//
 //go:generate stringer -type=Qt__ItemFlag
-//Qt::ItemFlag
 type Qt__ItemFlag int64
 
 const (
@@ -42124,8 +42316,9 @@ const (
 	Qt__ItemIsUserTristate   Qt__ItemFlag = Qt__ItemFlag(256)
 )
 
+// Qt::MatchFlag
+//
 //go:generate stringer -type=Qt__MatchFlag
-//Qt::MatchFlag
 type Qt__MatchFlag int64
 
 const (
@@ -42141,8 +42334,9 @@ const (
 	Qt__MatchRecursive     Qt__MatchFlag = Qt__MatchFlag(64)
 )
 
+// Qt::WindowModality
+//
 //go:generate stringer -type=Qt__WindowModality
-//Qt::WindowModality
 type Qt__WindowModality int64
 
 const (
@@ -42151,8 +42345,9 @@ const (
 	Qt__ApplicationModal Qt__WindowModality = Qt__WindowModality(2)
 )
 
+// Qt::TextInteractionFlag
+//
 //go:generate stringer -type=Qt__TextInteractionFlag
-//Qt::TextInteractionFlag
 type Qt__TextInteractionFlag int64
 
 const (
@@ -42166,8 +42361,9 @@ const (
 	Qt__TextBrowserInteraction    Qt__TextInteractionFlag = Qt__TextInteractionFlag(Qt__TextSelectableByMouse | Qt__LinksAccessibleByMouse | Qt__LinksAccessibleByKeyboard)
 )
 
+// Qt::EventPriority
+//
 //go:generate stringer -type=Qt__EventPriority
-//Qt::EventPriority
 type Qt__EventPriority int64
 
 const (
@@ -42176,8 +42372,9 @@ const (
 	Qt__LowEventPriority    Qt__EventPriority = Qt__EventPriority(-1)
 )
 
+// Qt::SizeHint
+//
 //go:generate stringer -type=Qt__SizeHint
-//Qt::SizeHint
 type Qt__SizeHint int64
 
 const (
@@ -42188,8 +42385,9 @@ const (
 	Qt__NSizeHints     Qt__SizeHint = Qt__SizeHint(4)
 )
 
+// Qt::WindowFrameSection
+//
 //go:generate stringer -type=Qt__WindowFrameSection
-//Qt::WindowFrameSection
 type Qt__WindowFrameSection int64
 
 const (
@@ -42205,8 +42403,9 @@ const (
 	Qt__TitleBarArea       Qt__WindowFrameSection = Qt__WindowFrameSection(9)
 )
 
+// Qt::CoordinateSystem
+//
 //go:generate stringer -type=Qt__CoordinateSystem
-//Qt::CoordinateSystem
 type Qt__CoordinateSystem int64
 
 const (
@@ -42214,8 +42413,9 @@ const (
 	Qt__LogicalCoordinates Qt__CoordinateSystem = Qt__CoordinateSystem(1)
 )
 
+// Qt::TouchPointState
+//
 //go:generate stringer -type=Qt__TouchPointState
-//Qt::TouchPointState
 type Qt__TouchPointState int64
 
 const (
@@ -42225,8 +42425,9 @@ const (
 	Qt__TouchPointReleased   Qt__TouchPointState = Qt__TouchPointState(0x08)
 )
 
+// Qt::GestureState
+//
 //go:generate stringer -type=Qt__GestureState
-//Qt::GestureState
 type Qt__GestureState int64
 
 const (
@@ -42237,8 +42438,9 @@ const (
 	Qt__GestureCanceled Qt__GestureState = Qt__GestureState(4)
 )
 
+// Qt::GestureType
+//
 //go:generate stringer -type=Qt__GestureType
-//Qt::GestureType
 type Qt__GestureType int64
 
 var (
@@ -42251,8 +42453,9 @@ var (
 	Qt__LastGestureType   Qt__GestureType = Qt__GestureType(0)
 )
 
+// Qt::GestureFlag
+//
 //go:generate stringer -type=Qt__GestureFlag
-//Qt::GestureFlag
 type Qt__GestureFlag int64
 
 const (
@@ -42261,8 +42464,9 @@ const (
 	Qt__IgnoredGesturesPropagateToParent Qt__GestureFlag = Qt__GestureFlag(0x04)
 )
 
+// Qt::NativeGestureType
+//
 //go:generate stringer -type=Qt__NativeGestureType
-//Qt::NativeGestureType
 type Qt__NativeGestureType int64
 
 const (
@@ -42275,8 +42479,9 @@ const (
 	Qt__SwipeNativeGesture     Qt__NativeGestureType = Qt__NativeGestureType(6)
 )
 
+// Qt::NavigationMode
+//
 //go:generate stringer -type=Qt__NavigationMode
-//Qt::NavigationMode
 type Qt__NavigationMode int64
 
 const (
@@ -42287,8 +42492,9 @@ const (
 	Qt__NavigationModeCursorForceVisible Qt__NavigationMode = Qt__NavigationMode(4)
 )
 
+// Qt::CursorMoveStyle
+//
 //go:generate stringer -type=Qt__CursorMoveStyle
-//Qt::CursorMoveStyle
 type Qt__CursorMoveStyle int64
 
 var (
@@ -42296,8 +42502,9 @@ var (
 	Qt__VisualMoveStyle  Qt__CursorMoveStyle = Qt__CursorMoveStyle(1)
 )
 
+// Qt::TimerType
+//
 //go:generate stringer -type=Qt__TimerType
-//Qt::TimerType
 type Qt__TimerType int64
 
 const (
@@ -42306,8 +42513,9 @@ const (
 	Qt__VeryCoarseTimer Qt__TimerType = Qt__TimerType(2)
 )
 
+// Qt::ScrollPhase
+//
 //go:generate stringer -type=Qt__ScrollPhase
-//Qt::ScrollPhase
 type Qt__ScrollPhase int64
 
 const (
@@ -42318,8 +42526,9 @@ const (
 	Qt__ScrollMomentum Qt__ScrollPhase = Qt__ScrollPhase(4)
 )
 
+// Qt::MouseEventSource
+//
 //go:generate stringer -type=Qt__MouseEventSource
-//Qt::MouseEventSource
 type Qt__MouseEventSource int64
 
 const (
@@ -42329,8 +42538,9 @@ const (
 	Qt__MouseEventSynthesizedByApplication Qt__MouseEventSource = Qt__MouseEventSource(3)
 )
 
+// Qt::MouseEventFlag
+//
 //go:generate stringer -type=Qt__MouseEventFlag
-//Qt::MouseEventFlag
 type Qt__MouseEventFlag int64
 
 const (
@@ -42338,8 +42548,9 @@ const (
 	Qt__MouseEventFlagMask           Qt__MouseEventFlag = Qt__MouseEventFlag(0xFF)
 )
 
+// Qt::ChecksumType
+//
 //go:generate stringer -type=Qt__ChecksumType
-//Qt::ChecksumType
 type Qt__ChecksumType int64
 
 const (

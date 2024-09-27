@@ -1,9 +1,9 @@
 package view
 
 import (
-	"github.com/bluszcz/cutego/quick"
+	"github.com/topofstack/cutego/quick"
 
-	_ "github.com/bluszcz/cutego/internal/examples/showcases/wallet/view/controller"
+	_ "github.com/topofstack/cutego/internal/examples/showcases/wallet/view/controller"
 )
 
 func init() { stackTemplate_QmlRegisterType2("ViewTemplate", 1, 0, "StackTemplate") }

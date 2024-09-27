@@ -1,6 +1,6 @@
 package main
 
-import "github.com/bluszcz/cutego/core"
+import "github.com/topofstack/cutego/core"
 
 const (
 	FirstName = int(core.Qt__UserRole) + 1<<iota

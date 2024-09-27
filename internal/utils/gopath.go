@@ -9,7 +9,7 @@ import (
 	"sync"
 )
 
-const PackageName = "github.com/bluszcz/cutego"
+const PackageName = "github.com/topofstack/cutego"
 
 var (
 	mustGoPath      string

@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/bluszcz/cutego/internal/binding/converter"
-	"github.com/bluszcz/cutego/internal/binding/parser"
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/binding/converter"
+	"github.com/topofstack/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 var exportedFunctions []string
@@ -661,7 +661,7 @@ extern "C" int32_t __isPlatformVersionAtLeast(int32_t Platform, int32_t Major, i
 #ifndef QT_CORE_LIB
 	#error ------------------------------------------------------------------
 	#error please run: '$(go env GOPATH)/bin/qtsetup'
-	#error more info here: https://github.com/bluszcz/cutego/wiki/Installation
+	#error more info here: https://github.com/topofstack/cutego/wiki/Installation
 	#error ------------------------------------------------------------------
 #endif`
 			}

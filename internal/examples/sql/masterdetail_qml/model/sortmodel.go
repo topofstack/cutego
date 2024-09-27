@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 )
 
 var SortFilterModel *sortFilterModel

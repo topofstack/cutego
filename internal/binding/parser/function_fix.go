@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 func (f *Function) fix() {

@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/widgets"
 )
 
 func layouts() {

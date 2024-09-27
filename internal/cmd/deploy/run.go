@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 func run(target, name, depPath, device string) {

@@ -13,8 +13,8 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/bluszcz/cutego/internal/cmd"
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/cmd"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 func build(mode, target, path, ldFlagsCustom, tagsCustom, name, depPath string, fast, comply bool) {

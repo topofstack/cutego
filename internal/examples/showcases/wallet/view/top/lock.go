@@ -1,9 +1,9 @@
 package top
 
 import (
-	"github.com/bluszcz/cutego/quick"
+	"github.com/topofstack/cutego/quick"
 
-	"github.com/bluszcz/cutego/internal/examples/showcases/wallet/view/top/controller"
+	"github.com/topofstack/cutego/internal/examples/showcases/wallet/view/top/controller"
 )
 
 func init() { lockTemplate_QmlRegisterType2("TopTemplate", 1, 0, "LockTemplate") }

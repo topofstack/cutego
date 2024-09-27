@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/binding/converter"
-	"github.com/bluszcz/cutego/internal/binding/parser"
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/binding/converter"
+	"github.com/topofstack/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 func cppFunctionCallback(function *parser.Function) string {
@@ -157,7 +157,7 @@ func cppFunctionHeader(function *parser.Function) string {
 	return ""
 }
 
-//TODO:
+// TODO:
 func cppFunctionUnused(function *parser.Function, body string) string {
 
 	var tmp = make([]string, 0)

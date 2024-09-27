@@ -5,9 +5,9 @@ package main
 import (
 	"os"
 
-	"github.com/bluszcz/cutego/charts"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/charts"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/widgets"
 )
 
 func main() {

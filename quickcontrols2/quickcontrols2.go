@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package quickcontrols2
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
 	"strings"
 	"unsafe"
 )

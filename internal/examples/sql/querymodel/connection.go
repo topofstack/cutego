@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/bluszcz/cutego/sql"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/sql"
+	"github.com/topofstack/cutego/widgets"
 )
 
 var db *sql.QSqlDatabase

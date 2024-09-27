@@ -8,12 +8,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/binding/parser"
-	"github.com/bluszcz/cutego/internal/binding/templater"
+	"github.com/topofstack/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/binding/templater"
 
-	"github.com/bluszcz/cutego/internal/cmd"
-	"github.com/bluszcz/cutego/internal/cmd/moc"
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/cmd"
+	"github.com/topofstack/cutego/internal/cmd/moc"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 func Generate(target string, docker, vagrant bool) {
@@ -71,6 +71,6 @@ func Generate(target string, docker, vagrant bool) {
 	runtimePath := utils.GoQtPkgPath("internal/binding/runtime")
 	utils.RemoveAll(runtimePath)
 	utils.MkdirAll(runtimePath)
-	utils.Save(filepath.Join(runtimePath, "utils-runtime.go"), utils.Load(filepath.Join(strings.TrimSpace(utils.GoListOptional("{{.Dir}}", "github.com/bluszcz/cutego/internal", "-find", "get files dir")), "/binding/files/utils-runtime.go")))
+	utils.Save(filepath.Join(runtimePath, "utils-runtime.go"), utils.Load(filepath.Join(strings.TrimSpace(utils.GoListOptional("{{.Dir}}", "github.com/topofstack/cutego/internal", "-find", "get files dir")), "/binding/files/utils-runtime.go")))
 	moc.Moc(runtimePath, target, "", true, false, false, true)
 }

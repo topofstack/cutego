@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/network"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/network"
 )
 
 //the custom QNetworkReply is partially modeled after

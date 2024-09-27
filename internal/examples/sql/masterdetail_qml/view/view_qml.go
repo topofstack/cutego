@@ -1,16 +1,17 @@
+//go:build qml
 // +build qml
 
 package view
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/controller"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/controller"
 
-	_ "github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/view/album"
-	_ "github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/view/artist"
-	_ "github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/view/detail"
-	_ "github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/view/dialog"
+	_ "github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/view/album"
+	_ "github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/view/artist"
+	_ "github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/view/detail"
+	_ "github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/view/dialog"
 )
 
 func init() {

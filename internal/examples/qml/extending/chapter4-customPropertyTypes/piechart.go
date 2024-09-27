@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/bluszcz/cutego/quick"
+	"github.com/topofstack/cutego/quick"
 )
 
 func init() {

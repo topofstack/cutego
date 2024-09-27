@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/sql"
-	"github.com/bluszcz/cutego/widgets"
-	"github.com/bluszcz/cutego/xml"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/sql"
+	"github.com/topofstack/cutego/widgets"
+	"github.com/topofstack/cutego/xml"
 )
 
 type MainWindow struct {

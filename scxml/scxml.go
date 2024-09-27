@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package scxml
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
 	"strings"
 	"unsafe"
 )
@@ -887,8 +888,9 @@ func NewQScxmlEventFromPointer(ptr unsafe.Pointer) (n *QScxmlEvent) {
 	return
 }
 
+// QScxmlEvent::EventType
+//
 //go:generate stringer -type=QScxmlEvent__EventType
-//QScxmlEvent::EventType
 type QScxmlEvent__EventType int64
 
 const (

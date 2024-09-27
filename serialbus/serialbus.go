@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package serialbus
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/network"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/network"
 	"strings"
 	"unsafe"
 )
@@ -257,8 +258,9 @@ func NewQCanBusDeviceFromPointer(ptr unsafe.Pointer) (n *QCanBusDevice) {
 func (ptr *QCanBusDevice) DestroyQCanBusDevice() {
 }
 
+// QCanBusDevice::CanBusError
+//
 //go:generate stringer -type=QCanBusDevice__CanBusError
-//QCanBusDevice::CanBusError
 type QCanBusDevice__CanBusError int64
 
 const (
@@ -270,8 +272,9 @@ const (
 	QCanBusDevice__UnknownError       QCanBusDevice__CanBusError = QCanBusDevice__CanBusError(5)
 )
 
+// QCanBusDevice::CanBusDeviceState
+//
 //go:generate stringer -type=QCanBusDevice__CanBusDeviceState
-//QCanBusDevice::CanBusDeviceState
 type QCanBusDevice__CanBusDeviceState int64
 
 const (
@@ -281,8 +284,9 @@ const (
 	QCanBusDevice__ClosingState     QCanBusDevice__CanBusDeviceState = QCanBusDevice__CanBusDeviceState(3)
 )
 
+// QCanBusDevice::ConfigurationKey
+//
 //go:generate stringer -type=QCanBusDevice__ConfigurationKey
-//QCanBusDevice::ConfigurationKey
 type QCanBusDevice__ConfigurationKey int64
 
 const (
@@ -296,8 +300,9 @@ const (
 	QCanBusDevice__UserKey        QCanBusDevice__ConfigurationKey = QCanBusDevice__ConfigurationKey(30)
 )
 
+// QCanBusDevice::Direction
+//
 //go:generate stringer -type=QCanBusDevice__Direction
-//QCanBusDevice::Direction
 type QCanBusDevice__Direction int64
 
 const (
@@ -978,8 +983,9 @@ func NewQCanBusFrameFromPointer(ptr unsafe.Pointer) (n *QCanBusFrame) {
 func (ptr *QCanBusFrame) DestroyQCanBusFrame() {
 }
 
+// QCanBusFrame::FrameType
+//
 //go:generate stringer -type=QCanBusFrame__FrameType
-//QCanBusFrame::FrameType
 type QCanBusFrame__FrameType int64
 
 const (
@@ -990,8 +996,9 @@ const (
 	QCanBusFrame__InvalidFrame       QCanBusFrame__FrameType = QCanBusFrame__FrameType(0x4)
 )
 
+// QCanBusFrame::FrameError
+//
 //go:generate stringer -type=QCanBusFrame__FrameError
-//QCanBusFrame::FrameError
 type QCanBusFrame__FrameError int64
 
 var (
@@ -1335,8 +1342,9 @@ func NewQModbusDataUnitFromPointer(ptr unsafe.Pointer) (n *QModbusDataUnit) {
 func (ptr *QModbusDataUnit) DestroyQModbusDataUnit() {
 }
 
+// QModbusDataUnit::RegisterType
+//
 //go:generate stringer -type=QModbusDataUnit__RegisterType
-//QModbusDataUnit::RegisterType
 type QModbusDataUnit__RegisterType int64
 
 const (
@@ -1545,8 +1553,9 @@ func NewQModbusDeviceFromPointer(ptr unsafe.Pointer) (n *QModbusDevice) {
 	return
 }
 
+// QModbusDevice::Error
+//
 //go:generate stringer -type=QModbusDevice__Error
-//QModbusDevice::Error
 type QModbusDevice__Error int64
 
 const (
@@ -1561,8 +1570,9 @@ const (
 	QModbusDevice__UnknownError       QModbusDevice__Error = QModbusDevice__Error(8)
 )
 
+// QModbusDevice::State
+//
 //go:generate stringer -type=QModbusDevice__State
-//QModbusDevice::State
 type QModbusDevice__State int64
 
 const (
@@ -1572,8 +1582,9 @@ const (
 	QModbusDevice__ClosingState     QModbusDevice__State = QModbusDevice__State(3)
 )
 
+// QModbusDevice::ConnectionParameter
+//
 //go:generate stringer -type=QModbusDevice__ConnectionParameter
-//QModbusDevice::ConnectionParameter
 type QModbusDevice__ConnectionParameter int64
 
 const (
@@ -1867,8 +1878,9 @@ func NewQModbusDeviceIdentificationFromPointer(ptr unsafe.Pointer) (n *QModbusDe
 func (ptr *QModbusDeviceIdentification) DestroyQModbusDeviceIdentification() {
 }
 
+// QModbusDeviceIdentification::ObjectId
+//
 //go:generate stringer -type=QModbusDeviceIdentification__ObjectId
-//QModbusDeviceIdentification::ObjectId
 type QModbusDeviceIdentification__ObjectId int64
 
 const (
@@ -1884,8 +1896,9 @@ const (
 	QModbusDeviceIdentification__UndefinedObjectId           QModbusDeviceIdentification__ObjectId = QModbusDeviceIdentification__ObjectId(0x100)
 )
 
+// QModbusDeviceIdentification::ReadDeviceIdCode
+//
 //go:generate stringer -type=QModbusDeviceIdentification__ReadDeviceIdCode
-//QModbusDeviceIdentification::ReadDeviceIdCode
 type QModbusDeviceIdentification__ReadDeviceIdCode int64
 
 const (
@@ -1895,8 +1908,9 @@ const (
 	QModbusDeviceIdentification__IndividualReadDeviceIdCode QModbusDeviceIdentification__ReadDeviceIdCode = QModbusDeviceIdentification__ReadDeviceIdCode(0x04)
 )
 
+// QModbusDeviceIdentification::ConformityLevel
+//
 //go:generate stringer -type=QModbusDeviceIdentification__ConformityLevel
-//QModbusDeviceIdentification::ConformityLevel
 type QModbusDeviceIdentification__ConformityLevel int64
 
 const (
@@ -2161,8 +2175,9 @@ func NewQModbusPduFromPointer(ptr unsafe.Pointer) (n *QModbusPdu) {
 	return
 }
 
+// QModbusPdu::ExceptionCode
+//
 //go:generate stringer -type=QModbusPdu__ExceptionCode
-//QModbusPdu::ExceptionCode
 type QModbusPdu__ExceptionCode int64
 
 const (
@@ -2179,8 +2194,9 @@ const (
 	QModbusPdu__ExtendedException                  QModbusPdu__ExceptionCode = QModbusPdu__ExceptionCode(0xFF)
 )
 
+// QModbusPdu::FunctionCode
+//
 //go:generate stringer -type=QModbusPdu__FunctionCode
-//QModbusPdu::FunctionCode
 type QModbusPdu__FunctionCode int64
 
 const (
@@ -2378,8 +2394,9 @@ func NewQModbusReplyFromPointer(ptr unsafe.Pointer) (n *QModbusReply) {
 func (ptr *QModbusReply) DestroyQModbusReply() {
 }
 
+// QModbusReply::ReplyType
+//
 //go:generate stringer -type=QModbusReply__ReplyType
-//QModbusReply::ReplyType
 type QModbusReply__ReplyType int64
 
 const (
@@ -3014,8 +3031,9 @@ func NewQModbusServerFromPointer(ptr unsafe.Pointer) (n *QModbusServer) {
 func (ptr *QModbusServer) DestroyQModbusServer() {
 }
 
+// QModbusServer::Option
+//
 //go:generate stringer -type=QModbusServer__Option
-//QModbusServer::Option
 type QModbusServer__Option int64
 
 const (

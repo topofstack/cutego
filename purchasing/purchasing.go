@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package purchasing
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
 	"strings"
 	"unsafe"
 )
@@ -60,8 +61,9 @@ func NewQInAppProductFromPointer(ptr unsafe.Pointer) (n *QInAppProduct) {
 func (ptr *QInAppProduct) DestroyQInAppProduct() {
 }
 
+// QInAppProduct::ProductType
+//
 //go:generate stringer -type=QInAppProduct__ProductType
-//QInAppProduct::ProductType
 type QInAppProduct__ProductType int64
 
 const (
@@ -507,8 +509,9 @@ func NewQInAppTransactionFromPointer(ptr unsafe.Pointer) (n *QInAppTransaction) 
 func (ptr *QInAppTransaction) DestroyQInAppTransaction() {
 }
 
+// QInAppTransaction::TransactionStatus
+//
 //go:generate stringer -type=QInAppTransaction__TransactionStatus
-//QInAppTransaction::TransactionStatus
 type QInAppTransaction__TransactionStatus int64
 
 const (
@@ -518,8 +521,9 @@ const (
 	QInAppTransaction__PurchaseRestored QInAppTransaction__TransactionStatus = QInAppTransaction__TransactionStatus(3)
 )
 
+// QInAppTransaction::FailureReason
+//
 //go:generate stringer -type=QInAppTransaction__FailureReason
-//QInAppTransaction::FailureReason
 type QInAppTransaction__FailureReason int64
 
 const (

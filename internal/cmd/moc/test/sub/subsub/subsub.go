@@ -1,9 +1,9 @@
 package subsubcustom
 
 import (
-	"github.com/bluszcz/cutego/gui"
+	"github.com/topofstack/cutego/gui"
 
-	_ "github.com/bluszcz/cutego/internal/cmd/moc/test/sub/conf"
+	_ "github.com/topofstack/cutego/internal/cmd/moc/test/sub/conf"
 )
 
 var SubSubTestStructInstance *SubSubTestStruct

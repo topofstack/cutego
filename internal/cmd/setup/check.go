@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 func Check(target string, docker, vagrant bool) {
@@ -28,7 +28,7 @@ func Check(target string, docker, vagrant bool) {
 
 	hash := "please install git"
 	if utils.UseGOMOD("") {
-		hash = utils.GoListOptional("{{.Version}}", "github.com/bluszcz/cutego", "-m", "get qt hash")
+		hash = utils.GoListOptional("{{.Version}}", "github.com/topofstack/cutego", "-m", "get qt hash")
 	} else {
 		if _, err := exec.LookPath("git"); err == nil {
 			cmd := exec.Command("git", "rev-parse", "--verify", "HEAD")

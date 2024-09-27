@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package bluetooth
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/network"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/network"
 	"reflect"
 	"strings"
 	"unsafe"
@@ -56,8 +57,9 @@ func NewQBluetoothFromPointer(ptr unsafe.Pointer) (n *QBluetooth) {
 func (ptr *QBluetooth) DestroyQBluetooth() {
 }
 
+// QBluetooth::AttAccessConstraint
+//
 //go:generate stringer -type=QBluetooth__AttAccessConstraint
-//QBluetooth::AttAccessConstraint
 type QBluetooth__AttAccessConstraint int64
 
 const (
@@ -66,8 +68,9 @@ const (
 	QBluetooth__AttEncryptionRequired     QBluetooth__AttAccessConstraint = QBluetooth__AttAccessConstraint(0x4)
 )
 
+// QBluetooth::Security
+//
 //go:generate stringer -type=QBluetooth__Security
-//QBluetooth::Security
 type QBluetooth__Security int64
 
 const (
@@ -212,8 +215,9 @@ func NewQBluetoothDeviceDiscoveryAgentFromPointer(ptr unsafe.Pointer) (n *QBluet
 	return
 }
 
+// QBluetoothDeviceDiscoveryAgent::Error
+//
 //go:generate stringer -type=QBluetoothDeviceDiscoveryAgent__Error
-//QBluetoothDeviceDiscoveryAgent::Error
 type QBluetoothDeviceDiscoveryAgent__Error int64
 
 const (
@@ -226,8 +230,9 @@ const (
 	QBluetoothDeviceDiscoveryAgent__UnknownError                 QBluetoothDeviceDiscoveryAgent__Error = QBluetoothDeviceDiscoveryAgent__Error(100)
 )
 
+// QBluetoothDeviceDiscoveryAgent::InquiryType
+//
 //go:generate stringer -type=QBluetoothDeviceDiscoveryAgent__InquiryType
-//QBluetoothDeviceDiscoveryAgent::InquiryType
 type QBluetoothDeviceDiscoveryAgent__InquiryType int64
 
 const (
@@ -235,8 +240,9 @@ const (
 	QBluetoothDeviceDiscoveryAgent__LimitedInquiry          QBluetoothDeviceDiscoveryAgent__InquiryType = QBluetoothDeviceDiscoveryAgent__InquiryType(1)
 )
 
+// QBluetoothDeviceDiscoveryAgent::DiscoveryMethod
+//
 //go:generate stringer -type=QBluetoothDeviceDiscoveryAgent__DiscoveryMethod
-//QBluetoothDeviceDiscoveryAgent::DiscoveryMethod
 type QBluetoothDeviceDiscoveryAgent__DiscoveryMethod int64
 
 const (
@@ -622,8 +628,9 @@ func NewQBluetoothDeviceInfoFromPointer(ptr unsafe.Pointer) (n *QBluetoothDevice
 	return
 }
 
+// QBluetoothDeviceInfo::MajorDeviceClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MajorDeviceClass
-//QBluetoothDeviceInfo::MajorDeviceClass
 type QBluetoothDeviceInfo__MajorDeviceClass int64
 
 const (
@@ -641,16 +648,18 @@ const (
 	QBluetoothDeviceInfo__UncategorizedDevice QBluetoothDeviceInfo__MajorDeviceClass = QBluetoothDeviceInfo__MajorDeviceClass(31)
 )
 
+// QBluetoothDeviceInfo::MinorMiscellaneousClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MinorMiscellaneousClass
-//QBluetoothDeviceInfo::MinorMiscellaneousClass
 type QBluetoothDeviceInfo__MinorMiscellaneousClass int64
 
 const (
 	QBluetoothDeviceInfo__UncategorizedMiscellaneous QBluetoothDeviceInfo__MinorMiscellaneousClass = QBluetoothDeviceInfo__MinorMiscellaneousClass(0)
 )
 
+// QBluetoothDeviceInfo::MinorComputerClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MinorComputerClass
-//QBluetoothDeviceInfo::MinorComputerClass
 type QBluetoothDeviceInfo__MinorComputerClass int64
 
 const (
@@ -663,8 +672,9 @@ const (
 	QBluetoothDeviceInfo__WearableComputer          QBluetoothDeviceInfo__MinorComputerClass = QBluetoothDeviceInfo__MinorComputerClass(6)
 )
 
+// QBluetoothDeviceInfo::MinorPhoneClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MinorPhoneClass
-//QBluetoothDeviceInfo::MinorPhoneClass
 type QBluetoothDeviceInfo__MinorPhoneClass int64
 
 const (
@@ -676,8 +686,9 @@ const (
 	QBluetoothDeviceInfo__CommonIsdnAccessPhone         QBluetoothDeviceInfo__MinorPhoneClass = QBluetoothDeviceInfo__MinorPhoneClass(5)
 )
 
+// QBluetoothDeviceInfo::MinorNetworkClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MinorNetworkClass
-//QBluetoothDeviceInfo::MinorNetworkClass
 type QBluetoothDeviceInfo__MinorNetworkClass int64
 
 const (
@@ -691,8 +702,9 @@ const (
 	QBluetoothDeviceInfo__NetworkNoService       QBluetoothDeviceInfo__MinorNetworkClass = QBluetoothDeviceInfo__MinorNetworkClass(0x38)
 )
 
+// QBluetoothDeviceInfo::MinorAudioVideoClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MinorAudioVideoClass
-//QBluetoothDeviceInfo::MinorAudioVideoClass
 type QBluetoothDeviceInfo__MinorAudioVideoClass int64
 
 const (
@@ -715,8 +727,9 @@ const (
 	QBluetoothDeviceInfo__GamingDevice                  QBluetoothDeviceInfo__MinorAudioVideoClass = QBluetoothDeviceInfo__MinorAudioVideoClass(18)
 )
 
+// QBluetoothDeviceInfo::MinorPeripheralClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MinorPeripheralClass
-//QBluetoothDeviceInfo::MinorPeripheralClass
 type QBluetoothDeviceInfo__MinorPeripheralClass int64
 
 const (
@@ -732,8 +745,9 @@ const (
 	QBluetoothDeviceInfo__CardReaderPeripheral                 QBluetoothDeviceInfo__MinorPeripheralClass = QBluetoothDeviceInfo__MinorPeripheralClass(0x06)
 )
 
+// QBluetoothDeviceInfo::MinorImagingClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MinorImagingClass
-//QBluetoothDeviceInfo::MinorImagingClass
 type QBluetoothDeviceInfo__MinorImagingClass int64
 
 const (
@@ -744,8 +758,9 @@ const (
 	QBluetoothDeviceInfo__ImagePrinter               QBluetoothDeviceInfo__MinorImagingClass = QBluetoothDeviceInfo__MinorImagingClass(0x20)
 )
 
+// QBluetoothDeviceInfo::MinorWearableClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MinorWearableClass
-//QBluetoothDeviceInfo::MinorWearableClass
 type QBluetoothDeviceInfo__MinorWearableClass int64
 
 const (
@@ -757,8 +772,9 @@ const (
 	QBluetoothDeviceInfo__WearableGlasses             QBluetoothDeviceInfo__MinorWearableClass = QBluetoothDeviceInfo__MinorWearableClass(5)
 )
 
+// QBluetoothDeviceInfo::MinorToyClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MinorToyClass
-//QBluetoothDeviceInfo::MinorToyClass
 type QBluetoothDeviceInfo__MinorToyClass int64
 
 const (
@@ -770,8 +786,9 @@ const (
 	QBluetoothDeviceInfo__ToyGame          QBluetoothDeviceInfo__MinorToyClass = QBluetoothDeviceInfo__MinorToyClass(5)
 )
 
+// QBluetoothDeviceInfo::MinorHealthClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__MinorHealthClass
-//QBluetoothDeviceInfo::MinorHealthClass
 type QBluetoothDeviceInfo__MinorHealthClass int64
 
 const (
@@ -785,8 +802,9 @@ const (
 	QBluetoothDeviceInfo__HealthStepCounter          QBluetoothDeviceInfo__MinorHealthClass = QBluetoothDeviceInfo__MinorHealthClass(0x8)
 )
 
+// QBluetoothDeviceInfo::ServiceClass
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__ServiceClass
-//QBluetoothDeviceInfo::ServiceClass
 type QBluetoothDeviceInfo__ServiceClass int64
 
 const (
@@ -802,8 +820,9 @@ const (
 	QBluetoothDeviceInfo__AllServices           QBluetoothDeviceInfo__ServiceClass = QBluetoothDeviceInfo__ServiceClass(0x07ff)
 )
 
+// QBluetoothDeviceInfo::DataCompleteness
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__DataCompleteness
-//QBluetoothDeviceInfo::DataCompleteness
 type QBluetoothDeviceInfo__DataCompleteness int64
 
 const (
@@ -812,8 +831,9 @@ const (
 	QBluetoothDeviceInfo__DataUnavailable QBluetoothDeviceInfo__DataCompleteness = QBluetoothDeviceInfo__DataCompleteness(2)
 )
 
+// QBluetoothDeviceInfo::Field
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__Field
-//QBluetoothDeviceInfo::Field
 type QBluetoothDeviceInfo__Field int64
 
 const (
@@ -823,8 +843,9 @@ const (
 	QBluetoothDeviceInfo__All              QBluetoothDeviceInfo__Field = QBluetoothDeviceInfo__Field(0x7fff)
 )
 
+// QBluetoothDeviceInfo::CoreConfiguration
+//
 //go:generate stringer -type=QBluetoothDeviceInfo__CoreConfiguration
-//QBluetoothDeviceInfo::CoreConfiguration
 type QBluetoothDeviceInfo__CoreConfiguration int64
 
 const (
@@ -1143,8 +1164,9 @@ func NewQBluetoothLocalDeviceFromPointer(ptr unsafe.Pointer) (n *QBluetoothLocal
 	return
 }
 
+// QBluetoothLocalDevice::Pairing
+//
 //go:generate stringer -type=QBluetoothLocalDevice__Pairing
-//QBluetoothLocalDevice::Pairing
 type QBluetoothLocalDevice__Pairing int64
 
 const (
@@ -1153,8 +1175,9 @@ const (
 	QBluetoothLocalDevice__AuthorizedPaired QBluetoothLocalDevice__Pairing = QBluetoothLocalDevice__Pairing(2)
 )
 
+// QBluetoothLocalDevice::HostMode
+//
 //go:generate stringer -type=QBluetoothLocalDevice__HostMode
-//QBluetoothLocalDevice::HostMode
 type QBluetoothLocalDevice__HostMode int64
 
 const (
@@ -1164,8 +1187,9 @@ const (
 	QBluetoothLocalDevice__HostDiscoverableLimitedInquiry QBluetoothLocalDevice__HostMode = QBluetoothLocalDevice__HostMode(3)
 )
 
+// QBluetoothLocalDevice::Error
+//
 //go:generate stringer -type=QBluetoothLocalDevice__Error
-//QBluetoothLocalDevice::Error
 type QBluetoothLocalDevice__Error int64
 
 const (
@@ -1567,8 +1591,9 @@ func NewQBluetoothServerFromPointer(ptr unsafe.Pointer) (n *QBluetoothServer) {
 	return
 }
 
+// QBluetoothServer::Error
+//
 //go:generate stringer -type=QBluetoothServer__Error
-//QBluetoothServer::Error
 type QBluetoothServer__Error int64
 
 const (
@@ -1858,8 +1883,9 @@ func NewQBluetoothServiceDiscoveryAgentFromPointer(ptr unsafe.Pointer) (n *QBlue
 	return
 }
 
+// QBluetoothServiceDiscoveryAgent::Error
+//
 //go:generate stringer -type=QBluetoothServiceDiscoveryAgent__Error
-//QBluetoothServiceDiscoveryAgent::Error
 type QBluetoothServiceDiscoveryAgent__Error int64
 
 const (
@@ -1870,8 +1896,9 @@ const (
 	QBluetoothServiceDiscoveryAgent__UnknownError                 QBluetoothServiceDiscoveryAgent__Error = QBluetoothServiceDiscoveryAgent__Error(QBluetoothDeviceDiscoveryAgent__UnknownError)
 )
 
+// QBluetoothServiceDiscoveryAgent::DiscoveryMode
+//
 //go:generate stringer -type=QBluetoothServiceDiscoveryAgent__DiscoveryMode
-//QBluetoothServiceDiscoveryAgent::DiscoveryMode
 type QBluetoothServiceDiscoveryAgent__DiscoveryMode int64
 
 const (
@@ -2266,8 +2293,9 @@ func NewQBluetoothServiceInfoFromPointer(ptr unsafe.Pointer) (n *QBluetoothServi
 	return
 }
 
+// QBluetoothServiceInfo::AttributeId
+//
 //go:generate stringer -type=QBluetoothServiceInfo__AttributeId
-//QBluetoothServiceInfo::AttributeId
 type QBluetoothServiceInfo__AttributeId int64
 
 var (
@@ -2291,8 +2319,9 @@ var (
 	QBluetoothServiceInfo__ServiceProvider                  QBluetoothServiceInfo__AttributeId = QBluetoothServiceInfo__AttributeId(0)
 )
 
+// QBluetoothServiceInfo::Protocol
+//
 //go:generate stringer -type=QBluetoothServiceInfo__Protocol
-//QBluetoothServiceInfo::Protocol
 type QBluetoothServiceInfo__Protocol int64
 
 const (
@@ -2509,8 +2538,9 @@ func NewQBluetoothSocketFromPointer(ptr unsafe.Pointer) (n *QBluetoothSocket) {
 	return
 }
 
+// QBluetoothSocket::SocketState
+//
 //go:generate stringer -type=QBluetoothSocket__SocketState
-//QBluetoothSocket::SocketState
 type QBluetoothSocket__SocketState int64
 
 const (
@@ -2523,8 +2553,9 @@ const (
 	QBluetoothSocket__ListeningState     QBluetoothSocket__SocketState = QBluetoothSocket__SocketState(network.QAbstractSocket__ListeningState)
 )
 
+// QBluetoothSocket::SocketError
+//
 //go:generate stringer -type=QBluetoothSocket__SocketError
-//QBluetoothSocket::SocketError
 type QBluetoothSocket__SocketError int64
 
 const (
@@ -3193,8 +3224,9 @@ func NewQBluetoothTransferReplyFromPointer(ptr unsafe.Pointer) (n *QBluetoothTra
 	return
 }
 
+// QBluetoothTransferReply::TransferError
+//
 //go:generate stringer -type=QBluetoothTransferReply__TransferError
-//QBluetoothTransferReply::TransferError
 type QBluetoothTransferReply__TransferError int64
 
 const (
@@ -3525,8 +3557,9 @@ func NewQBluetoothTransferRequestFromPointer(ptr unsafe.Pointer) (n *QBluetoothT
 	return
 }
 
+// QBluetoothTransferRequest::Attribute
+//
 //go:generate stringer -type=QBluetoothTransferRequest__Attribute
-//QBluetoothTransferRequest::Attribute
 type QBluetoothTransferRequest__Attribute int64
 
 const (
@@ -3615,8 +3648,9 @@ func NewQBluetoothUuidFromPointer(ptr unsafe.Pointer) (n *QBluetoothUuid) {
 	return
 }
 
+// QBluetoothUuid::ProtocolUuid
+//
 //go:generate stringer -type=QBluetoothUuid__ProtocolUuid
-//QBluetoothUuid::ProtocolUuid
 type QBluetoothUuid__ProtocolUuid int64
 
 const (
@@ -3647,8 +3681,9 @@ const (
 	QBluetoothUuid__L2cap                  QBluetoothUuid__ProtocolUuid = QBluetoothUuid__ProtocolUuid(0x0100)
 )
 
+// QBluetoothUuid::ServiceClassUuid
+//
 //go:generate stringer -type=QBluetoothUuid__ServiceClassUuid
-//QBluetoothUuid::ServiceClassUuid
 type QBluetoothUuid__ServiceClassUuid int64
 
 const (
@@ -3745,8 +3780,9 @@ const (
 	QBluetoothUuid__ContinuousGlucoseMonitoring           QBluetoothUuid__ServiceClassUuid = QBluetoothUuid__ServiceClassUuid(0x181f)
 )
 
+// QBluetoothUuid::CharacteristicType
+//
 //go:generate stringer -type=QBluetoothUuid__CharacteristicType
-//QBluetoothUuid::CharacteristicType
 type QBluetoothUuid__CharacteristicType int64
 
 const (
@@ -3889,8 +3925,9 @@ const (
 	QBluetoothUuid__BarometricPressureTrend                       QBluetoothUuid__CharacteristicType = QBluetoothUuid__CharacteristicType(0x2aa3)
 )
 
+// QBluetoothUuid::DescriptorType
+//
 //go:generate stringer -type=QBluetoothUuid__DescriptorType
-//QBluetoothUuid::DescriptorType
 type QBluetoothUuid__DescriptorType int64
 
 const (
@@ -4061,8 +4098,9 @@ func NewQLowEnergyAdvertisingDataFromPointer(ptr unsafe.Pointer) (n *QLowEnergyA
 	return
 }
 
+// QLowEnergyAdvertisingData::Discoverability
+//
 //go:generate stringer -type=QLowEnergyAdvertisingData__Discoverability
-//QLowEnergyAdvertisingData::Discoverability
 type QLowEnergyAdvertisingData__Discoverability int64
 
 const (
@@ -4233,8 +4271,9 @@ func NewQLowEnergyAdvertisingParametersFromPointer(ptr unsafe.Pointer) (n *QLowE
 	return
 }
 
+// QLowEnergyAdvertisingParameters::Mode
+//
 //go:generate stringer -type=QLowEnergyAdvertisingParameters__Mode
-//QLowEnergyAdvertisingParameters::Mode
 type QLowEnergyAdvertisingParameters__Mode int64
 
 const (
@@ -4243,8 +4282,9 @@ const (
 	QLowEnergyAdvertisingParameters__AdvNonConnInd QLowEnergyAdvertisingParameters__Mode = QLowEnergyAdvertisingParameters__Mode(0x3)
 )
 
+// QLowEnergyAdvertisingParameters::FilterPolicy
+//
 //go:generate stringer -type=QLowEnergyAdvertisingParameters__FilterPolicy
-//QLowEnergyAdvertisingParameters::FilterPolicy
 type QLowEnergyAdvertisingParameters__FilterPolicy int64
 
 const (
@@ -4346,8 +4386,9 @@ func NewQLowEnergyCharacteristicFromPointer(ptr unsafe.Pointer) (n *QLowEnergyCh
 	return
 }
 
+// QLowEnergyCharacteristic::PropertyType
+//
 //go:generate stringer -type=QLowEnergyCharacteristic__PropertyType
-//QLowEnergyCharacteristic::PropertyType
 type QLowEnergyCharacteristic__PropertyType int64
 
 const (
@@ -4747,8 +4788,9 @@ func NewQLowEnergyControllerFromPointer(ptr unsafe.Pointer) (n *QLowEnergyContro
 	return
 }
 
+// QLowEnergyController::Error
+//
 //go:generate stringer -type=QLowEnergyController__Error
-//QLowEnergyController::Error
 type QLowEnergyController__Error int64
 
 const (
@@ -4762,8 +4804,9 @@ const (
 	QLowEnergyController__RemoteHostClosedError        QLowEnergyController__Error = QLowEnergyController__Error(7)
 )
 
+// QLowEnergyController::ControllerState
+//
 //go:generate stringer -type=QLowEnergyController__ControllerState
-//QLowEnergyController::ControllerState
 type QLowEnergyController__ControllerState int64
 
 const (
@@ -4776,8 +4819,9 @@ const (
 	QLowEnergyController__AdvertisingState QLowEnergyController__ControllerState = QLowEnergyController__ControllerState(6)
 )
 
+// QLowEnergyController::RemoteAddressType
+//
 //go:generate stringer -type=QLowEnergyController__RemoteAddressType
-//QLowEnergyController::RemoteAddressType
 type QLowEnergyController__RemoteAddressType int64
 
 const (
@@ -4785,8 +4829,9 @@ const (
 	QLowEnergyController__RandomAddress QLowEnergyController__RemoteAddressType = QLowEnergyController__RemoteAddressType(1)
 )
 
+// QLowEnergyController::Role
+//
 //go:generate stringer -type=QLowEnergyController__Role
-//QLowEnergyController::Role
 type QLowEnergyController__Role int64
 
 const (
@@ -5404,8 +5449,9 @@ func NewQLowEnergyServiceFromPointer(ptr unsafe.Pointer) (n *QLowEnergyService) 
 	return
 }
 
+// QLowEnergyService::ServiceType
+//
 //go:generate stringer -type=QLowEnergyService__ServiceType
-//QLowEnergyService::ServiceType
 type QLowEnergyService__ServiceType int64
 
 const (
@@ -5413,8 +5459,9 @@ const (
 	QLowEnergyService__IncludedService QLowEnergyService__ServiceType = QLowEnergyService__ServiceType(0x0002)
 )
 
+// QLowEnergyService::ServiceError
+//
 //go:generate stringer -type=QLowEnergyService__ServiceError
-//QLowEnergyService::ServiceError
 type QLowEnergyService__ServiceError int64
 
 const (
@@ -5427,8 +5474,9 @@ const (
 	QLowEnergyService__DescriptorReadError      QLowEnergyService__ServiceError = QLowEnergyService__ServiceError(6)
 )
 
+// QLowEnergyService::ServiceState
+//
 //go:generate stringer -type=QLowEnergyService__ServiceState
-//QLowEnergyService::ServiceState
 type QLowEnergyService__ServiceState int64
 
 const (
@@ -5439,8 +5487,9 @@ const (
 	QLowEnergyService__LocalService        QLowEnergyService__ServiceState = QLowEnergyService__ServiceState(4)
 )
 
+// QLowEnergyService::WriteMode
+//
 //go:generate stringer -type=QLowEnergyService__WriteMode
-//QLowEnergyService::WriteMode
 type QLowEnergyService__WriteMode int64
 
 const (
@@ -5826,8 +5875,9 @@ func NewQLowEnergyServiceDataFromPointer(ptr unsafe.Pointer) (n *QLowEnergyServi
 	return
 }
 
+// QLowEnergyServiceData::ServiceType
+//
 //go:generate stringer -type=QLowEnergyServiceData__ServiceType
-//QLowEnergyServiceData::ServiceType
 type QLowEnergyServiceData__ServiceType int64
 
 const (

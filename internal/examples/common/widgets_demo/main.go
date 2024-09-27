@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/widgets"
 )
 
 var (
@@ -38,7 +38,7 @@ func main() {
 	mainWindow.SetCentralWidget(scrollWidget)
 	mainWindow.ShowMaximized()
 
-	//->needed to work around some iOS issue: https://github.com/bluszcz/cutego/issues/451
+	//->needed to work around some iOS issue: https://github.com/topofstack/cutego/issues/451
 	gui.QGuiApplication_Screens()[0].SetOrientationUpdateMask(core.Qt__PrimaryOrientation | core.Qt__LandscapeOrientation | core.Qt__PortraitOrientation | core.Qt__InvertedLandscapeOrientation | core.Qt__InvertedPortraitOrientation)
 	gui.QGuiApplication_Screens()[0].ConnectOrientationChanged(func(core.Qt__ScreenOrientation) {
 		mainWindow.Hide()

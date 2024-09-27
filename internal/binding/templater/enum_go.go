@@ -5,10 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/binding/converter"
-	"github.com/bluszcz/cutego/internal/binding/parser"
-	"github.com/bluszcz/cutego/internal/utils"
-
+	"github.com/topofstack/cutego/internal/binding/converter"
+	"github.com/topofstack/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 func goEnum(e *parser.Enum, _ *parser.Value) string {

@@ -3,7 +3,7 @@ package converter
 import (
 	"fmt"
 
-	"github.com/bluszcz/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/binding/parser"
 )
 
 func CppOutputParameters(function *parser.Function, name string) string {

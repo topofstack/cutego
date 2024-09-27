@@ -1,9 +1,9 @@
 package left
 
 import (
-	"github.com/bluszcz/cutego/quick"
+	"github.com/topofstack/cutego/quick"
 
-	"github.com/bluszcz/cutego/internal/examples/showcases/wallet/view/left/controller"
+	"github.com/topofstack/cutego/internal/examples/showcases/wallet/view/left/controller"
 )
 
 func init() { progressBarTemplate_QmlRegisterType2("LeftTemplate", 1, 0, "ProgressBarTemplate") }

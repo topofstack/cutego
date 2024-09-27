@@ -1,16 +1,17 @@
+//go:build !qml
 // +build !qml
 
 package view
 
 import (
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/widgets"
 
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/controller"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/controller"
 
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/view/album"
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/view/artist"
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/view/detail"
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/view/dialog"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/view/album"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/view/artist"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/view/detail"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/view/dialog"
 )
 
 var ViewControllerInstance *viewController

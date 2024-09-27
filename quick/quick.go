@@ -1,13 +1,14 @@
+//go:build !minimal
 // +build !minimal
 
 package quick
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/qml"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/qml"
+	"github.com/topofstack/cutego/widgets"
 	"strings"
 	"unsafe"
 )
@@ -2271,8 +2272,9 @@ func NewQQuickItemFromPointer(ptr unsafe.Pointer) (n *QQuickItem) {
 	return
 }
 
+// QQuickItem::Flag
+//
 //go:generate stringer -type=QQuickItem__Flag
-//QQuickItem::Flag
 type QQuickItem__Flag int64
 
 const (
@@ -2283,8 +2285,9 @@ const (
 	QQuickItem__ItemAcceptsDrops         QQuickItem__Flag = QQuickItem__Flag(0x10)
 )
 
+// QQuickItem::ItemChange
+//
 //go:generate stringer -type=QQuickItem__ItemChange
-//QQuickItem::ItemChange
 type QQuickItem__ItemChange int64
 
 const (
@@ -2301,8 +2304,9 @@ const (
 	QQuickItem__ItemEnabledHasChanged          QQuickItem__ItemChange = QQuickItem__ItemChange(10)
 )
 
+// QQuickItem::TransformOrigin
+//
 //go:generate stringer -type=QQuickItem__TransformOrigin
-//QQuickItem::TransformOrigin
 type QQuickItem__TransformOrigin int64
 
 const (
@@ -4261,8 +4265,9 @@ func NewQQuickPaintedItemFromPointer(ptr unsafe.Pointer) (n *QQuickPaintedItem) 
 	return
 }
 
+// QQuickPaintedItem::RenderTarget
+//
 //go:generate stringer -type=QQuickPaintedItem__RenderTarget
-//QQuickPaintedItem::RenderTarget
 type QQuickPaintedItem__RenderTarget int64
 
 const (
@@ -4271,8 +4276,9 @@ const (
 	QQuickPaintedItem__InvertedYFramebufferObject QQuickPaintedItem__RenderTarget = QQuickPaintedItem__RenderTarget(2)
 )
 
+// QQuickPaintedItem::PerformanceHint
+//
 //go:generate stringer -type=QQuickPaintedItem__PerformanceHint
-//QQuickPaintedItem::PerformanceHint
 type QQuickPaintedItem__PerformanceHint int64
 
 const (
@@ -5468,8 +5474,9 @@ func NewQQuickViewFromPointer(ptr unsafe.Pointer) (n *QQuickView) {
 	return
 }
 
+// QQuickView::ResizeMode
+//
 //go:generate stringer -type=QQuickView__ResizeMode
-//QQuickView::ResizeMode
 type QQuickView__ResizeMode int64
 
 const (
@@ -5477,8 +5484,9 @@ const (
 	QQuickView__SizeRootObjectToView QQuickView__ResizeMode = QQuickView__ResizeMode(1)
 )
 
+// QQuickView::Status
+//
 //go:generate stringer -type=QQuickView__Status
-//QQuickView::Status
 type QQuickView__Status int64
 
 const (
@@ -5666,8 +5674,9 @@ func NewQQuickWidgetFromPointer(ptr unsafe.Pointer) (n *QQuickWidget) {
 	return
 }
 
+// QQuickWidget::ResizeMode
+//
 //go:generate stringer -type=QQuickWidget__ResizeMode
-//QQuickWidget::ResizeMode
 type QQuickWidget__ResizeMode int64
 
 const (
@@ -5675,8 +5684,9 @@ const (
 	QQuickWidget__SizeRootObjectToView QQuickWidget__ResizeMode = QQuickWidget__ResizeMode(1)
 )
 
+// QQuickWidget::Status
+//
 //go:generate stringer -type=QQuickWidget__Status
-//QQuickWidget::Status
 type QQuickWidget__Status int64
 
 const (
@@ -6334,8 +6344,9 @@ func NewQQuickWindowFromPointer(ptr unsafe.Pointer) (n *QQuickWindow) {
 	return
 }
 
+// QQuickWindow::CreateTextureOption
+//
 //go:generate stringer -type=QQuickWindow__CreateTextureOption
-//QQuickWindow::CreateTextureOption
 type QQuickWindow__CreateTextureOption int64
 
 const (
@@ -6346,8 +6357,9 @@ const (
 	QQuickWindow__TextureIsOpaque        QQuickWindow__CreateTextureOption = QQuickWindow__CreateTextureOption(0x0010)
 )
 
+// QQuickWindow::RenderStage
+//
 //go:generate stringer -type=QQuickWindow__RenderStage
-//QQuickWindow::RenderStage
 type QQuickWindow__RenderStage int64
 
 const (
@@ -6359,16 +6371,18 @@ const (
 	QQuickWindow__NoStage                  QQuickWindow__RenderStage = QQuickWindow__RenderStage(5)
 )
 
+// QQuickWindow::SceneGraphError
+//
 //go:generate stringer -type=QQuickWindow__SceneGraphError
-//QQuickWindow::SceneGraphError
 type QQuickWindow__SceneGraphError int64
 
 const (
 	QQuickWindow__ContextNotAvailable QQuickWindow__SceneGraphError = QQuickWindow__SceneGraphError(1)
 )
 
+// QQuickWindow::TextRenderType
+//
 //go:generate stringer -type=QQuickWindow__TextRenderType
-//QQuickWindow::TextRenderType
 type QQuickWindow__TextRenderType int64
 
 const (
@@ -7252,8 +7266,9 @@ func NewQSGAbstractRendererFromPointer(ptr unsafe.Pointer) (n *QSGAbstractRender
 func (ptr *QSGAbstractRenderer) DestroyQSGAbstractRenderer() {
 }
 
+// QSGAbstractRenderer::ClearModeBit
+//
 //go:generate stringer -type=QSGAbstractRenderer__ClearModeBit
-//QSGAbstractRenderer::ClearModeBit
 type QSGAbstractRenderer__ClearModeBit int64
 
 const (
@@ -7800,8 +7815,9 @@ func NewQSGEngineFromPointer(ptr unsafe.Pointer) (n *QSGEngine) {
 	return
 }
 
+// QSGEngine::CreateTextureOption
+//
 //go:generate stringer -type=QSGEngine__CreateTextureOption
-//QSGEngine::CreateTextureOption
 type QSGEngine__CreateTextureOption int64
 
 const (
@@ -8109,8 +8125,9 @@ func NewQSGGeometryFromPointer(ptr unsafe.Pointer) (n *QSGGeometry) {
 	return
 }
 
+// QSGGeometry::AttributeType
+//
 //go:generate stringer -type=QSGGeometry__AttributeType
-//QSGGeometry::AttributeType
 type QSGGeometry__AttributeType int64
 
 const (
@@ -8122,8 +8139,9 @@ const (
 	QSGGeometry__TexCoord2Attribute QSGGeometry__AttributeType = QSGGeometry__AttributeType(5)
 )
 
+// QSGGeometry::DataPattern
+//
 //go:generate stringer -type=QSGGeometry__DataPattern
-//QSGGeometry::DataPattern
 type QSGGeometry__DataPattern int64
 
 const (
@@ -8133,8 +8151,9 @@ const (
 	QSGGeometry__StaticPattern       QSGGeometry__DataPattern = QSGGeometry__DataPattern(3)
 )
 
+// QSGGeometry::DrawingMode
+//
 //go:generate stringer -type=QSGGeometry__DrawingMode
-//QSGGeometry::DrawingMode
 type QSGGeometry__DrawingMode int64
 
 const (
@@ -8147,8 +8166,9 @@ const (
 	QSGGeometry__DrawTriangleFan   QSGGeometry__DrawingMode = QSGGeometry__DrawingMode(0x0006)
 )
 
+// QSGGeometry::Type
+//
 //go:generate stringer -type=QSGGeometry__Type
-//QSGGeometry::Type
 type QSGGeometry__Type int64
 
 const (
@@ -8479,8 +8499,9 @@ func NewQSGImageNodeFromPointer(ptr unsafe.Pointer) (n *QSGImageNode) {
 func (ptr *QSGImageNode) DestroyQSGImageNode() {
 }
 
+// QSGImageNode::TextureCoordinatesTransformFlag
+//
 //go:generate stringer -type=QSGImageNode__TextureCoordinatesTransformFlag
-//QSGImageNode::TextureCoordinatesTransformFlag
 type QSGImageNode__TextureCoordinatesTransformFlag int64
 
 const (
@@ -8764,8 +8785,9 @@ func NewQSGMaterialFromPointer(ptr unsafe.Pointer) (n *QSGMaterial) {
 func (ptr *QSGMaterial) DestroyQSGMaterial() {
 }
 
+// QSGMaterial::Flag
+//
 //go:generate stringer -type=QSGMaterial__Flag
-//QSGMaterial::Flag
 type QSGMaterial__Flag int64
 
 const (
@@ -9103,8 +9125,9 @@ func NewQSGNodeFromPointer(ptr unsafe.Pointer) (n *QSGNode) {
 	return
 }
 
+// QSGNode::NodeType
+//
 //go:generate stringer -type=QSGNode__NodeType
-//QSGNode::NodeType
 type QSGNode__NodeType int64
 
 const (
@@ -9117,8 +9140,9 @@ const (
 	QSGNode__RenderNodeType    QSGNode__NodeType = QSGNode__NodeType(6)
 )
 
+// QSGNode::Flag
+//
 //go:generate stringer -type=QSGNode__Flag
-//QSGNode::Flag
 type QSGNode__Flag int64
 
 const (
@@ -9131,8 +9155,9 @@ const (
 	QSGNode__InternalReserved   QSGNode__Flag = QSGNode__Flag(0x01000000)
 )
 
+// QSGNode::DirtyStateBit
+//
 //go:generate stringer -type=QSGNode__DirtyStateBit
-//QSGNode::DirtyStateBit
 type QSGNode__DirtyStateBit int64
 
 const (
@@ -10329,8 +10354,9 @@ func NewQSGRenderNodeFromPointer(ptr unsafe.Pointer) (n *QSGRenderNode) {
 	return
 }
 
+// QSGRenderNode::StateFlag
+//
 //go:generate stringer -type=QSGRenderNode__StateFlag
-//QSGRenderNode::StateFlag
 type QSGRenderNode__StateFlag int64
 
 const (
@@ -10344,8 +10370,9 @@ const (
 	QSGRenderNode__RenderTargetState QSGRenderNode__StateFlag = QSGRenderNode__StateFlag(0x80)
 )
 
+// QSGRenderNode::RenderingFlag
+//
 //go:generate stringer -type=QSGRenderNode__RenderingFlag
-//QSGRenderNode::RenderingFlag
 type QSGRenderNode__RenderingFlag int64
 
 const (
@@ -10514,8 +10541,9 @@ func NewQSGRendererInterfaceFromPointer(ptr unsafe.Pointer) (n *QSGRendererInter
 func (ptr *QSGRendererInterface) DestroyQSGRendererInterface() {
 }
 
+// QSGRendererInterface::GraphicsApi
+//
 //go:generate stringer -type=QSGRendererInterface__GraphicsApi
-//QSGRendererInterface::GraphicsApi
 type QSGRendererInterface__GraphicsApi int64
 
 const (
@@ -10526,8 +10554,9 @@ const (
 	QSGRendererInterface__OpenVG     QSGRendererInterface__GraphicsApi = QSGRendererInterface__GraphicsApi(4)
 )
 
+// QSGRendererInterface::Resource
+//
 //go:generate stringer -type=QSGRendererInterface__Resource
-//QSGRendererInterface::Resource
 type QSGRendererInterface__Resource int64
 
 const (
@@ -10537,8 +10566,9 @@ const (
 	QSGRendererInterface__PainterResource      QSGRendererInterface__Resource = QSGRendererInterface__Resource(3)
 )
 
+// QSGRendererInterface::ShaderType
+//
 //go:generate stringer -type=QSGRendererInterface__ShaderType
-//QSGRendererInterface::ShaderType
 type QSGRendererInterface__ShaderType int64
 
 const (
@@ -10547,8 +10577,9 @@ const (
 	QSGRendererInterface__HLSL                   QSGRendererInterface__ShaderType = QSGRendererInterface__ShaderType(2)
 )
 
+// QSGRendererInterface::ShaderCompilationType
+//
 //go:generate stringer -type=QSGRendererInterface__ShaderCompilationType
-//QSGRendererInterface::ShaderCompilationType
 type QSGRendererInterface__ShaderCompilationType int64
 
 const (
@@ -10556,8 +10587,9 @@ const (
 	QSGRendererInterface__OfflineCompilation QSGRendererInterface__ShaderCompilationType = QSGRendererInterface__ShaderCompilationType(0x02)
 )
 
+// QSGRendererInterface::ShaderSourceType
+//
 //go:generate stringer -type=QSGRendererInterface__ShaderSourceType
-//QSGRendererInterface::ShaderSourceType
 type QSGRendererInterface__ShaderSourceType int64
 
 const (
@@ -10953,8 +10985,9 @@ func NewQSGSimpleTextureNodeFromPointer(ptr unsafe.Pointer) (n *QSGSimpleTexture
 	return
 }
 
+// QSGSimpleTextureNode::TextureCoordinatesTransformFlag
+//
 //go:generate stringer -type=QSGSimpleTextureNode__TextureCoordinatesTransformFlag
-//QSGSimpleTextureNode::TextureCoordinatesTransformFlag
 type QSGSimpleTextureNode__TextureCoordinatesTransformFlag int64
 
 const (
@@ -11106,8 +11139,9 @@ func NewQSGTextureFromPointer(ptr unsafe.Pointer) (n *QSGTexture) {
 	return
 }
 
+// QSGTexture::WrapMode
+//
 //go:generate stringer -type=QSGTexture__WrapMode
-//QSGTexture::WrapMode
 type QSGTexture__WrapMode int64
 
 const (
@@ -11116,8 +11150,9 @@ const (
 	QSGTexture__MirroredRepeat QSGTexture__WrapMode = QSGTexture__WrapMode(2)
 )
 
+// QSGTexture::Filtering
+//
 //go:generate stringer -type=QSGTexture__Filtering
-//QSGTexture::Filtering
 type QSGTexture__Filtering int64
 
 const (
@@ -11126,8 +11161,9 @@ const (
 	QSGTexture__Linear  QSGTexture__Filtering = QSGTexture__Filtering(2)
 )
 
+// QSGTexture::AnisotropyLevel
+//
 //go:generate stringer -type=QSGTexture__AnisotropyLevel
-//QSGTexture::AnisotropyLevel
 type QSGTexture__AnisotropyLevel int64
 
 const (

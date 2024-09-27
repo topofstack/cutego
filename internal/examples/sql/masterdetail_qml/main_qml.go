@@ -7,13 +7,13 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/qml"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/qml"
+	"github.com/topofstack/cutego/widgets"
 
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/controller"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/controller"
 
-	_ "github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/view"
+	_ "github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/view"
 )
 
 const PRODUCTION = true

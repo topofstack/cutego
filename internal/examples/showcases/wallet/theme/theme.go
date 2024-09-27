@@ -1,9 +1,9 @@
 package theme
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	"github.com/bluszcz/cutego/internal/examples/showcases/wallet/theme/controller"
+	"github.com/topofstack/cutego/internal/examples/showcases/wallet/theme/controller"
 )
 
 func init() { themeTemplate_QmlRegisterType2("ThemeTemplate", 1, 0, "ThemeTemplate") }

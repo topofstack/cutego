@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/binding/parser"
 )
 
 func GoInput(name, value string, f *parser.Function, p string) string {

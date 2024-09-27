@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package network
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
 	"reflect"
 	"strings"
 	"unsafe"
@@ -355,8 +356,9 @@ func NewQAbstractSocketFromPointer(ptr unsafe.Pointer) (n *QAbstractSocket) {
 	return
 }
 
+// QAbstractSocket::SocketType
+//
 //go:generate stringer -type=QAbstractSocket__SocketType
-//QAbstractSocket::SocketType
 type QAbstractSocket__SocketType int64
 
 const (
@@ -366,8 +368,9 @@ const (
 	QAbstractSocket__UnknownSocketType QAbstractSocket__SocketType = QAbstractSocket__SocketType(-1)
 )
 
+// QAbstractSocket::NetworkLayerProtocol
+//
 //go:generate stringer -type=QAbstractSocket__NetworkLayerProtocol
-//QAbstractSocket::NetworkLayerProtocol
 type QAbstractSocket__NetworkLayerProtocol int64
 
 const (
@@ -377,8 +380,9 @@ const (
 	QAbstractSocket__UnknownNetworkLayerProtocol QAbstractSocket__NetworkLayerProtocol = QAbstractSocket__NetworkLayerProtocol(-1)
 )
 
+// QAbstractSocket::SocketError
+//
 //go:generate stringer -type=QAbstractSocket__SocketError
-//QAbstractSocket::SocketError
 type QAbstractSocket__SocketError int64
 
 const (
@@ -408,8 +412,9 @@ const (
 	QAbstractSocket__UnknownSocketError               QAbstractSocket__SocketError = QAbstractSocket__SocketError(-1)
 )
 
+// QAbstractSocket::SocketState
+//
 //go:generate stringer -type=QAbstractSocket__SocketState
-//QAbstractSocket::SocketState
 type QAbstractSocket__SocketState int64
 
 const (
@@ -422,8 +427,9 @@ const (
 	QAbstractSocket__ClosingState     QAbstractSocket__SocketState = QAbstractSocket__SocketState(6)
 )
 
+// QAbstractSocket::SocketOption
+//
 //go:generate stringer -type=QAbstractSocket__SocketOption
-//QAbstractSocket::SocketOption
 type QAbstractSocket__SocketOption int64
 
 const (
@@ -437,8 +443,9 @@ const (
 	QAbstractSocket__PathMtuSocketOption           QAbstractSocket__SocketOption = QAbstractSocket__SocketOption(7)
 )
 
+// QAbstractSocket::BindFlag
+//
 //go:generate stringer -type=QAbstractSocket__BindFlag
-//QAbstractSocket::BindFlag
 type QAbstractSocket__BindFlag int64
 
 const (
@@ -448,8 +455,9 @@ const (
 	QAbstractSocket__ReuseAddressHint   QAbstractSocket__BindFlag = QAbstractSocket__BindFlag(0x4)
 )
 
+// QAbstractSocket::PauseMode
+//
 //go:generate stringer -type=QAbstractSocket__PauseMode
-//QAbstractSocket::PauseMode
 type QAbstractSocket__PauseMode int64
 
 const (
@@ -1438,8 +1446,9 @@ func NewQDnsLookupFromPointer(ptr unsafe.Pointer) (n *QDnsLookup) {
 	return
 }
 
+// QDnsLookup::Error
+//
 //go:generate stringer -type=QDnsLookup__Error
-//QDnsLookup::Error
 type QDnsLookup__Error int64
 
 const (
@@ -1453,8 +1462,9 @@ const (
 	QDnsLookup__NotFoundError           QDnsLookup__Error = QDnsLookup__Error(7)
 )
 
+// QDnsLookup::Type
+//
 //go:generate stringer -type=QDnsLookup__Type
-//QDnsLookup::Type
 type QDnsLookup__Type int64
 
 const (
@@ -2205,8 +2215,9 @@ func NewQDtlsFromPointer(ptr unsafe.Pointer) (n *QDtls) {
 	return
 }
 
+// QDtls::QDtlsError
+//
 //go:generate stringer -type=QDtls__QDtlsError
-//QDtls::QDtlsError
 type QDtls__QDtlsError int64
 
 const (
@@ -2221,8 +2232,9 @@ const (
 	QDtls__TlsNonFatalError            QDtls__QDtlsError = QDtls__QDtlsError(8)
 )
 
+// QDtls::HandshakeState
+//
 //go:generate stringer -type=QDtls__HandshakeState
-//QDtls::HandshakeState
 type QDtls__HandshakeState int64
 
 const (
@@ -2322,8 +2334,9 @@ func NewQHostAddressFromPointer(ptr unsafe.Pointer) (n *QHostAddress) {
 	return
 }
 
+// QHostAddress::SpecialAddress
+//
 //go:generate stringer -type=QHostAddress__SpecialAddress
-//QHostAddress::SpecialAddress
 type QHostAddress__SpecialAddress int64
 
 const (
@@ -2336,8 +2349,9 @@ const (
 	QHostAddress__AnyIPv4       QHostAddress__SpecialAddress = QHostAddress__SpecialAddress(6)
 )
 
+// QHostAddress::ConversionModeFlag
+//
 //go:generate stringer -type=QHostAddress__ConversionModeFlag
-//QHostAddress::ConversionModeFlag
 type QHostAddress__ConversionModeFlag int64
 
 const (
@@ -2546,8 +2560,9 @@ func NewQHostInfoFromPointer(ptr unsafe.Pointer) (n *QHostInfo) {
 	return
 }
 
+// QHostInfo::HostInfoError
+//
 //go:generate stringer -type=QHostInfo__HostInfoError
-//QHostInfo::HostInfoError
 type QHostInfo__HostInfoError int64
 
 const (
@@ -2748,8 +2763,9 @@ func NewQHstsPolicyFromPointer(ptr unsafe.Pointer) (n *QHstsPolicy) {
 	return
 }
 
+// QHstsPolicy::PolicyFlag
+//
 //go:generate stringer -type=QHstsPolicy__PolicyFlag
-//QHstsPolicy::PolicyFlag
 type QHstsPolicy__PolicyFlag int64
 
 const (
@@ -2864,8 +2880,9 @@ func NewQHttpMultiPartFromPointer(ptr unsafe.Pointer) (n *QHttpMultiPart) {
 	return
 }
 
+// QHttpMultiPart::ContentType
+//
 //go:generate stringer -type=QHttpMultiPart__ContentType
-//QHttpMultiPart::ContentType
 type QHttpMultiPart__ContentType int64
 
 const (
@@ -3204,8 +3221,9 @@ func NewQLocalServerFromPointer(ptr unsafe.Pointer) (n *QLocalServer) {
 	return
 }
 
+// QLocalServer::SocketOption
+//
 //go:generate stringer -type=QLocalServer__SocketOption
-//QLocalServer::SocketOption
 type QLocalServer__SocketOption int64
 
 const (
@@ -3539,8 +3557,9 @@ func NewQLocalSocketFromPointer(ptr unsafe.Pointer) (n *QLocalSocket) {
 	return
 }
 
+// QLocalSocket::LocalSocketError
+//
 //go:generate stringer -type=QLocalSocket__LocalSocketError
-//QLocalSocket::LocalSocketError
 type QLocalSocket__LocalSocketError int64
 
 const (
@@ -3557,8 +3576,9 @@ const (
 	QLocalSocket__OperationError                  QLocalSocket__LocalSocketError = QLocalSocket__LocalSocketError(QAbstractSocket__OperationError)
 )
 
+// QLocalSocket::LocalSocketState
+//
 //go:generate stringer -type=QLocalSocket__LocalSocketState
-//QLocalSocket::LocalSocketState
 type QLocalSocket__LocalSocketState int64
 
 const (
@@ -3991,8 +4011,9 @@ func NewQNetworkAccessManagerFromPointer(ptr unsafe.Pointer) (n *QNetworkAccessM
 	return
 }
 
+// QNetworkAccessManager::Operation
+//
 //go:generate stringer -type=QNetworkAccessManager__Operation
-//QNetworkAccessManager::Operation
 type QNetworkAccessManager__Operation int64
 
 const (
@@ -4005,8 +4026,9 @@ const (
 	QNetworkAccessManager__UnknownOperation QNetworkAccessManager__Operation = QNetworkAccessManager__Operation(0)
 )
 
+// QNetworkAccessManager::NetworkAccessibility
+//
 //go:generate stringer -type=QNetworkAccessManager__NetworkAccessibility
-//QNetworkAccessManager::NetworkAccessibility
 type QNetworkAccessManager__NetworkAccessibility int64
 
 const (
@@ -4572,8 +4594,9 @@ func NewQNetworkAddressEntryFromPointer(ptr unsafe.Pointer) (n *QNetworkAddressE
 	return
 }
 
+// QNetworkAddressEntry::DnsEligibilityStatus
+//
 //go:generate stringer -type=QNetworkAddressEntry__DnsEligibilityStatus
-//QNetworkAddressEntry::DnsEligibilityStatus
 type QNetworkAddressEntry__DnsEligibilityStatus int64
 
 const (
@@ -4865,8 +4888,9 @@ func NewQNetworkConfigurationFromPointer(ptr unsafe.Pointer) (n *QNetworkConfigu
 	return
 }
 
+// QNetworkConfiguration::Type
+//
 //go:generate stringer -type=QNetworkConfiguration__Type
-//QNetworkConfiguration::Type
 type QNetworkConfiguration__Type int64
 
 const (
@@ -4876,8 +4900,9 @@ const (
 	QNetworkConfiguration__Invalid             QNetworkConfiguration__Type = QNetworkConfiguration__Type(3)
 )
 
+// QNetworkConfiguration::Purpose
+//
 //go:generate stringer -type=QNetworkConfiguration__Purpose
-//QNetworkConfiguration::Purpose
 type QNetworkConfiguration__Purpose int64
 
 const (
@@ -4887,8 +4912,9 @@ const (
 	QNetworkConfiguration__ServiceSpecificPurpose QNetworkConfiguration__Purpose = QNetworkConfiguration__Purpose(3)
 )
 
+// QNetworkConfiguration::StateFlag
+//
 //go:generate stringer -type=QNetworkConfiguration__StateFlag
-//QNetworkConfiguration::StateFlag
 type QNetworkConfiguration__StateFlag int64
 
 const (
@@ -4898,8 +4924,9 @@ const (
 	QNetworkConfiguration__Active     QNetworkConfiguration__StateFlag = QNetworkConfiguration__StateFlag(0x000000e)
 )
 
+// QNetworkConfiguration::BearerType
+//
 //go:generate stringer -type=QNetworkConfiguration__BearerType
-//QNetworkConfiguration::BearerType
 type QNetworkConfiguration__BearerType int64
 
 const (
@@ -5066,8 +5093,9 @@ func NewQNetworkConfigurationManagerFromPointer(ptr unsafe.Pointer) (n *QNetwork
 	return
 }
 
+// QNetworkConfigurationManager::Capability
+//
 //go:generate stringer -type=QNetworkConfigurationManager__Capability
-//QNetworkConfigurationManager::Capability
 type QNetworkConfigurationManager__Capability int64
 
 const (
@@ -5387,8 +5415,9 @@ func NewQNetworkCookieFromPointer(ptr unsafe.Pointer) (n *QNetworkCookie) {
 	return
 }
 
+// QNetworkCookie::RawForm
+//
 //go:generate stringer -type=QNetworkCookie__RawForm
-//QNetworkCookie::RawForm
 type QNetworkCookie__RawForm int64
 
 const (
@@ -6367,8 +6396,9 @@ func NewQNetworkInterfaceFromPointer(ptr unsafe.Pointer) (n *QNetworkInterface) 
 	return
 }
 
+// QNetworkInterface::InterfaceType
+//
 //go:generate stringer -type=QNetworkInterface__InterfaceType
-//QNetworkInterface::InterfaceType
 type QNetworkInterface__InterfaceType int64
 
 const (
@@ -6389,8 +6419,9 @@ const (
 	QNetworkInterface__Unknown    QNetworkInterface__InterfaceType = QNetworkInterface__InterfaceType(0)
 )
 
+// QNetworkInterface::InterfaceFlag
+//
 //go:generate stringer -type=QNetworkInterface__InterfaceFlag
-//QNetworkInterface::InterfaceFlag
 type QNetworkInterface__InterfaceFlag int64
 
 const (
@@ -6614,8 +6645,9 @@ func NewQNetworkProxyFromPointer(ptr unsafe.Pointer) (n *QNetworkProxy) {
 	return
 }
 
+// QNetworkProxy::ProxyType
+//
 //go:generate stringer -type=QNetworkProxy__ProxyType
-//QNetworkProxy::ProxyType
 type QNetworkProxy__ProxyType int64
 
 const (
@@ -6627,8 +6659,9 @@ const (
 	QNetworkProxy__FtpCachingProxy  QNetworkProxy__ProxyType = QNetworkProxy__ProxyType(5)
 )
 
+// QNetworkProxy::Capability
+//
 //go:generate stringer -type=QNetworkProxy__Capability
-//QNetworkProxy::Capability
 type QNetworkProxy__Capability int64
 
 const (
@@ -7019,8 +7052,9 @@ func NewQNetworkProxyQueryFromPointer(ptr unsafe.Pointer) (n *QNetworkProxyQuery
 	return
 }
 
+// QNetworkProxyQuery::QueryType
+//
 //go:generate stringer -type=QNetworkProxyQuery__QueryType
-//QNetworkProxyQuery::QueryType
 type QNetworkProxyQuery__QueryType int64
 
 const (
@@ -7175,8 +7209,9 @@ func NewQNetworkReplyFromPointer(ptr unsafe.Pointer) (n *QNetworkReply) {
 	return
 }
 
+// QNetworkReply::NetworkError
+//
 //go:generate stringer -type=QNetworkReply__NetworkError
-//QNetworkReply::NetworkError
 type QNetworkReply__NetworkError int64
 
 const (
@@ -7923,8 +7958,9 @@ func NewQNetworkRequestFromPointer(ptr unsafe.Pointer) (n *QNetworkRequest) {
 	return
 }
 
+// QNetworkRequest::Attribute
+//
 //go:generate stringer -type=QNetworkRequest__Attribute
-//QNetworkRequest::Attribute
 type QNetworkRequest__Attribute int64
 
 const (
@@ -7960,8 +7996,9 @@ const (
 	QNetworkRequest__UserMax                               QNetworkRequest__Attribute = QNetworkRequest__Attribute(32767)
 )
 
+// QNetworkRequest::KnownHeaders
+//
 //go:generate stringer -type=QNetworkRequest__KnownHeaders
-//QNetworkRequest::KnownHeaders
 type QNetworkRequest__KnownHeaders int64
 
 const (
@@ -7980,8 +8017,9 @@ const (
 	QNetworkRequest__IfNoneMatchHeader        QNetworkRequest__KnownHeaders = QNetworkRequest__KnownHeaders(12)
 )
 
+// QNetworkRequest::CacheLoadControl
+//
 //go:generate stringer -type=QNetworkRequest__CacheLoadControl
-//QNetworkRequest::CacheLoadControl
 type QNetworkRequest__CacheLoadControl int64
 
 const (
@@ -7991,8 +8029,9 @@ const (
 	QNetworkRequest__AlwaysCache   QNetworkRequest__CacheLoadControl = QNetworkRequest__CacheLoadControl(3)
 )
 
+// QNetworkRequest::LoadControl
+//
 //go:generate stringer -type=QNetworkRequest__LoadControl
-//QNetworkRequest::LoadControl
 type QNetworkRequest__LoadControl int64
 
 const (
@@ -8000,8 +8039,9 @@ const (
 	QNetworkRequest__Manual    QNetworkRequest__LoadControl = QNetworkRequest__LoadControl(1)
 )
 
+// QNetworkRequest::Priority
+//
 //go:generate stringer -type=QNetworkRequest__Priority
-//QNetworkRequest::Priority
 type QNetworkRequest__Priority int64
 
 const (
@@ -8010,8 +8050,9 @@ const (
 	QNetworkRequest__LowPriority    QNetworkRequest__Priority = QNetworkRequest__Priority(5)
 )
 
+// QNetworkRequest::RedirectPolicy
+//
 //go:generate stringer -type=QNetworkRequest__RedirectPolicy
-//QNetworkRequest::RedirectPolicy
 type QNetworkRequest__RedirectPolicy int64
 
 const (
@@ -8204,8 +8245,9 @@ func NewQNetworkSessionFromPointer(ptr unsafe.Pointer) (n *QNetworkSession) {
 	return
 }
 
+// QNetworkSession::State
+//
 //go:generate stringer -type=QNetworkSession__State
-//QNetworkSession::State
 type QNetworkSession__State int64
 
 const (
@@ -8218,8 +8260,9 @@ const (
 	QNetworkSession__Roaming      QNetworkSession__State = QNetworkSession__State(6)
 )
 
+// QNetworkSession::SessionError
+//
 //go:generate stringer -type=QNetworkSession__SessionError
-//QNetworkSession::SessionError
 type QNetworkSession__SessionError int64
 
 const (
@@ -8230,8 +8273,9 @@ const (
 	QNetworkSession__InvalidConfigurationError  QNetworkSession__SessionError = QNetworkSession__SessionError(4)
 )
 
+// QNetworkSession::UsagePolicy
+//
 //go:generate stringer -type=QNetworkSession__UsagePolicy
-//QNetworkSession::UsagePolicy
 type QNetworkSession__UsagePolicy int64
 
 const (
@@ -8721,8 +8765,9 @@ func NewQOcspResponseFromPointer(ptr unsafe.Pointer) (n *QOcspResponse) {
 	return
 }
 
+// QOcspResponse::QOcspCertificateStatus
+//
 //go:generate stringer -type=QOcspResponse__QOcspCertificateStatus
-//QOcspResponse::QOcspCertificateStatus
 type QOcspResponse__QOcspCertificateStatus int64
 
 const (
@@ -8731,8 +8776,9 @@ const (
 	QOcspResponse__Unknown QOcspResponse__QOcspCertificateStatus = QOcspResponse__QOcspCertificateStatus(2)
 )
 
+// QOcspResponse::QOcspRevocationReason
+//
 //go:generate stringer -type=QOcspResponse__QOcspRevocationReason
-//QOcspResponse::QOcspRevocationReason
 type QOcspResponse__QOcspRevocationReason int64
 
 const (
@@ -8963,8 +9009,9 @@ func NewQSslFromPointer(ptr unsafe.Pointer) (n *QSsl) {
 func (ptr *QSsl) DestroyQSsl() {
 }
 
+// QSsl::KeyType
+//
 //go:generate stringer -type=QSsl__KeyType
-//QSsl::KeyType
 type QSsl__KeyType int64
 
 const (
@@ -8972,8 +9019,9 @@ const (
 	QSsl__PublicKey  QSsl__KeyType = QSsl__KeyType(1)
 )
 
+// QSsl::EncodingFormat
+//
 //go:generate stringer -type=QSsl__EncodingFormat
-//QSsl::EncodingFormat
 type QSsl__EncodingFormat int64
 
 const (
@@ -8981,8 +9029,9 @@ const (
 	QSsl__Der QSsl__EncodingFormat = QSsl__EncodingFormat(1)
 )
 
+// QSsl::KeyAlgorithm
+//
 //go:generate stringer -type=QSsl__KeyAlgorithm
-//QSsl::KeyAlgorithm
 type QSsl__KeyAlgorithm int64
 
 const (
@@ -8993,8 +9042,9 @@ const (
 	QSsl__Dh     QSsl__KeyAlgorithm = QSsl__KeyAlgorithm(4)
 )
 
+// QSsl::AlternativeNameEntryType
+//
 //go:generate stringer -type=QSsl__AlternativeNameEntryType
-//QSsl::AlternativeNameEntryType
 type QSsl__AlternativeNameEntryType int64
 
 const (
@@ -9003,8 +9053,9 @@ const (
 	QSsl__IpAddressEntry QSsl__AlternativeNameEntryType = QSsl__AlternativeNameEntryType(2)
 )
 
+// QSsl::SslProtocol
+//
 //go:generate stringer -type=QSsl__SslProtocol
-//QSsl::SslProtocol
 type QSsl__SslProtocol int64
 
 const (
@@ -9029,8 +9080,9 @@ const (
 	QSsl__UnknownProtocol QSsl__SslProtocol = QSsl__SslProtocol(-1)
 )
 
+// QSsl::SslOption
+//
 //go:generate stringer -type=QSsl__SslOption
-//QSsl::SslOption
 type QSsl__SslOption int64
 
 const (
@@ -9086,8 +9138,9 @@ func NewQSslCertificateFromPointer(ptr unsafe.Pointer) (n *QSslCertificate) {
 	return
 }
 
+// QSslCertificate::SubjectInfo
+//
 //go:generate stringer -type=QSslCertificate__SubjectInfo
-//QSslCertificate::SubjectInfo
 type QSslCertificate__SubjectInfo int64
 
 const (
@@ -9706,8 +9759,9 @@ func NewQSslConfigurationFromPointer(ptr unsafe.Pointer) (n *QSslConfiguration) 
 	return
 }
 
+// QSslConfiguration::NextProtocolNegotiationStatus
+//
 //go:generate stringer -type=QSslConfiguration__NextProtocolNegotiationStatus
-//QSslConfiguration::NextProtocolNegotiationStatus
 type QSslConfiguration__NextProtocolNegotiationStatus int64
 
 const (
@@ -10303,8 +10357,9 @@ func NewQSslDiffieHellmanParametersFromPointer(ptr unsafe.Pointer) (n *QSslDiffi
 	return
 }
 
+// QSslDiffieHellmanParameters::Error
+//
 //go:generate stringer -type=QSslDiffieHellmanParameters__Error
-//QSslDiffieHellmanParameters::Error
 type QSslDiffieHellmanParameters__Error int64
 
 const (
@@ -10520,8 +10575,9 @@ func NewQSslErrorFromPointer(ptr unsafe.Pointer) (n *QSslError) {
 	return
 }
 
+// QSslError::SslError
+//
 //go:generate stringer -type=QSslError__SslError
-//QSslError::SslError
 type QSslError__SslError int64
 
 const (
@@ -10860,8 +10916,9 @@ func NewQSslSocketFromPointer(ptr unsafe.Pointer) (n *QSslSocket) {
 	return
 }
 
+// QSslSocket::SslMode
+//
 //go:generate stringer -type=QSslSocket__SslMode
-//QSslSocket::SslMode
 type QSslSocket__SslMode int64
 
 const (
@@ -10870,8 +10927,9 @@ const (
 	QSslSocket__SslServerMode   QSslSocket__SslMode = QSslSocket__SslMode(2)
 )
 
+// QSslSocket::PeerVerifyMode
+//
 //go:generate stringer -type=QSslSocket__PeerVerifyMode
-//QSslSocket::PeerVerifyMode
 type QSslSocket__PeerVerifyMode int64
 
 const (

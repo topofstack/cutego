@@ -1,9 +1,9 @@
 package terminal
 
 import (
-	"github.com/bluszcz/cutego/quick"
+	"github.com/topofstack/cutego/quick"
 
-	_ "github.com/bluszcz/cutego/internal/examples/showcases/wallet/terminal/controller"
+	_ "github.com/topofstack/cutego/internal/examples/showcases/wallet/terminal/controller"
 )
 
 func init() { terminalTemplate_QmlRegisterType2("TerminalTemplate", 1, 0, "TerminalTemplate") }

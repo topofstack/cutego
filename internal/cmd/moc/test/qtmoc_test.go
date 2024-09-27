@@ -9,15 +9,15 @@ import (
 	tps "time"
 	"unsafe"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/sql"
-	"github.com/bluszcz/cutego/widgets"
-	"github.com/bluszcz/cutego/xml"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/sql"
+	"github.com/topofstack/cutego/widgets"
+	"github.com/topofstack/cutego/xml"
 
-	"github.com/bluszcz/cutego/internal/cmd/moc/test/sub"
-	_ "github.com/bluszcz/cutego/internal/cmd/moc/test/sub/conf"
-	"github.com/bluszcz/cutego/internal/cmd/moc/test/sub/subsub" //subsubcustom
+	"github.com/topofstack/cutego/internal/cmd/moc/test/sub"
+	_ "github.com/topofstack/cutego/internal/cmd/moc/test/sub/conf"
+	"github.com/topofstack/cutego/internal/cmd/moc/test/sub/subsub" //subsubcustom
 )
 
 type Application struct {

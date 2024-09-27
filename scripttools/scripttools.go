@@ -1,12 +1,13 @@
+//go:build !minimal
 // +build !minimal
 
 package scripttools
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/script"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/script"
+	"github.com/topofstack/cutego/widgets"
 	"strings"
 	"unsafe"
 )
@@ -59,8 +60,9 @@ func NewQScriptEngineDebuggerFromPointer(ptr unsafe.Pointer) (n *QScriptEngineDe
 	return
 }
 
+// QScriptEngineDebugger::DebuggerAction
+//
 //go:generate stringer -type=QScriptEngineDebugger__DebuggerAction
-//QScriptEngineDebugger::DebuggerAction
 type QScriptEngineDebugger__DebuggerAction int64
 
 const (
@@ -81,8 +83,9 @@ const (
 	QScriptEngineDebugger__GoToLineAction             QScriptEngineDebugger__DebuggerAction = QScriptEngineDebugger__DebuggerAction(14)
 )
 
+// QScriptEngineDebugger::DebuggerWidget
+//
 //go:generate stringer -type=QScriptEngineDebugger__DebuggerWidget
-//QScriptEngineDebugger::DebuggerWidget
 type QScriptEngineDebugger__DebuggerWidget int64
 
 const (
@@ -97,8 +100,9 @@ const (
 	QScriptEngineDebugger__ErrorLogWidget    QScriptEngineDebugger__DebuggerWidget = QScriptEngineDebugger__DebuggerWidget(8)
 )
 
+// QScriptEngineDebugger::DebuggerState
+//
 //go:generate stringer -type=QScriptEngineDebugger__DebuggerState
-//QScriptEngineDebugger::DebuggerState
 type QScriptEngineDebugger__DebuggerState int64
 
 const (

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 )
 
 var (

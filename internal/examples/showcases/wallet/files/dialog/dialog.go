@@ -1,10 +1,10 @@
 package dialog
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	fcontroller "github.com/bluszcz/cutego/internal/examples/showcases/wallet/files/dialog/controller"
-	wcontroller "github.com/bluszcz/cutego/internal/examples/showcases/wallet/wallet/dialog/controller"
+	fcontroller "github.com/topofstack/cutego/internal/examples/showcases/wallet/files/dialog/controller"
+	wcontroller "github.com/topofstack/cutego/internal/examples/showcases/wallet/wallet/dialog/controller"
 )
 
 type filesDialogTemplate struct {

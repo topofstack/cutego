@@ -1,10 +1,10 @@
 package controller
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	"github.com/bluszcz/cutego/internal/examples/showcases/wallet/controller"
-	dcontroller "github.com/bluszcz/cutego/internal/examples/showcases/wallet/wallet/dialog/controller"
+	"github.com/topofstack/cutego/internal/examples/showcases/wallet/controller"
+	dcontroller "github.com/topofstack/cutego/internal/examples/showcases/wallet/wallet/dialog/controller"
 )
 
 func init() {

@@ -1,3 +1,4 @@
+//go:build !minimal
 // +build !minimal
 
 package felgo
@@ -8,9 +9,9 @@ package felgo
 //#include "felgo.h"
 import "C"
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/qml"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/qml"
 	"runtime"
 	"strings"
 	"unsafe"

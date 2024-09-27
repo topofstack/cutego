@@ -1,6 +1,6 @@
 package haxe
 
-import "github.com/bluszcz/cutego/interop"
+import "github.com/topofstack/cutego/interop"
 
 func init() {
 	interop.ReturnPointersAsStrings = true

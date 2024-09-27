@@ -17,7 +17,7 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/bluszcz/cutego/interop"
+	"github.com/topofstack/cutego/interop"
 )
 
 var (

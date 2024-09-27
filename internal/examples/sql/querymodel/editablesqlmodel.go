@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/sql"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/sql"
 )
 
 type EditableSqlModel struct {

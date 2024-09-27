@@ -5,7 +5,7 @@ package main
 import (
 	"os"
 
-	"github.com/bluszcz/cutego/gui"
+	"github.com/topofstack/cutego/gui"
 )
 
 const (

@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	"github.com/bluszcz/cutego/internal/examples/showcases/wallet/controller"
+	"github.com/topofstack/cutego/internal/examples/showcases/wallet/controller"
 )
 
 type StatusController struct {

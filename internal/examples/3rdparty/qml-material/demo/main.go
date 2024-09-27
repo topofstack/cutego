@@ -5,12 +5,12 @@ package main
 import (
 	"os"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/qml"
-	"github.com/bluszcz/cutego/quickcontrols2"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/qml"
+	"github.com/topofstack/cutego/quickcontrols2"
 
-	_ "github.com/bluszcz/cutego/internal/examples/3rdparty/qml-material/demo/icons"
+	_ "github.com/topofstack/cutego/internal/examples/3rdparty/qml-material/demo/icons"
 )
 
 func main() {

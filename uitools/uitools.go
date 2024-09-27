@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package uitools
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/widgets"
 	"strings"
 	"unsafe"
 )

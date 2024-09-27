@@ -1,12 +1,13 @@
+//go:build qml
 // +build qml
 
 package artist
 
 import (
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/quick"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/quick"
 
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/controller"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/controller"
 )
 
 func init() {

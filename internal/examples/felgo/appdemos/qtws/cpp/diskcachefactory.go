@@ -1,9 +1,9 @@
 package cpp
 
 import (
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/network"
-	"github.com/bluszcz/cutego/qml"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/network"
+	"github.com/topofstack/cutego/qml"
 )
 
 type DiskCacheFactory struct {

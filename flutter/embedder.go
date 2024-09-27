@@ -48,7 +48,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 )
 
 func FlutterEngineRun() {

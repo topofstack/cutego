@@ -5,10 +5,10 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	maincontroller "github.com/bluszcz/cutego/internal/examples/showcases/wallet/controller"
-	_ "github.com/bluszcz/cutego/internal/examples/showcases/wallet/view/controller"
+	maincontroller "github.com/topofstack/cutego/internal/examples/showcases/wallet/controller"
+	_ "github.com/topofstack/cutego/internal/examples/showcases/wallet/view/controller"
 )
 
 func init() {

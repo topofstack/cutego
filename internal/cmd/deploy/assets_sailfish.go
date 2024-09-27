@@ -1,3 +1,4 @@
+//go:build sailfish
 // +build sailfish
 
 package deploy
@@ -10,7 +11,7 @@ import (
 
 	"golang.org/x/crypto/ssh"
 
-	"github.com/bluszcz/cutego/internal/utils"
+	"github.com/topofstack/cutego/internal/utils"
 )
 
 func sailfish_ssh(port, login string, cmd ...string) error {

@@ -6,8 +6,8 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/widgets"
 )
 
 var (

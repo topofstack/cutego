@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package dbus
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
 	"strings"
 	"unsafe"
 )
@@ -54,8 +55,9 @@ func NewQDBusFromPointer(ptr unsafe.Pointer) (n *QDBus) {
 func (ptr *QDBus) DestroyQDBus() {
 }
 
+// QDBus::CallMode
+//
 //go:generate stringer -type=QDBus__CallMode
-//QDBus::CallMode
 type QDBus__CallMode int64
 
 const (
@@ -767,8 +769,9 @@ func NewQDBusArgumentFromPointer(ptr unsafe.Pointer) (n *QDBusArgument) {
 	return
 }
 
+// QDBusArgument::ElementType
+//
 //go:generate stringer -type=QDBusArgument__ElementType
-//QDBusArgument::ElementType
 type QDBusArgument__ElementType int64
 
 const (
@@ -938,8 +941,9 @@ func NewQDBusConnectionFromPointer(ptr unsafe.Pointer) (n *QDBusConnection) {
 	return
 }
 
+// QDBusConnection::BusType
+//
 //go:generate stringer -type=QDBusConnection__BusType
-//QDBusConnection::BusType
 type QDBusConnection__BusType int64
 
 const (
@@ -948,8 +952,9 @@ const (
 	QDBusConnection__ActivationBus QDBusConnection__BusType = QDBusConnection__BusType(2)
 )
 
+// QDBusConnection::RegisterOption
+//
 //go:generate stringer -type=QDBusConnection__RegisterOption
-//QDBusConnection::RegisterOption
 type QDBusConnection__RegisterOption int64
 
 const (
@@ -967,8 +972,9 @@ const (
 	QDBusConnection__ExportChildObjects            QDBusConnection__RegisterOption = QDBusConnection__RegisterOption(0x1000)
 )
 
+// QDBusConnection::UnregisterMode
+//
 //go:generate stringer -type=QDBusConnection__UnregisterMode
-//QDBusConnection::UnregisterMode
 type QDBusConnection__UnregisterMode int64
 
 const (
@@ -976,8 +982,9 @@ const (
 	QDBusConnection__UnregisterTree QDBusConnection__UnregisterMode = QDBusConnection__UnregisterMode(1)
 )
 
+// QDBusConnection::ConnectionCapability
+//
 //go:generate stringer -type=QDBusConnection__ConnectionCapability
-//QDBusConnection::ConnectionCapability
 type QDBusConnection__ConnectionCapability int64
 
 const (
@@ -1240,8 +1247,9 @@ func NewQDBusConnectionInterfaceFromPointer(ptr unsafe.Pointer) (n *QDBusConnect
 func (ptr *QDBusConnectionInterface) DestroyQDBusConnectionInterface() {
 }
 
+// QDBusConnectionInterface::ServiceQueueOptions
+//
 //go:generate stringer -type=QDBusConnectionInterface__ServiceQueueOptions
-//QDBusConnectionInterface::ServiceQueueOptions
 type QDBusConnectionInterface__ServiceQueueOptions int64
 
 const (
@@ -1250,8 +1258,9 @@ const (
 	QDBusConnectionInterface__ReplaceExistingService QDBusConnectionInterface__ServiceQueueOptions = QDBusConnectionInterface__ServiceQueueOptions(2)
 )
 
+// QDBusConnectionInterface::ServiceReplacementOptions
+//
 //go:generate stringer -type=QDBusConnectionInterface__ServiceReplacementOptions
-//QDBusConnectionInterface::ServiceReplacementOptions
 type QDBusConnectionInterface__ServiceReplacementOptions int64
 
 const (
@@ -1259,8 +1268,9 @@ const (
 	QDBusConnectionInterface__AllowReplacement     QDBusConnectionInterface__ServiceReplacementOptions = QDBusConnectionInterface__ServiceReplacementOptions(1)
 )
 
+// QDBusConnectionInterface::RegisterServiceReply
+//
 //go:generate stringer -type=QDBusConnectionInterface__RegisterServiceReply
-//QDBusConnectionInterface::RegisterServiceReply
 type QDBusConnectionInterface__RegisterServiceReply int64
 
 const (
@@ -1445,8 +1455,9 @@ func NewQDBusErrorFromPointer(ptr unsafe.Pointer) (n *QDBusError) {
 func (ptr *QDBusError) DestroyQDBusError() {
 }
 
+// QDBusError::ErrorType
+//
 //go:generate stringer -type=QDBusError__ErrorType
-//QDBusError::ErrorType
 type QDBusError__ErrorType int64
 
 const (
@@ -1629,8 +1640,9 @@ func NewQDBusMessageFromPointer(ptr unsafe.Pointer) (n *QDBusMessage) {
 	return
 }
 
+// QDBusMessage::MessageType
+//
 //go:generate stringer -type=QDBusMessage__MessageType
-//QDBusMessage::MessageType
 type QDBusMessage__MessageType int64
 
 const (
@@ -2695,8 +2707,9 @@ func NewQDBusServiceWatcherFromPointer(ptr unsafe.Pointer) (n *QDBusServiceWatch
 	return
 }
 
+// QDBusServiceWatcher::WatchModeFlag
+//
 //go:generate stringer -type=QDBusServiceWatcher__WatchModeFlag
-//QDBusServiceWatcher::WatchModeFlag
 type QDBusServiceWatcher__WatchModeFlag int64
 
 const (

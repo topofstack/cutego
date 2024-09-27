@@ -10,8 +10,8 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
 )
 
 var (

@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/bluszcz/cutego/bluetooth"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/bluetooth"
+	"github.com/topofstack/cutego/core"
 )
 
 const (

@@ -1,12 +1,13 @@
+//go:build !minimal
 // +build !minimal
 
 package printsupport
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/widgets"
 	"strings"
 	"unsafe"
 )
@@ -62,8 +63,9 @@ func NewQAbstractPrintDialogFromPointer(ptr unsafe.Pointer) (n *QAbstractPrintDi
 func (ptr *QAbstractPrintDialog) DestroyQAbstractPrintDialog() {
 }
 
+// QAbstractPrintDialog::PrintDialogOption
+//
 //go:generate stringer -type=QAbstractPrintDialog__PrintDialogOption
-//QAbstractPrintDialog::PrintDialogOption
 type QAbstractPrintDialog__PrintDialogOption int64
 
 const (
@@ -77,8 +79,9 @@ const (
 	QAbstractPrintDialog__PrintCurrentPage   QAbstractPrintDialog__PrintDialogOption = QAbstractPrintDialog__PrintDialogOption(0x0040)
 )
 
+// QAbstractPrintDialog::PrintRange
+//
 //go:generate stringer -type=QAbstractPrintDialog__PrintRange
-//QAbstractPrintDialog::PrintRange
 type QAbstractPrintDialog__PrintRange int64
 
 const (
@@ -1475,8 +1478,9 @@ func NewQPrintEngineFromPointer(ptr unsafe.Pointer) (n *QPrintEngine) {
 	return
 }
 
+// QPrintEngine::PrintEnginePropertyKey
+//
 //go:generate stringer -type=QPrintEngine__PrintEnginePropertyKey
-//QPrintEngine::PrintEnginePropertyKey
 type QPrintEngine__PrintEnginePropertyKey int64
 
 const (
@@ -2234,8 +2238,9 @@ func NewQPrintPreviewWidgetFromPointer(ptr unsafe.Pointer) (n *QPrintPreviewWidg
 	return
 }
 
+// QPrintPreviewWidget::ViewMode
+//
 //go:generate stringer -type=QPrintPreviewWidget__ViewMode
-//QPrintPreviewWidget::ViewMode
 type QPrintPreviewWidget__ViewMode int64
 
 const (
@@ -2244,8 +2249,9 @@ const (
 	QPrintPreviewWidget__AllPagesView    QPrintPreviewWidget__ViewMode = QPrintPreviewWidget__ViewMode(2)
 )
 
+// QPrintPreviewWidget::ZoomMode
+//
 //go:generate stringer -type=QPrintPreviewWidget__ZoomMode
-//QPrintPreviewWidget::ZoomMode
 type QPrintPreviewWidget__ZoomMode int64
 
 const (
@@ -3157,8 +3163,9 @@ func NewQPrinterFromPointer(ptr unsafe.Pointer) (n *QPrinter) {
 	return
 }
 
+// QPrinter::PrinterMode
+//
 //go:generate stringer -type=QPrinter__PrinterMode
-//QPrinter::PrinterMode
 type QPrinter__PrinterMode int64
 
 const (
@@ -3167,8 +3174,9 @@ const (
 	QPrinter__HighResolution    QPrinter__PrinterMode = QPrinter__PrinterMode(2)
 )
 
+// QPrinter::Orientation
+//
 //go:generate stringer -type=QPrinter__Orientation
-//QPrinter::Orientation
 type QPrinter__Orientation int64
 
 const (
@@ -3176,8 +3184,9 @@ const (
 	QPrinter__Landscape QPrinter__Orientation = QPrinter__Orientation(1)
 )
 
+// QPrinter::PageOrder
+//
 //go:generate stringer -type=QPrinter__PageOrder
-//QPrinter::PageOrder
 type QPrinter__PageOrder int64
 
 const (
@@ -3185,8 +3194,9 @@ const (
 	QPrinter__LastPageFirst  QPrinter__PageOrder = QPrinter__PageOrder(1)
 )
 
+// QPrinter::ColorMode
+//
 //go:generate stringer -type=QPrinter__ColorMode
-//QPrinter::ColorMode
 type QPrinter__ColorMode int64
 
 const (
@@ -3194,8 +3204,9 @@ const (
 	QPrinter__Color     QPrinter__ColorMode = QPrinter__ColorMode(1)
 )
 
+// QPrinter::PaperSource
+//
 //go:generate stringer -type=QPrinter__PaperSource
-//QPrinter::PaperSource
 type QPrinter__PaperSource int64
 
 const (
@@ -3218,8 +3229,9 @@ const (
 	QPrinter__Upper           QPrinter__PaperSource = QPrinter__PaperSource(QPrinter__OnlyOne)
 )
 
+// QPrinter::PrinterState
+//
 //go:generate stringer -type=QPrinter__PrinterState
-//QPrinter::PrinterState
 type QPrinter__PrinterState int64
 
 const (
@@ -3229,8 +3241,9 @@ const (
 	QPrinter__Error   QPrinter__PrinterState = QPrinter__PrinterState(3)
 )
 
+// QPrinter::OutputFormat
+//
 //go:generate stringer -type=QPrinter__OutputFormat
-//QPrinter::OutputFormat
 type QPrinter__OutputFormat int64
 
 const (
@@ -3238,8 +3251,9 @@ const (
 	QPrinter__PdfFormat    QPrinter__OutputFormat = QPrinter__OutputFormat(1)
 )
 
+// QPrinter::PrintRange
+//
 //go:generate stringer -type=QPrinter__PrintRange
-//QPrinter::PrintRange
 type QPrinter__PrintRange int64
 
 const (
@@ -3249,8 +3263,9 @@ const (
 	QPrinter__CurrentPage QPrinter__PrintRange = QPrinter__PrintRange(3)
 )
 
+// QPrinter::Unit
+//
 //go:generate stringer -type=QPrinter__Unit
-//QPrinter::Unit
 type QPrinter__Unit int64
 
 const (
@@ -3263,8 +3278,9 @@ const (
 	QPrinter__DevicePixel QPrinter__Unit = QPrinter__Unit(6)
 )
 
+// QPrinter::DuplexMode
+//
 //go:generate stringer -type=QPrinter__DuplexMode
-//QPrinter::DuplexMode
 type QPrinter__DuplexMode int64
 
 const (

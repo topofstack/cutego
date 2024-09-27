@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package macextras
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
 	"strings"
 	"unsafe"
 )
@@ -439,8 +440,9 @@ func NewQMacToolBarItemFromPointer(ptr unsafe.Pointer) (n *QMacToolBarItem) {
 	return
 }
 
+// QMacToolBarItem::StandardItem
+//
 //go:generate stringer -type=QMacToolBarItem__StandardItem
-//QMacToolBarItem::StandardItem
 type QMacToolBarItem__StandardItem int64
 
 const (

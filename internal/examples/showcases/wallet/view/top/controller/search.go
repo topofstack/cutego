@@ -1,10 +1,10 @@
 package controller
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	"github.com/bluszcz/cutego/internal/examples/showcases/wallet/files/controller"
-	lcontroller "github.com/bluszcz/cutego/internal/examples/showcases/wallet/view/left/controller"
+	"github.com/topofstack/cutego/internal/examples/showcases/wallet/files/controller"
+	lcontroller "github.com/topofstack/cutego/internal/examples/showcases/wallet/view/left/controller"
 )
 
 type searchController struct {

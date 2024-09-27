@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package xml
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
 	"strings"
 	"unsafe"
 )
@@ -1062,8 +1063,9 @@ func NewQDomImplementationFromPointer(ptr unsafe.Pointer) (n *QDomImplementation
 	return
 }
 
+// QDomImplementation::InvalidDataPolicy
+//
 //go:generate stringer -type=QDomImplementation__InvalidDataPolicy
-//QDomImplementation::InvalidDataPolicy
 type QDomImplementation__InvalidDataPolicy int64
 
 const (
@@ -1285,8 +1287,9 @@ func NewQDomNodeFromPointer(ptr unsafe.Pointer) (n *QDomNode) {
 	return
 }
 
+// QDomNode::NodeType
+//
 //go:generate stringer -type=QDomNode__NodeType
-//QDomNode::NodeType
 type QDomNode__NodeType int64
 
 const (
@@ -1306,8 +1309,9 @@ const (
 	QDomNode__CharacterDataNode         QDomNode__NodeType = QDomNode__NodeType(22)
 )
 
+// QDomNode::EncodingPolicy
+//
 //go:generate stringer -type=QDomNode__EncodingPolicy
-//QDomNode::EncodingPolicy
 type QDomNode__EncodingPolicy int64
 
 const (

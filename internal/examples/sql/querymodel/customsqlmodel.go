@@ -3,9 +3,9 @@ package main
 import (
 	"strings"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/sql"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/sql"
 )
 
 type CustomSqlModel struct {

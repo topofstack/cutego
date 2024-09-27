@@ -3,7 +3,7 @@ package main
 import (
 	"sort"
 
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 )
 
 type ChatServer struct {

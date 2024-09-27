@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/bluszcz/cutego/androidextras"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/androidextras"
+	"github.com/topofstack/cutego/core"
 )
 
 type NotificationClient struct {

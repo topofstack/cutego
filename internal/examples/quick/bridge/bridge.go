@@ -8,9 +8,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/quick"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/quick"
+	"github.com/topofstack/cutego/widgets"
 )
 
 var (

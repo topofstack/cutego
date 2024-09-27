@@ -6,11 +6,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/widgets"
-	"github.com/bluszcz/cutego/xml"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/widgets"
+	"github.com/topofstack/cutego/xml"
 
-	"github.com/bluszcz/cutego/internal/examples/sql/masterdetail_qml/model"
+	"github.com/topofstack/cutego/internal/examples/sql/masterdetail_qml/model"
 )
 
 var Instance *Controller

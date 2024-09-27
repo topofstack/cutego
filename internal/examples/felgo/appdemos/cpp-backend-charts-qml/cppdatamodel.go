@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 )
 
 type CppDataModel struct {

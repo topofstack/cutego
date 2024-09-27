@@ -1,12 +1,13 @@
+//go:build !minimal
 // +build !minimal
 
 package designer
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/widgets"
 	"strings"
 	"unsafe"
 )
@@ -2659,8 +2660,9 @@ func NewQDesignerFormWindowCursorInterfaceFromPointer(ptr unsafe.Pointer) (n *QD
 	return
 }
 
+// QDesignerFormWindowCursorInterface::MoveOperation
+//
 //go:generate stringer -type=QDesignerFormWindowCursorInterface__MoveOperation
-//QDesignerFormWindowCursorInterface::MoveOperation
 type QDesignerFormWindowCursorInterface__MoveOperation int64
 
 const (
@@ -2675,8 +2677,9 @@ const (
 	QDesignerFormWindowCursorInterface__Down   QDesignerFormWindowCursorInterface__MoveOperation = QDesignerFormWindowCursorInterface__MoveOperation(8)
 )
 
+// QDesignerFormWindowCursorInterface::MoveMode
+//
 //go:generate stringer -type=QDesignerFormWindowCursorInterface__MoveMode
-//QDesignerFormWindowCursorInterface::MoveMode
 type QDesignerFormWindowCursorInterface__MoveMode int64
 
 const (
@@ -2952,8 +2955,9 @@ func NewQDesignerFormWindowInterfaceFromPointer(ptr unsafe.Pointer) (n *QDesigne
 	return
 }
 
+// QDesignerFormWindowInterface::FeatureFlag
+//
 //go:generate stringer -type=QDesignerFormWindowInterface__FeatureFlag
-//QDesignerFormWindowInterface::FeatureFlag
 type QDesignerFormWindowInterface__FeatureFlag int64
 
 const (
@@ -2963,8 +2967,9 @@ const (
 	QDesignerFormWindowInterface__DefaultFeature  QDesignerFormWindowInterface__FeatureFlag = QDesignerFormWindowInterface__FeatureFlag(QDesignerFormWindowInterface__EditFeature | QDesignerFormWindowInterface__GridFeature)
 )
 
+// QDesignerFormWindowInterface::ResourceFileSaveMode
+//
 //go:generate stringer -type=QDesignerFormWindowInterface__ResourceFileSaveMode
-//QDesignerFormWindowInterface::ResourceFileSaveMode
 type QDesignerFormWindowInterface__ResourceFileSaveMode int64
 
 const (
@@ -4376,8 +4381,9 @@ func NewQDesignerFormWindowManagerInterfaceFromPointer(ptr unsafe.Pointer) (n *Q
 	return
 }
 
+// QDesignerFormWindowManagerInterface::Action
+//
 //go:generate stringer -type=QDesignerFormWindowManagerInterface__Action
-//QDesignerFormWindowManagerInterface::Action
 type QDesignerFormWindowManagerInterface__Action int64
 
 const (
@@ -4403,8 +4409,9 @@ const (
 	QDesignerFormWindowManagerInterface__FormWindowSettingsDialogAction QDesignerFormWindowManagerInterface__Action = QDesignerFormWindowManagerInterface__Action(600)
 )
 
+// QDesignerFormWindowManagerInterface::ActionGroup
+//
 //go:generate stringer -type=QDesignerFormWindowManagerInterface__ActionGroup
-//QDesignerFormWindowManagerInterface::ActionGroup
 type QDesignerFormWindowManagerInterface__ActionGroup int64
 
 const (

@@ -1,3 +1,3 @@
 package qtmoc
 
-import _ "github.com/bluszcz/cutego/internal/cmd/moc/test/sub"
+import _ "github.com/topofstack/cutego/internal/cmd/moc/test/sub"

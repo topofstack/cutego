@@ -11,12 +11,12 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/widgets"
 
-	"github.com/bluszcz/cutego/interop"
-	_ "github.com/bluszcz/cutego/interop/dart"
+	"github.com/topofstack/cutego/interop"
+	_ "github.com/topofstack/cutego/interop/dart"
 )
 
 var (

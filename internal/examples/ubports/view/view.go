@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/bluszcz/cutego/gui"
-	"github.com/bluszcz/cutego/quick"
+	"github.com/topofstack/cutego/gui"
+	"github.com/topofstack/cutego/quick"
 )
 
 func main() {

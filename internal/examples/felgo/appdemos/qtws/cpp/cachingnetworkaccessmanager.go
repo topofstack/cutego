@@ -1,8 +1,8 @@
 package cpp
 
 import (
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/network"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/network"
 )
 
 type CachingNetworkAccessManager struct {

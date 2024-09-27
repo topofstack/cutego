@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/bluszcz/cutego/androidextras"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/androidextras"
+	"github.com/topofstack/cutego/widgets"
 )
 
 func main() {

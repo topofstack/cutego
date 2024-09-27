@@ -1,3 +1,4 @@
+//go:build vivid
 // +build vivid
 
 package main
@@ -5,7 +6,7 @@ package main
 import (
 	"os"
 
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 )
 
 func EnableHighDPI()               { os.Setenv("QT_DEVICE_PIXEL_RATIO", "auto") }

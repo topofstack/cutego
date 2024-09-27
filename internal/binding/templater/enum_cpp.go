@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/bluszcz/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/binding/parser"
 )
 
 func cppEnum(e *parser.Enum, v *parser.Value) string {

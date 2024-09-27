@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego/core"
 
-	_ "github.com/bluszcz/cutego/internal/examples/showcases/wallet/wallet/dialog/controller"
+	_ "github.com/topofstack/cutego/internal/examples/showcases/wallet/wallet/dialog/controller"
 )
 
 var ButtonController *buttonController

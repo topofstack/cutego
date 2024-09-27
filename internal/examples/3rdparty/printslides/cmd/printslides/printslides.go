@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
 )
 
 func main() {

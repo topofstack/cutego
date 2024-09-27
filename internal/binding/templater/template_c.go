@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/bluszcz/cutego/internal/binding/converter"
-	"github.com/bluszcz/cutego/internal/binding/parser"
+	"github.com/topofstack/cutego/internal/binding/converter"
+	"github.com/topofstack/cutego/internal/binding/parser"
 )
 
 func cTemplate(bb *bytes.Buffer, c *parser.Class, ef func(*parser.Enum, *parser.Value) string, ff func(*parser.Function) string, del string, isGo bool) {

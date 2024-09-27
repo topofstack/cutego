@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package speech
 
 import (
-	"github.com/bluszcz/cutego"
-	"github.com/bluszcz/cutego/core"
+	"github.com/topofstack/cutego"
+	"github.com/topofstack/cutego/core"
 	"strings"
 	"unsafe"
 )
@@ -60,8 +61,9 @@ func NewQTextToSpeechFromPointer(ptr unsafe.Pointer) (n *QTextToSpeech) {
 func (ptr *QTextToSpeech) DestroyQTextToSpeech() {
 }
 
+// QTextToSpeech::State
+//
 //go:generate stringer -type=QTextToSpeech__State
-//QTextToSpeech::State
 type QTextToSpeech__State int64
 
 const (
@@ -1949,8 +1951,9 @@ func NewQVoiceFromPointer(ptr unsafe.Pointer) (n *QVoice) {
 func (ptr *QVoice) DestroyQVoice() {
 }
 
+// QVoice::Age
+//
 //go:generate stringer -type=QVoice__Age
-//QVoice::Age
 type QVoice__Age int64
 
 const (
@@ -1961,8 +1964,9 @@ const (
 	QVoice__Other    QVoice__Age = QVoice__Age(4)
 )
 
+// QVoice::Gender
+//
 //go:generate stringer -type=QVoice__Gender
-//QVoice::Gender
 type QVoice__Gender int64
 
 const (

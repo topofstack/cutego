@@ -1,6 +1,6 @@
 package main
 
-import "github.com/bluszcz/cutego/core"
+import "github.com/topofstack/cutego/core"
 
 var (
 	materialRed        = []string{"#FFCDD2", "#F44336", "#D32F2F", "#000000", "#FFFFFF", "#FFFFFF", "black", "white", "white"}

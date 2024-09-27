@@ -4,10 +4,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/felgo"
-	"github.com/bluszcz/cutego/qml"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/felgo"
+	"github.com/topofstack/cutego/qml"
+	"github.com/topofstack/cutego/widgets"
 )
 
 func main() {

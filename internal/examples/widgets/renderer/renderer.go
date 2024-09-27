@@ -17,10 +17,10 @@ import (
 	"github.com/fogleman/ln/ln"
 	"github.com/fogleman/pt/pt"
 
-	"github.com/bluszcz/cutego/core"
-	"github.com/bluszcz/cutego/gui"
-	_ "github.com/bluszcz/cutego/svg"
-	"github.com/bluszcz/cutego/widgets"
+	"github.com/topofstack/cutego/core"
+	"github.com/topofstack/cutego/gui"
+	_ "github.com/topofstack/cutego/svg"
+	"github.com/topofstack/cutego/widgets"
 )
 
 var (
